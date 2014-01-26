@@ -1,17 +1,8 @@
-.class-5 {
-  top: 500%;
-}
-.class-4 {
-  top: 400%;
-}
-.class-3 {
-  top: 300%;
-}
 .class-2 {
-  top: 200%;
+  top: 1%;
 }
 .class-1 {
-  top: 100%;
+  top: 0.5%;
 }
 .class-5 > div {
   top: -100%;
@@ -111,4 +102,10 @@
 }
 .camelCase {
   background-image: url( '../img/CAMELCASE.png' );
+}
+.replace-me {
+  background-image: url( '../img/replaced-you.png' );
+}
+.no-replace {
+  background-image: url( '../img/no-replace.png' );
 }

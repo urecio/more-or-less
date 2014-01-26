@@ -33,15 +33,15 @@
           else { return '' }
         })()`;
         @cleanSelector: ~`(function(){
-          var clean = @{selector}.replace(/\\'/g, '');
+          var clean = @{selector}.replace(/\'/g, '');
           return clean
         })()`;
         @cleanPrefix: ~`(function(){
-          var clean = @{prefix}.replace(/\\'/g, '');
+          var clean = @{prefix}.replace(/\'/g, '');
           return clean
         })()`;
         @cleanSuffix: ~`(function(){
-          var clean = @{suffix}.replace(/\\'/g, '');
+          var clean = @{suffix}.replace(/\'/g, '');
           return clean
         })()`;
         @converted: ~`(function(){
@@ -50,11 +50,11 @@
           return clean
         })()`;
         @cleanProperty: ~`(function(){
-          var clean = @{property}.replace(/\\'/g, '');
+          var clean = @{property}.replace(/\'/g, '');
           return clean
         })()`;
         @cleanClassPrefix: ~`(function(){
-          var clean = @{class-prefix}.replace(/\\'/g, '');
+          var clean = @{class-prefix}.replace(/\'/g, '');
           return clean
         })()`;
         @out:  @cleanPrefix'@{path}@{converted}@{imgType}'@cleanSuffix;
@@ -87,23 +87,23 @@
       ) when (@index > 0) {
 
         @cleanPrefix: ~`(function(){
-          var clean = @{prefix}.replace(/\\'/g, '');
+          var clean = @{prefix}.replace(/\'/g, '');
           return clean
         })()`;
         @cleanSuffix: ~`(function(){
-          var clean = @{suffix}.replace(/\\'/g, '');
+          var clean = @{suffix}.replace(/\'/g, '');
           return clean
         })()`;
         @cleanSelector: ~`(function(){
-          var clean = @{selector}.replace(/\\'/g, '');
+          var clean = @{selector}.replace(/\'/g, '');
           return clean
         })()`;
         @cleanProperty: ~`(function(){
-          var clean = @{property}.replace(/\\'/g, '');
+          var clean = @{property}.replace(/\'/g, '');
           return clean
           })()`;
         @cleanSeparator: ~`(function(){
-          var clean = @{separator}.replace(/\\'/g, '');
+          var clean = @{separator}.replace(/\'/g, '');
           return clean
           })()`;
         @cleanIndex: ~`(function(){
@@ -112,7 +112,7 @@
           })()`;
         @out:  '@{cleanPrefix}@{cleanIndex}@{cleanSuffix}';
         @cleanOut: ~`(function(){
-          var clean = @{out}.replace(/\\'/g, '');
+          var clean = @{out}.replace(/\'/g, '');
           return clean
           })()`;
         //print the CSS
@@ -144,7 +144,7 @@
 
 //testing numbers
 .class {
-  #functions > .loop > .numbers(@index: 2, @separator: '-', @suffix: '%', @multiplier: 100);
+  #functions > .loop > .numbers(@index: 2, @separator: '-', @suffix: '%', @multiplier: 0.5);
 }
 
 .class {
@@ -183,3 +183,4 @@
 
 #functions > .loop > .images(@type: @ARRAY, @convert: toUpperCase());
 
+#functions > .loop > .images(@type: 'replace-me, no-replace', @convert: replace('replace-me','replaced-you'));
