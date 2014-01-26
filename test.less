@@ -15,8 +15,7 @@
       @suffix: ')',
       @convert: toString()) {
       //find length to make the stop point
-      //@stopIndex: unit(`(function(){ return @{type}.split(",").length})()`);
-      @stopIndex: 3;
+      @stopIndex: unit(`(function(){ return @{type}.split(",").length})()`);
       //need to get the first item in @type
       @firstClass: ~`(function(){
         var clsArray = @{type}.replace(/\s+/g, '').split(",");
@@ -158,6 +157,7 @@
 
 // testing images from arrays
 @ARRAY: 'UPPERCASE, lowercase, camelCase';
+@PATH: '../images/are/in/here/';
 
 .class {
   #functions > .loop > .images(@type: @ARRAY, @path: '../../../images/');
@@ -176,10 +176,10 @@
 }
 
 .class {
-  #functions > .loop > .images(@type: @ARRAY, @path: '../../../images/', @class-prefix: 'testing-');
+  #functions > .loop > .images(@type: 'one, two, three, four, five', @path: '../../../images/', @class-prefix: 'testing-');
 }
 
-#functions > .loop > .images(@type: @ARRAY, @path: '../../../images/');
+#functions > .loop > .images(@type: @ARRAY, @path: @PATH);
 
 #functions > .loop > .images(@type: @ARRAY, @convert: toUpperCase());
 

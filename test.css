@@ -79,23 +79,29 @@
 .class.camelCase .child > span {
   background-image: url( '../img/camelcase.png' );
 }
-.class.testing-UPPERCASE {
-  background-image: url( '../../../images/UPPERCASE.png' );
+.class.testing-one {
+  background-image: url( '../../../images/one.png' );
 }
-.class.testing-lowercase {
-  background-image: url( '../../../images/lowercase.png' );
+.class.testing-two {
+  background-image: url( '../../../images/two.png' );
 }
-.class.testing-camelCase {
-  background-image: url( '../../../images/camelCase.png' );
+.class.testing-three {
+  background-image: url( '../../../images/three.png' );
+}
+.class.testing-four {
+  background-image: url( '../../../images/four.png' );
+}
+.class.testing-five {
+  background-image: url( '../../../images/five.png' );
 }
 .UPPERCASE {
-  background-image: url( '../../../images/UPPERCASE.png' );
+  background-image: url( '../images/are/in/here/UPPERCASE.png' );
 }
 .lowercase {
-  background-image: url( '../../../images/lowercase.png' );
+  background-image: url( '../images/are/in/here/lowercase.png' );
 }
 .camelCase {
-  background-image: url( '../../../images/camelCase.png' );
+  background-image: url( '../images/are/in/here/camelCase.png' );
 }
 .UPPERCASE {
   background-image: url( '../img/UPPERCASE.png' );
