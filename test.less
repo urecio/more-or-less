@@ -5,27 +5,28 @@
 #functions {
   .loop () {
     .images (
-      @property: 'background-image',
-      @selector: '',
-      @class-prefix: '',
-      @type: 'a,b,c',
-      @imgType: '.png',
-      @path: '../img/',
-      @prefix: 'url(',
-      @suffix: ')',
+      @property: 'background-image';
+      @selector: '';
+      @class-prefix: '';
+      @array: a,b,c;
+      @imgType: '.png';
+      @path: '../img/';
+      @prefix: 'url(';
+      @suffix: ')';
       @convert: toString()) {
       //find length to make the stop point
-      @stopIndex: unit(`(function(){ return @{type}.split(",").length})()`);
-      //need to get the first item in @type
+      @stopIndex: unit(`(function(){ return @{array}.split(",").length})()`);
+      @stopIndex: length(@array);
+      //need to get the first item in @array
       @firstClass: ~`(function(){
-        var clsArray = @{type}.replace(/\s+/g, '').split(",");
+        var clsArray = @{array}.replace(/\s+/g, '').split(",");
         return clsArray[0];
       })()`;
 
       //set up our LESS loop (recursive)
       .loopTypes (@index, @captureClass) when (@index < @stopIndex) {
         @nextClass: ~`(function(){
-          var clsArray = @{type}.replace(/\s+/g, '').split(",");
+          var clsArray = @{array}.replace(/\s+/g, '').split(",");
           //don't let it try to access past array length
           if(@{index} < (@{stopIndex} - 1)) {
             return clsArray[@{index} + 1];
@@ -77,12 +78,12 @@
 
     // loop through numbers
     .numbers (
-      @index: 5,
-      @property: 'top',
-      @selector: '',
-      @prefix: '',
-      @suffix: 'px',
-      @separator: '_',
+      @index: 5;
+      @property: 'top';
+      @selector: '';
+      @prefix: '';
+      @suffix: 'px';
+      @separator: '_';
       @multiplier: 1
       ) when (@index > 0) {
 
@@ -144,43 +145,76 @@
 
 //testing numbers
 .class {
-  #functions > .loop > .numbers(@index: 2, @separator: '-', @suffix: '%', @multiplier: 0.5);
+  #functions > .loop > .numbers(
+    @index: 2;
+    @separator: '-';
+    @suffix: '%';
+    @multiplier: 0.5);
 }
 
 .class {
-  #functions > .loop > .numbers(@separator: '-', @suffix: '%', @multiplier: -20, @selector: ' > div');
+  #functions > .loop > .numbers(
+    @separator: '-';
+    @suffix: '%';
+    @multiplier: -20;
+    @selector: ' > div');
 }
 
 .class {
-  #functions > .loop > .numbers(@separator: '-', @prefix: 'calc(100% - ', @suffix: 'px)', @multiplier: 100);
+  #functions > .loop > .numbers(
+    @separator: '-';
+    @prefix: 'calc(100% - ';
+    @suffix: 'px)';
+    @multiplier: 100);
 }
 
 // testing images from arrays
-@ARRAY: 'UPPERCASE, lowercase, camelCase';
+@LIST: 'UPPERCASE, lowercase, camelCase';
 @PATH: '../images/are/in/here/';
 
 .class {
-  #functions > .loop > .images(@type: @ARRAY, @path: '../../../images/');
+  #functions > .loop > .images(
+    @array: @LIST;
+    @path: '../../../images/');
 }
 
 .class {
-  #functions > .loop > .images(@selector: ':before', @type: @ARRAY, @imgType: '.jpg');
+  #functions > .loop > .images(
+    @selector: ':before';
+    @array: @LIST;
+    @imgType: '.jpg');
 }
 
 .class {
-  #functions > .loop > .images(@property: 'background', @selector: ' .child', @type: @ARRAY, @prefix: 'transparent url(', @suffix: ') center center no-repeat');
+  #functions > .loop > .images(
+    @property: 'background';
+    @selector: ' .child';
+    @array: @LIST;
+    @prefix: 'transparent url(';
+    @suffix: ') center center no-repeat');
 }
 
 .class {
-  #functions > .loop > .images(@selector: ' .child > span', @type: @ARRAY, @convert: toLowerCase());
+  #functions > .loop > .images(
+    @selector: ' .child > span'; @array:
+    @LIST; @convert: toLowerCase());
 }
 
 .class {
-  #functions > .loop > .images(@type: 'one, two, three, four, five', @path: '../../../images/', @class-prefix: 'testing-');
+  #functions > .loop > .images(
+    @array: 'one, two, three, four, five';
+    @path: '../../../images/';
+    @class-prefix: 'testing-');
 }
 
-#functions > .loop > .images(@type: @ARRAY, @path: @PATH);
+#functions > .loop > .images(
+  @array: @LIST;
+  @path: @PATH);
 
-#functions > .loop > .images(@type: @ARRAY, @convert: toUpperCase());
+#functions > .loop > .images(
+  @array: @LIST;
+  @convert: toUpperCase());
 
-#functions > .loop > .images(@type: 'replace-me, no-replace', @convert: replace('replace-me','replaced-you'));
+#functions > .loop > .images(
+  @array: 'replace-me, no-replace';
+  @convert: replace('replace-me','replaced-you'));
