@@ -8,7 +8,7 @@
       @property: 'background-image';
       @selector: '';
       @class-prefix: '';
-      @array: a,b,c;
+      @array: 'a,b,c';
       @imgType: '.png';
       @path: '../img/';
       @prefix: 'url(';
@@ -16,7 +16,7 @@
       @convert: toString()) {
       //find length to make the stop point
       @stopIndex: unit(`(function(){ return @{array}.split(",").length})()`);
-      @stopIndex: length(@array);
+      //@stopIndex: length(@array);
       //need to get the first item in @array
       @firstClass: ~`(function(){
         var clsArray = @{array}.replace(/\s+/g, '').split(",");
@@ -212,7 +212,6 @@
   @path: @PATH);
 
 #functions > .loop > .images(
-  @array: @LIST;
   @convert: toUpperCase());
 
 #functions > .loop > .images(
