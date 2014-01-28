@@ -27,7 +27,6 @@
       .loopTypes (@index, @captureClass) when (@index < @stopIndex) {
         @nextClass: ~`(function(){
           var clsArray = @{array}.replace(/\s+/g, '').split(",");
-          //don't let it try to access past array length
           if(@{index} < (@{stopIndex} - 1)) {
             return clsArray[@{index} + 1];
           }
