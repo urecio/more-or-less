@@ -1,23 +1,8 @@
-.class-2 {
-  top: 1%;
+.replace-me {
+  background-image: url( '../img/replaced-you.png' );
 }
-.class-1 {
-  top: 0.5%;
-}
-.class-5 > div {
-  top: -100%;
-}
-.class-4 > div {
-  top: -80%;
-}
-.class-3 > div {
-  top: -60%;
-}
-.class-2 > div {
-  top: -40%;
-}
-.class-1 > div {
-  top: -20%;
+.no-replace {
+  background-image: url( '../img/no-replace.png' );
 }
 .class-5 {
   top: calc(100% - 500px);
@@ -34,78 +19,12 @@
 .class-1 {
   top: calc(100% - 100px);
 }
-.class.UPPERCASE {
-  background-image: url( '../../../images/UPPERCASE.png' );
-}
-.class.lowercase {
-  background-image: url( '../../../images/lowercase.png' );
-}
-.class.camelCase {
-  background-image: url( '../../../images/camelCase.png' );
-}
-.class.UPPERCASE:before {
-  background-image: url( '../img/UPPERCASE.jpg' );
-}
-.class.lowercase:before {
-  background-image: url( '../img/lowercase.jpg' );
-}
-.class.camelCase:before {
-  background-image: url( '../img/camelCase.jpg' );
-}
-.class.UPPERCASE .child {
-  background: transparent url( '../img/UPPERCASE.png' ) center center no-repeat;
-}
-.class.lowercase .child {
-  background: transparent url( '../img/lowercase.png' ) center center no-repeat;
-}
-.class.camelCase .child {
-  background: transparent url( '../img/camelCase.png' ) center center no-repeat;
-}
-.class.UPPERCASE .child > span {
-  background-image: url( '../img/uppercase.png' );
-}
-.class.lowercase .child > span {
-  background-image: url( '../img/lowercase.png' );
-}
-.class.camelCase .child > span {
-  background-image: url( '../img/camelcase.png' );
-}
-.class.testing-one {
-  background-image: url( '../../../images/one.png' );
-}
-.class.testing-two {
-  background-image: url( '../../../images/two.png' );
-}
-.class.testing-three {
-  background-image: url( '../../../images/three.png' );
-}
-.class.testing-four {
-  background-image: url( '../../../images/four.png' );
-}
-.class.testing-five {
-  background-image: url( '../../../images/five.png' );
-}
-.UPPERCASE {
-  background-image: url( '../images/are/in/here/UPPERCASE.png' );
-}
-.lowercase {
-  background-image: url( '../images/are/in/here/lowercase.png' );
-}
-.camelCase {
-  background-image: url( '../images/are/in/here/camelCase.png' );
-}
 .a {
-  background-image: url( '../img/A.png' );
+  background-position: 101px 0px;
 }
 .b {
-  background-image: url( '../img/B.png' );
+  background-position:  201px 0px;
 }
 .c {
-  background-image: url( '../img/C.png' );
-}
-.replace-me {
-  background-image: url( '../img/replaced-you.png' );
-}
-.no-replace {
-  background-image: url( '../img/no-replace.png' );
+  background-position:  301px 0px;
 }
