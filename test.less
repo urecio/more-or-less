@@ -4,90 +4,95 @@
 // TESTS
 
 //testing numbers
-//.class {
-//  #functions > .loop > .numbers(
-//    @index: 2;
-//    @separator: '-';
-//    @suffix: '%';
-//    @multiplier: 0.5);
-//}
-//
-//.class {
-//  #functions > .loop > .numbers(
-//    @separator: '-';
-//    @suffix: '%';
-//    @multiplier: -20;
-//    @selector: ' > div');
-//}
-//
-//.class {
-//  #functions > .loop > .numbers(
-//    @separator: '-';
-//    @prefix: 'calc(100% - ';
-//    @suffix: 'px)';
-//    @multiplier: 100);
-//}
-//
-//// testing images from class-names
-//@LIST: 'UPPERCASE, lowercase, camelCase';
-//@PATH: '../images/are/in/here/';
-//
-//.class {
-//  #functions > .loop > .images(
-//    @class-name: @LIST;
-//    @path: '../../../images/');
-//}
-//
-//.class {
-//  #functions > .loop > .images(
-//    @selector: ':before';
-//    @class-name: @LIST;
-//    @imgType: '.jpg');
-//}
-//
-//.class {
-//  #functions > .loop > .images(
-//    @property: 'background';
-//    @selector: ' .child';
-//    @class-name: @LIST;
-//    @prefix: 'transparent url(';
-//    @suffix: ') center center no-repeat');
-//}
-//
-//.class {
-//  #functions > .loop > .images(
-//    @selector: ' .child > span'; @class-name:
-//    @LIST; @convert: toLowerCase());
-//}
-//
-//.class {
-//  #functions > .loop > .images(
-//    @class-name: 'one, two, three, four, five';
-//    @path: '../../../images/';
-//    @class-prefix: 'testing-');
-//}
-//
-//#functions > .loop > .images(
-//  @class-name: @LIST;
-//  @path: @PATH);
-//
-//#functions > .loop > .images(
-//  @convert: toUpperCase());
-//
-//#functions > .loop > .images(
-//  @class-name: 'replace-me, no-replace';
-//  @convert: replace('replace-me','replaced-you'));
-//
-
-#functions > .loop > .images(
-  @class-name: 'replace-me, no-replace';
-  @convert: replace('replace-me','replaced-you'));
+.class {
+  #functions > .loop > .numbers(
+    @index: 2;
+    @separator: '-';
+    @suffix: '%';
+    @multiplier: 0.5);
+}
 
 .class {
-#functions > .loop > .numbers(
+  #functions > .loop > .numbers(
+    @separator: '-';
+    @suffix: '%';
+    @multiplier: -20;
+    @selector: ' > div');
+}
+
+.class {
+  #functions > .loop > .numbers(
     @separator: '-';
     @prefix: 'calc(100% - ';
     @suffix: 'px)';
     @multiplier: 100);
 }
-#functions > .loop > .sprites;
+
+//// testing images from class-names
+@LIST: 'UPPERCASE, lowercase, camelCase';
+@PATH: '../images/are/in/here/';
+
+.class {
+  #functions > .loop > .images(
+    @class-name: @LIST;
+    @path: '../../../images/');
+}
+
+.class {
+  #functions > .loop > .images(
+    @selector: ':before';
+    @class-name: @LIST;
+    @imgType: '.jpg');
+}
+
+.class {
+  #functions > .loop > .images(
+    @property: 'background';
+    @selector: ' .child';
+    @class-name: @LIST;
+    @prefix: 'transparent url(';
+    @suffix: ') center center no-repeat');
+}
+
+.class {
+  #functions > .loop > .images(
+    @selector: ' .child > span'; @class-name:
+    @LIST; @convert: toLowerCase());
+}
+
+.class {
+  #functions > .loop > .images(
+    @class-name: 'one, two, three, four, five';
+    @path: '../../../images/';
+    @class-prefix: 'testing-');
+}
+
+#functions > .loop > .images(
+  @class-name: @LIST;
+  @path: @PATH);
+
+#functions > .loop > .images(
+  @convert: toUpperCase());
+
+#functions > .loop > .images(
+  @class-name: 'replace-me, no-replace';
+  @convert: replace('replace-me','replaced-you'));
+
+
+
+#functions > .loop > .sprites(@class-name: 'lalala,lollololo,luluululu';
+      @position: '-41px 0px, 2701px 30px, 301px 0px');
+
+
+
+#function > .map;
+#function > .map(@property: content;
+                 @class-prefix: 'trollface-';
+                 @selector: ':before';
+                 @JSON: '[{"class": "1","value": "trollo"},{"class": "2","value": "trollolo"},{"class": "3","value": "trollololo"}]';);
+
+@foo: '{"class": "foo","value": "red"}';
+@bar: '{"class": "bar","value": "green"}';
+@baz: '{"class": "baz","value": "blue"}';
+#function > .map(@property: color;
+                 @JSON: '[@{foo},@{bar},@{baz}]';);

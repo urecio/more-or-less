@@ -198,3 +198,42 @@
 }
 
 
+#function {
+  .map (@property: background-position;
+        @selector: '';
+        @class-prefix: '';
+        @JSON: '[{"class": "class-1","value": "100px 50px"},{"class": "class-2","value": "200px 150px"},{"class": "class-3","value": "300px 250px"}]';) {
+    @length: ~`(function(){
+      var validJSON = JSON.parse(@{JSON});
+      return validJSON.length
+      })()`;
+    @cleanClassPrefix: ~`(function(){
+      var clean = @{class-prefix}.replace(/\'/g, '');
+      return clean
+    })()`;
+    @cleanSelector: ~`(function(){
+      var clean = @{selector}.replace(/\'/g, '');
+      return clean
+    })()`;
+    .loopJSON (@index) when (@index < @length) {
+      @class: ~`(function(){
+        var validJSON = JSON.parse(@{JSON});
+        return validJSON[@{index}].class
+        })()`;
+      @value: ~`(function(){
+        var validJSON = JSON.parse(@{JSON});
+        return validJSON[@{index}].value
+        })()`;
+
+      .@{cleanClassPrefix}@{class}@{cleanSelector} {
+        @{property}: @value;
+
+      }
+      .loopJSON(@index + 1);
+    }
+    .loopJSON (@length) {}
+    .loopJSON (0);
+  }
+}
+
+
