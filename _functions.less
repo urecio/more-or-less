@@ -2,237 +2,56 @@
 // this works in less 1.6.x
 // earlier verions do not support some of the functionality
 
-#functions {
-  .loop () {
-    .images (
-      @property: 'background-image';
-      @selector: '';
-      @class-prefix: '';
-      @class-name: 'a,b,c';
-      @imgType: '.png';
-      @path: '../img/';
-      @prefix: 'url(';
-      @suffix: ')';
-      @convert: toString()) {
-      //find length to make the stop point
-      @stopIndex: unit(`(function(){ return @{class-name}.split(",").length})()`);
-      //@stopIndex: length(@class-name);
-      //need to get the first item in @class-name
-      @firstClass: ~`(function(){
-        var clsArray = @{class-name}.replace(/\s+/g, '').split(",");
-        return clsArray[0];
-      })()`;
 
-      //set up our LESS loop (recursive)
-      .loopTypes (@index, @captureClass) when (@index < @stopIndex) {
-        @nextClass: ~`(function(){
-          var clsArray = @{class-name}.replace(/\s+/g, '').split(",");
-          //don't let it try to access past class-name length
-          if(@{index} < (@{stopIndex} - 1)) {
-            return clsArray[@{index} + 1];
-          }
-          else { return '' }
-        })()`;
-        @cleanSelector: ~`(function(){
-          var clean = @{selector}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @cleanPrefix: ~`(function(){
-          var clean = @{prefix}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @cleanSuffix: ~`(function(){
-          var clean = @{suffix}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @converted: ~`(function(){
-          var str = "@{captureClass}";
-          var clean = str.@{convert};
-          return clean
-        })()`;
-        @cleanProperty: ~`(function(){
-          var clean = @{property}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @cleanClassPrefix: ~`(function(){
-          var clean = @{class-prefix}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @out:  @cleanPrefix'@{path}@{converted}@{imgType}'@cleanSuffix;
+#function {
+  .map (@property;
+        @prefix;
+        @suffix;
+        @list...) {
 
-        //print the CSS
-        &.@{cleanClassPrefix}@{captureClass}@{cleanSelector} {
-          @{cleanProperty}: @out;
-          //@cleanProperty: @out;
-        }
-        // next iteration
-        .loopTypes(@index + 1, @nextClass);
+    @length: length(@list);
+    @ePrefix: e(@prefix);
+    @eSuffix: e(@suffix);
+
+    .for (@eq) when (@eq <= @length) {
+      @listPart: extract(@list, @eq);
+      @selector: extract(@listPart, 1);
+      @value: extract(@listPart, 2);
+
+      @{ePrefix}@{selector}@{eSuffix} {
+        @{property}: @value;
       }
 
-      // define guard expressoin to end the loop when past length
-      .loopTypes (@stopIndex, @captureClass) {}
-
-      // "call" the loopingClass the first time getting first item
-      .loopTypes (0, @firstClass);
+      .for (@eq + 1);
     }
-    .sprites (
-      @selector: '';
-      @class-prefix: '';
-      @class-name: 'a,b,c';
-      @position: '101px 0px, 201px 0px, 301px 0px') {
-      //find length to make the stop point
-      @stopIndex: unit(`(function(){ return @{class-name}.split(",").length})()`);
-      //@stopIndex: length(@class-name);
-      //need to get the first item in @class-name
-      @firstClass: ~`(function(){
-        var clsArray = @{class-name}.replace(/\s+/g, '').split(",");
-        return clsArray[0];
-      })()`;
-      @firstPosition: ~`(function(){
-        var clsArray = @{position}.split(",");
-        return clsArray[0];
-      })()`;
-
-      //set up our LESS loop (recursive)
-      .loopTypes (@index, @captureClass, @capturePosition) when (@index < @stopIndex) {
-        @nextClass: ~`(function(){
-          var clsArray = @{class-name}.replace(/\s+/g, '').split(",");
-          //don't let it try to access past class-name length
-          if(@{index} < (@{stopIndex} - 1)) {
-            return clsArray[@{index} + 1];
-          }
-          else { return '' }
-        })()`;
-        @nextPosition: ~`(function(){
-          var clsArray = @{position}.split(",");
-          //don't let it try to access past class-name length
-          if(@{index} < (@{stopIndex} - 1)) {
-            return clsArray[@{index} + 1];
-          }
-          else { return '' }
-        })()`;
-        @cleanSelector: ~`(function(){
-          var clean = @{selector}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @cleanClassPrefix: ~`(function(){
-          var clean = @{class-prefix}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @out: @capturePosition;
-
-        //print the CSS
-        &.@{cleanClassPrefix}@{captureClass}@{cleanSelector} {
-          background-position: @out;
-          //@cleanProperty: @out;
-        }
-        // next iteration
-        .loopTypes(@index + 1, @nextClass, @nextPosition);
-      }
-
-      // define guard expressoin to end the loop when past length
-      .loopTypes (@stopIndex, @captureClass, @capturePosition) {}
-
-      // "call" the loopingClass the first time getting first item
-      .loopTypes (0, @firstClass, @firstPosition);
-    }
-
-    // loop through numbers
-    .numbers (
-      @index: 5;
-      @property: 'top';
-      @selector: '';
-      @prefix: '';
-      @suffix: 'px';
-      @separator: '_';
-      @multiplier: 1
-      ) when (@index > 0) {
-
-        @cleanPrefix: ~`(function(){
-          var clean = @{prefix}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @cleanSuffix: ~`(function(){
-          var clean = @{suffix}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @cleanSelector: ~`(function(){
-          var clean = @{selector}.replace(/\'/g, '');
-          return clean
-        })()`;
-        @cleanProperty: ~`(function(){
-          var clean = @{property}.replace(/\'/g, '');
-          return clean
-          })()`;
-        @cleanSeparator: ~`(function(){
-          var clean = @{separator}.replace(/\'/g, '');
-          return clean
-          })()`;
-        @cleanIndex: ~`(function(){
-          var clean = @{index} * @{multiplier};
-          return clean
-          })()`;
-        @out:  '@{cleanPrefix}@{cleanIndex}@{cleanSuffix}';
-        @cleanOut: ~`(function(){
-          var clean = @{out}.replace(/\'/g, '');
-          return clean
-          })()`;
-        //print the CSS
-        &@{cleanSeparator}@{index}@{cleanSelector} {
-          @{cleanProperty}: @cleanOut;
-          //@cleanProperty: @cleanOut;
-          //top: @cleanOut;
-        }
-
-        // next iteration
-        #functions > .loop > .numbers(
-         @index: (@index - 1),
-         @prefix: @prefix,
-         @suffix: @suffix,
-         @selector: @selector,
-         @property: @property,
-         @separator: @separator,
-         @multiplier: @multiplier);
-     }
+    .for (1);
   }
 }
 
-
 #function {
-  .map (@property: background-position;
-        @selector: '';
-        @class-prefix: '';
-        @JSON: '[{"class": "class-1","value": "100px 50px"},{"class": "class-2","value": "200px 150px"},{"class": "class-3","value": "300px 250px"}]';) {
-    @length: ~`(function(){
-      var validJSON = JSON.parse(@{JSON});
-      return validJSON.length
-      })()`;
-    @cleanClassPrefix: ~`(function(){
-      var clean = @{class-prefix}.replace(/\'/g, '');
-      return clean
-    })()`;
-    @cleanSelector: ~`(function(){
-      var clean = @{selector}.replace(/\'/g, '');
-      return clean
-    })()`;
-    .loopJSON (@index) when (@index < @length) {
-      @class: ~`(function(){
-        var validJSON = JSON.parse(@{JSON});
-        return validJSON[@{index}].class
-        })()`;
-      @value: ~`(function(){
-        var validJSON = JSON.parse(@{JSON});
-        return validJSON[@{index}].value
-        })()`;
+  .loop (@property: background-image;
+         @prefix: '.';
+         @suffix: ' ';
+         @valuePrefix: 'url(..img/';
+         @valueSuffix: '.png)';
+         @list) {
 
-      .@{cleanClassPrefix}@{class}@{cleanSelector} {
+    @length: length(@list);
+    @ePrefix: e(@prefix);
+    @eSuffix: e(@suffix);
+    @eValuePrefix: e(@valuePrefix);
+    @eValueSuffix: e(@valueSuffix);
+
+    .for (@eq) when (@eq <= @length) {
+      @name: extract(@list, @eq);
+      @value: e('@{eValuePrefix}@{name}@{eValueSuffix}');
+      @{ePrefix}@{name}@{eSuffix} {
         @{property}: @value;
-
       }
-      .loopJSON(@index + 1);
+
+      .for (@eq + 1);
     }
-    .loopJSON (@length) {}
-    .loopJSON (0);
+    .for (1);
   }
 }
 
