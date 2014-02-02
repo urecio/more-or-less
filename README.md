@@ -63,7 +63,7 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
     }
 
     .transition-oneline {
-        .transition(transform ~'200ms' linear ~'400ms');
+        .transition(transform 200ms linear 400ms);
     }
 
     .transition-separated {
