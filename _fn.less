@@ -1,0 +1,24 @@
+// basic functions for global usage
+
+
+// for-loop
+// works with two integers or a list
+.for(@i;@n) when     (@i <= @n)     {.-each(@i);}
+.for(@n)    when not (isnumber(@n)) {.for(1;length(@n));}
+.for(@i;@n) when not (@i = @n)      {.for(@i + 1;@n);}
+
+
+// map-loop
+// set prop
+// set map with class and value
+.map (@prop;@list...) {
+    .for(@list);.-each(@i) {
+        @listPart: extract(@list, @i);
+        @class: extract(@listPart, 1);
+        @val: extract(@listPart, 2);
+        &.@{class} {@{prop}: @val;}
+    }
+}
+
+
+

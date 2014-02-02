@@ -1,0 +1,38 @@
+@import '_fn';
+
+
+.sprites-css3 (@img;@width;@height;@step;@list...) {
+    background-color: transparent;
+    background-image: url(@img);
+    .background-size(@width @height);
+    background-repeat: no-repeat;
+    .for(@list);
+     .-each(@i) when (@height = auto) {
+        @pos: -(@step * @i);
+        @class: e(extract(@list, @i));
+        &.@{class}{background-position: 0 ~'@{pos}px';}
+    }
+    .-each(@i) when (@width = auto) {
+        @pos: -(@step * @i);
+        @class: e(extract(@list, @i));
+        &.@{class}{background-position: ~'@{pos}px' 0;}
+    }
+}
+
+.sprites (@img;@width;@height;@step;@list...) {
+    background-color: transparent;
+    background-image: url(@img);
+    background-size: @width @height;
+    background-repeat: no-repeat;
+    .for(@list);
+     .-each(@i) when (@height = auto) {
+        @pos: -(@step * @i);
+        @class: e(extract(@list, @i));
+        &.@{class}{background-position: 0 ~'@{pos}px';}
+    }
+    .-each(@i) when (@width = auto) {
+        @pos: -(@step * @i);
+        @class: e(extract(@list, @i));
+        &.@{class}{background-position: ~'@{pos}px' 0;}
+    }
+}

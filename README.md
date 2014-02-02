@@ -1,51 +1,97 @@
-##LESS CSS FUNCTIONS
+#LESS CSS FUNCTIONS & MIXINS
 
-some functions for less.js
+...add some functions and mixins for lessjs
 
-MORE WILL FOLLOW
+Auto prefixing css-properties should not be used.
 
-###Examples
+It is advised to use libraries like 'autoprefixer'
 
-####INPUT
+Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less file (also used in _images.less for .sprites-css3())
 
-    #function > .loop(background;
-                     '.';
-                     ' ';
-                     'transparent url(../';
-                     '.png) center center no-repeat';
-                     one, two, three;);
+###Usage
 
-    #function > .map(transform;
-                     '.';
-                     ':before';
-                     class-1, translate3d(0,3px,10px);
-                     class-2, translate3d(4px,0,0);
-                     class-3, translate3d(3px,0,4px);
-                     class-4, translate3d(3px,10px,0););
-
-
-
-####OUTPUT
-
-    .class-1:before {
-      transform: translate3d(0, 3px, 10px);
-    }
-    .class-2:before {
-      transform: translate3d(4px, 0, 0);
-    }
-    .class-3:before {
-      transform: translate3d(3px, 0, 4px);
-    }
-    .class-4:before {
-      transform: translate3d(3px, 10px, 0);
+    .border-radius {
+        .border-radius(1px 2px 3px 4px;);
     }
 
-    .one  {
-      background: transparent url(../one.png) center center no-repeat;
+    .box-shadow {
+        .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
     }
-    .two  {
-      background: transparent url(../two.png) center center no-repeat;
+
+    .box-sizing {
+        .box-sizing(border-box);
     }
-    .three  {
-      background: transparent url(../three.png) center center no-repeat;
+
+
+    .sprite-right{
+        .sprites(~'../img/sprite.png';
+                 auto;
+                 90px;
+                 30;
+                 one;
+                 two;
+                 three;);
     }
+
+    .sprite-down{
+        .sprites(~'../img/sprite.png';
+                 90px;
+                 auto;
+                 30;
+                 four;
+                 five;
+                 six;);
+    }
+
+    .calc {
+        .calc(height;
+              ~'100% - 10px');
+        .calc(width;
+              ~'50% - 20px');
+    }
+
+    .opacity {
+        .opacity(0.4);
+    }
+
+    .text-overflow-ellipsis {
+        .text-overflow(ellipsis);
+    }
+
+    .text-overflow-clip {
+        .text-overflow(clip);
+    }
+
+    .transition-oneline {
+        .transition(transform ~'200ms' linear ~'400ms');
+    }
+
+    .transition-separated {
+        .transition-property(all);
+        .transition-duration(200ms);
+        .transition-timing-function(linear);
+        .transition-delay(400ms);
+    }
+
+    .transition-prop-transform {
+        .transition-property(transform;);
+    }
+    .transition-prop-mutli-with-transform {
+        .transition-property(transform, color, height;);
+    }
+
+    .transition-prop-mutli-with-transform-and-boxShadow {
+        .transition-property(transform, color, box-shadow;);
+    }
+
+    .transition-prop {
+        .transition-property(height;);
+    }
+    .transition-multi {
+        .transition-property(height, top, left;);
+    }
+
+    .transforms {
+        .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+    }
+

@@ -1,66 +1,143 @@
-#id-1 > span {
-  background: #000000;
+.border-radius {
+  -webkit-border-radius: 1px 2px 3px 4px;
+  -moz-border-radius: 1px 2px 3px 4px;
+  border-radius: 1px 2px 3px 4px;
 }
-#id-2 > span {
-  background: #111111;
+.box-shadow {
+  -webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 0, 0, 0.3);
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 0, 0, 0.3);
 }
-#id-3 > span {
-  background: #222222;
+.box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-#id-4 > span {
-  background: #333333;
+.sprite-right {
+  background-color: transparent;
+  background-image: url(../img/sprite.png);
+  background-size: auto 90px;
+  background-repeat: no-repeat;
 }
-.class-1:before {
-  transform: translate3d(0, 3px, 10px);
+.sprite-right.one {
+  background-position: -30px 0;
 }
-.class-2:before {
-  transform: translate3d(4px, 0, 0);
+.sprite-right.two {
+  background-position: -60px 0;
 }
-.class-3:before {
-  transform: translate3d(3px, 0, 4px);
+.sprite-right.three {
+  background-position: -90px 0;
 }
-.class-4:before {
-  transform: translate3d(3px, 10px, 0);
+.sprite-down {
+  background-color: transparent;
+  background-image: url(../img/sprite.png);
+  background-size: 90px auto;
+  background-repeat: no-repeat;
 }
- div  {
-  color: #ff0000;
+.sprite-down.four {
+  background-position: 0 -30px;
 }
- span  {
-  color: #008000;
+.sprite-down.five {
+  background-position: 0 -60px;
 }
- strong  {
-  color: #0000ff;
+.sprite-down.six {
+  background-position: 0 -90px;
 }
- em  {
-  color: #ffff00;
+.calc {
+  height: -webkit-calc(100% - 10px);
+  height: -moz-calc(100% - 10px);
+  height: calc(100% - 10px);
+  width: -webkit-calc(50% - 20px);
+  width: -moz-calc(50% - 20px);
+  width: calc(50% - 20px);
 }
-.one  {
-  background: transparent url(../one.png) center center no-repeat;
+.opacity {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: alpha(opacity=40);
+  opacity: 0.4;
 }
-.two  {
-  background: transparent url(../two.png) center center no-repeat;
+.text-overflow-ellipsis {
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: no-wrap;
+  word-wrap: normal;
+  *display: inline;
+  *zoom: 1;
 }
-.three  {
-  background: transparent url(../three.png) center center no-repeat;
+.text-overflow-clip {
+  -ms-text-overflow: clip;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: no-wrap;
+  word-wrap: normal;
+  *display: inline;
+  *zoom: 1;
 }
-.a  {
-  background-image: url(..img/a.png);
+.transition-oneline {
+  -webkit-transition-property: -webkit-transform, 200ms, linear, 400ms;
+  -moz-transition-property: -moz-transform, 200ms, linear, 400ms;
+  -o-transition-property: -o-transform, 200ms, linear, 400ms;
+  -ms-transition-property: -ms-transform, 200ms, linear, 400ms;
 }
-.b  {
-  background-image: url(..img/b.png);
+.transition-separated {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  -webkit-transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 400ms;
+  -moz-transition-delay: 400ms;
+  -o-transition-delay: 400ms;
+  transition-delay: 400ms;
 }
-.c  {
-  background-image: url(..img/c.png);
+.transition-prop-transform {
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
 }
-.class-1  {
-  top: -1px;
+.transition-prop-mutli-with-transform {
+  -webkit-transition-property: -webkit-transform, color, height;
+  -moz-transition-property: -moz-transform, color, height;
+  -o-transition-property: -o-transform, color, height;
+  -ms-transition-property: -ms-transform, color, height;
 }
-.class-2  {
-  top: -2px;
+.transition-prop-mutli-with-transform-and-boxShadow {
+  -webkit-transition-property: -webkit-transform, color, -webkit-box-shadow;
+  -moz-transition-property: -moz-transform, color, -moz-box-shadow;
+  -o-transition-property: -o-transform, color, -o-box-shadow;
+  -ms-transition-property: -ms-transform, color, -ms-box-shadow;
 }
-.class-3  {
-  top: -3px;
+.transition-prop {
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  -ms-transition-property: height;
 }
-.class-4  {
-  top: -4px;
+.transition-multi {
+  -webkit-transition-property: height, top, left;
+  -moz-transition-property: height, top, left;
+  -o-transition-property: height, top, left;
+  -ms-transition-property: height, top, left;
 }
+.transforms {
+  -webkit-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
+  -moz-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
+  -o-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
+  transform: translate(2px, 3px) rotate(3deg) scale(0.4);
+}
+/*# sourceMappingURL=source.map */

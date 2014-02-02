@@ -1,6 +1,4 @@
-// hacky ways to create loops in less
-// this works in less 1.6.x
-// earlier verions do not support some of the functionality
+// deprecated
 
 
 #function {
@@ -44,8 +42,9 @@
 
     .for (@eq) when (@eq <= @length) {
       @name: extract(@list, @eq);
+      @eName: e(@name);
       @value: e('@{eValuePrefix}@{name}@{eValueSuffix}');
-      @{ePrefix}@{name}@{eSuffix} {
+      @{ePrefix}@{eName}@{eSuffix} {
         @{property}: @value;
       }
 
