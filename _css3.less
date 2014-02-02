@@ -13,11 +13,11 @@
 .frames(@i;@n) when not (@i = @n)      {.frames(@i + 1;@n);}
 
 // MIXIN: .map-frames (map for keyframes)
-.map-frames (@propy-list...) {
-    .for(@propy-list);.-each(@i) {
-        @propy: extract(@propy-list, @i);
-        @propa: extract(@propy, 1);
-        @{propa}: extract(@propy, 2);
+.map-frames (@array-list...) {
+    .for(@array-list);.-each(@i) {
+        @array: extract(@array-list, @i);
+        @prop: extract(@array, 1);
+        @{prop}: extract(@array, 2);
     }
 }
 
