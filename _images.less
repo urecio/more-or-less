@@ -6,15 +6,17 @@
     background-image: url(@img);
     .background-size(@width @height);
     background-repeat: no-repeat;
+    .-i(@in;@st) {
+        @pos: (-(@st * @in) + @st);
+        @class: e(extract(@list, @in));
+    }
     .for(@list);
-     .-each(@i) when (@height = auto) {
-        @pos: -(@step * @i);
-        @class: e(extract(@list, @i));
+    .-each(@i) when (@height = auto) {
+        .-i(@i;@step);
         &.@{class}{background-position: 0 ~'@{pos}px';}
     }
     .-each(@i) when (@width = auto) {
-        @pos: -(@step * @i);
-        @class: e(extract(@list, @i));
+        .-i(@i;@step);
         &.@{class}{background-position: ~'@{pos}px' 0;}
     }
 }
@@ -24,15 +26,17 @@
     background-image: url(@img);
     background-size: @width @height;
     background-repeat: no-repeat;
+    .-i(@in;@st) {
+        @pos: (-(@st * @in) + @st);
+        @class: e(extract(@list, @in));
+    }
     .for(@list);
-     .-each(@i) when (@height = auto) {
-        @pos: -(@step * @i);
-        @class: e(extract(@list, @i));
+    .-each(@i) when (@height = auto) {
+        .-i(@i;@step);
         &.@{class}{background-position: 0 ~'@{pos}px';}
     }
     .-each(@i) when (@width = auto) {
-        @pos: -(@step * @i);
-        @class: e(extract(@list, @i));
+        .-i(@i;@step);
         &.@{class}{background-position: ~'@{pos}px' 0;}
     }
 }

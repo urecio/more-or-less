@@ -33,13 +33,13 @@
   background-repeat: no-repeat;
 }
 .sprite-right.one {
-  background-position: -30px 0;
+  background-position: 0px 0;
 }
 .sprite-right.two {
-  background-position: -60px 0;
+  background-position: -30px 0;
 }
 .sprite-right.three {
-  background-position: -90px 0;
+  background-position: -60px 0;
 }
 .sprite-down {
   background-color: transparent;
@@ -48,13 +48,13 @@
   background-repeat: no-repeat;
 }
 .sprite-down.four {
-  background-position: 0 -30px;
+  background-position: 0 0px;
 }
 .sprite-down.five {
-  background-position: 0 -60px;
+  background-position: 0 -30px;
 }
 .sprite-down.six {
-  background-position: 0 -90px;
+  background-position: 0 -60px;
 }
 .calc {
   height: -webkit-calc(100% - 10px);
