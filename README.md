@@ -50,9 +50,9 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
 
     .calc {
         .calc(height;
-              ~'100% - 10px');
+              '100% - 10px');
         .calc(width;
-              ~'50% - 20px');
+              '50% - 20px');
     }
 
     .opacity {
