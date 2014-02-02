@@ -94,16 +94,10 @@
   *zoom: 1;
 }
 .transition-oneline {
-  -webkit-transition-property: -webkit-transform, 200ms, linear, 400ms;
-  -moz-transition-property: -moz-transform, 200ms, linear, 400ms;
-  -o-transition-property: -o-transform, 200ms, linear, 400ms;
-  -ms-transition-property: -ms-transform, 200ms, linear, 400ms;
+  transition-property: transform, 200ms, linear, 400ms, transform, 200ms, linear, 400ms, transform, 200ms, linear, 400ms, transform, 200ms, linear, 400ms;
 }
 .transition-separated {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -ms-transition-property: all;
+  transition-property: all, all, all, all;
   -webkit-transition-duration: 200ms;
   -moz-transition-duration: 200ms;
   -o-transition-duration: 200ms;
@@ -121,34 +115,19 @@
   transition-delay: 400ms;
 }
 .transition-prop-transform {
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  -ms-transition-property: -ms-transform;
+  transition-property: transform, transform, transform, transform;
 }
 .transition-prop-mutli-with-transform {
-  -webkit-transition-property: -webkit-transform, color, height;
-  -moz-transition-property: -moz-transform, color, height;
-  -o-transition-property: -o-transform, color, height;
-  -ms-transition-property: -ms-transform, color, height;
+  transition-property: transform, color, height, transform, color, height, transform, color, height, transform, color, height;
 }
 .transition-prop-mutli-with-transform-and-boxShadow {
-  -webkit-transition-property: -webkit-transform, color, -webkit-box-shadow;
-  -moz-transition-property: -moz-transform, color, -moz-box-shadow;
-  -o-transition-property: -o-transform, color, -o-box-shadow;
-  -ms-transition-property: -ms-transform, color, -ms-box-shadow;
+  transition-property: transform, color, box-shadow, transform, color, box-shadow, transform, color, box-shadow, transform, color, box-shadow;
 }
 .transition-prop {
-  -webkit-transition-property: height;
-  -moz-transition-property: height;
-  -o-transition-property: height;
-  -ms-transition-property: height;
+  transition-property: height, height, height, height;
 }
 .transition-multi {
-  -webkit-transition-property: height, top, left;
-  -moz-transition-property: height, top, left;
-  -o-transition-property: height, top, left;
-  -ms-transition-property: height, top, left;
+  transition-property: height, top, left, height, top, left, height, top, left, height, top, left;
 }
 .transforms {
   -webkit-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
@@ -168,5 +147,93 @@ input:-moz-placeholder {
 }
 input::-ms-placeholder {
   color: #aaaaaa;
+}
+@-webkit-keyframes animation1 { 
+from  {
+  top: 0;
+  height: 200px;
+}
+to {
+  top: 200px;
+  height: 0px;
+}
+@-moz-keyframes animation1 { 
+from  {
+  top: 0;
+  height: 200px;
+}
+to {
+  top: 200px;
+  height: 0px;
+}
+@-o-keyframes animation1 { 
+from  {
+  top: 0;
+  height: 200px;
+}
+to {
+  top: 200px;
+  height: 0px;
+}
+@keyframes animation1 { 
+from  {
+  top: 0;
+  height: 200px;
+}
+to {
+  top: 200px;
+  height: 0px;
+}
+} 
+.animation1 {
+  -webkit-animation-name: animation1;
+  -moz-animation-name: animation1;
+  -o-animation-name: animation1;
+  -ms-animation-name: animation1;
+  animation-name: animation1;
+}
+@-webkit-keyframes animation2 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+@-moz-keyframes animation2 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+@-o-keyframes animation2 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+@keyframes animation2 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+} 
+.animation2 {
+  -webkit-animation-name: animation2;
+  -moz-animation-name: animation2;
+  -o-animation-name: animation2;
+  -ms-animation-name: animation2;
+  animation-name: animation2;
 }
 /*# sourceMappingURL=source.map */
