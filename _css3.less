@@ -23,41 +23,36 @@
     .-call(@value);
 }
 
+.-return(@prop) {
+    .for(@vendorPrefixes);.-each(@i) {
+        @vendorPrefix: extract(@vendorPrefixes, @i);
+        @{vendorPrefix}@{prop}: @values;
+    }
+}
 
 .background-size(@values...) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=background-size
-    .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}background-size: @values;
-    }
+    .-return(background-size);
 }
 
 .border-radius(@values) {
     @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=border-radius
-    .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}border-radius: @values;
-    }
+    .-return(border-radius);
 }
 
-.box-sizing(@value) {
+.box-sizing(@values) {
     @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=box-sizing
-    .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}box-sizing: @value;
-    }
+    .-return(box-sizing);
 }
 
 .box-shadow(@values...) {
     @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=box-sizing
-    .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}box-shadow: @values;
-    }
+    .-return(box-shadow);
+
 }
 
 .calc(@prop; @value) {
@@ -99,20 +94,16 @@
 .transform(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transform
-    .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}transform: @values;
-    }
+    .-return(transform);
+
 }
 
 
 .backface-visibility(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transform
-    .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}backface-visibility: @values;
-    }
+    .-return(backface-visibility);
+
 }
 
 .transition(@values) {
@@ -142,28 +133,22 @@
 .transition-duration(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
-    .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}transition-duration: @values;
-    }
+    .-return(transition-duration);
+
 }
 
 .transition-delay(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
-    .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}transition-delay: @values;
-    }
+    .-return(transition-delay);
+
 }
 
 .transition-timing-function(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
-    .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}transition-timing-function: @values;
-    }
+    .-return(transition-timing-function);
+
 }
 
 

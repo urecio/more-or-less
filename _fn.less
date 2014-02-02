@@ -11,12 +11,11 @@
 // map-loop
 // set prop
 // set map with class and value
-.map (@prop;@list...) {
-    .for(@list);.-each(@i) {
-        @listPart: extract(@list, @i);
-        @class: extract(@listPart, 1);
-        @val: extract(@listPart, 2);
-        &.@{class} {@{prop}: @val;}
+.map (@prop;@array-list...) {
+    .for(@array-list);.-each(@i) {
+        @array: extract(@array-list, @i);
+        @class: extract(@array, 1);
+        &.@{class} {@{prop}: extract(@array, 2);}
     }
 }
 
