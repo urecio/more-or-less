@@ -2,11 +2,11 @@
 
 @vendorPrefixes: -webkit-, -moz-, -o-, -ms-, ~'';
 
-// prop-loop
-// loop through values for vendor-prefixing
+// MIXIN: .prop (loop through values for vendor-prefixing)
 .prop(@p;@s;@in;@n) when     (@in <= @n)    {.-vendor(@p;false;@in);}
 .prop(@p;@s;@n)     when not (isnumber(@n)) {.prop(@p;false;1;length(@n));}
 .prop(@p;@s;@in;@n) when not (@in = @n)     {.prop(@p;false;@in + 1;@n);}
+
 
 // MIXIN: .-vendor (prefixes properties)
 .-vendor(@prop;@sep;@in) {
@@ -180,6 +180,77 @@
     .-return(transition-timing-function);
 }
 
+// MIXIN: .animation
+.animation(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation);
+}
+
+// MIXIN: .animation-delay
+.animation-delay(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-delay);
+}
+
+// MIXIN: .animation-duration
+.animation-duration(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-duration);
+}
+
+// MIXIN: .animation-direction
+.animation-direction(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-direction);
+}
+
+// MIXIN: .animation-duration
+.animation-duration(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-duration);
+}
+
+// MIXIN: .animation-fill-mode
+.animation-fill-mode(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-fill-mode);
+}
+
+// MIXIN: .animation-iteration-count
+.animation-iteration-count(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-iteration-count);
+}
+
+// MIXIN: .animation-name
+.animation-name(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-name);
+}
+
+// MIXIN: .animation-play-state
+.animation-play-state(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-play-state);
+}
+
+// MIXIN: .animation-timing-function
+.animation-timing-function(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-timing-function);
+}
+
+
 // MIXIN: .user-select
 .user-select(@values) {
     @vendorPrefixes: -webkit-, -moz-, -ms-, ~'';
@@ -201,7 +272,7 @@
     .for(@vendorPrefixes);.-each(@i) {
         @vendorPrefix: extract(@vendorPrefixes, @i);
         @selector: ~':@{vendorPrefix}placeholder';
-         &@{selector} {
+        &@{selector} {
             color: @values;
         }
     }
