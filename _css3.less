@@ -8,9 +8,9 @@
 .prop(@p;@s;@in;@n) when not (@in = @n)     {.prop(@p;false;@in + 1;@n);}
 
 // MIXIN: .-frames (loop throug frames for kayframe-animations)
-.frames(@inf;@nf) when     (@inf <= @nf)     {.-frame(@inf);}
-.frames(@nf)    when not (isnumber(@nf)) {.frames(1;length(@nf));}
-.frames(@inf;@nf) when not (@inf = @nf)      {.frames(@inf + 1;@nf);}
+.frames(@i;@n) when     (@i < @n)     {.-frame(@i);}
+.frames(@n)    when not (isnumber(@n)) {.frames(1;length(@n));}
+.frames(@i;@n) when not (@i = @n)      {.frames(@i + 1;@n);}
 
 // MIXIN: .map-frames (map for keyframes)
 .map-frames (@propy-list...) {
@@ -266,7 +266,7 @@
 // MIXIN: .keyframes
 
 .keyframes(@name;@mapFrom;@mapTo) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @localVendorPrefixes: -webkit-, -moz-, -o-, ~'';
     //http://caniuse.com/#search=animation
     .-from (@map...) {
         .map-frames(@map);
@@ -274,9 +274,19 @@
     .-to (@map...) {
         .map-frames(@map);
     }
-    .frames(@vendorPrefixes);.-frame(@inf) {
-        @vendorPrefix: extract(@vendorPrefixes, @inf);
-        @k: ~'@@{vendorPrefix}keyframes @{name} { `"\n"`from ';
+    .frames(@vendorPrefixes);.-frame(@i) when (@i = 1) {
+        @localVendorPrefix: extract(@localVendorPrefixes, @i);
+        @k: ~'@@{localVendorPrefix}keyframes @{name} { `"\n"`from ';
+        @{k} {
+            .-from(@mapFrom);
+        }
+        to {
+            .-to(@mapTo);
+        }
+    }
+    .frames(@vendorPrefixes);.-frame(@i) when (@i > 1) {
+        @localVendorPrefix: extract(@localVendorPrefixes, @i);
+        @k: ~'} `"\n"` @@{localVendorPrefix}keyframes @{name} { `"\n"`from ';
         @{k} {
             .-from(@mapFrom);
         }
