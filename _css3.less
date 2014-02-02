@@ -98,11 +98,37 @@
     *zoom: 1;
 }
 
+// MIXIN: .perspective
+.perspective(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=transform
+    .-return(perspective);
+}
+// MIXIN: .transform-origin
+.perspective-origin(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=transform
+    .-return(perspective-origin);
+}
 // MIXIN: .transform
 .transform(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transform
     .-return(transform);
+}
+
+// MIXIN: .transform-origin
+.transform-origin(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=transform
+    .-return(transform-origin);
+}
+
+// MIXIN: .transform-style
+.transform-style(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=transform
+    .-return(transform-style);
 }
 
 // MIXIN: .backface-visibility
@@ -154,3 +180,29 @@
     .-return(transition-timing-function);
 }
 
+// MIXIN: .user-select
+.user-select(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -ms-, ~'';
+    // http://caniuse.com/#search=user-select
+    .-return(user-select);
+}
+
+// MIXIN: .appearance
+.appearance(@values) {
+    @vendorPrefixes: -webkit-, -moz- ~'';
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance
+    .-return(appearance);
+}
+
+// MIXIN: .placeholder
+.placeholder(@values) {
+    @vendorPrefixes: ~':-webkit-', ~':-moz-', ~'-moz-', ~':-ms-';
+    // http://caniuse.com/#search=placeholder
+    .for(@vendorPrefixes);.-each(@i) {
+        @vendorPrefix: extract(@vendorPrefixes, @i);
+        @selector: ~':@{vendorPrefix}placeholder';
+         &@{selector} {
+            color: @values;
+        }
+    }
+}

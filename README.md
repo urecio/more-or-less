@@ -1,6 +1,17 @@
 #LESS CSS FUNCTIONS & MIXINS
 
-...add some functions and mixins for lessjs
+##What does this do?
+
+It adds some functions and mixins for lessjs
+
+It is almost as strong as lesshat but does not use ANY inline-javaScript
+
+##What does it NOT do?
+
+It does not render SVGs from gradients
+(gradients are currently not supported but will follow)
+
+##Notice
 
 Auto prefixing css-properties should not be used.
 
@@ -8,7 +19,7 @@ It is advised to use libraries like 'autoprefixer'
 
 Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less file (also used in _images.less for .sprites-css3())
 
-###Usage
+###Example Usage
 
 
     .border-radius {
@@ -36,16 +47,6 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
                  one;
                  two;
                  three;);
-    }
-
-    .sprite-down{
-        .sprites('../img/sprite.png';
-                 90px;
-                 auto;
-                 30;
-                 four;
-                 five;
-                 six;);
     }
 
     .calc {
@@ -78,22 +79,9 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
         .transition-delay(400ms);
     }
 
-    .transition-prop-transform {
-        .transition-property(transform;);
-    }
-    .transition-prop-mutli-with-transform {
-        .transition-property(transform, color, height;);
-    }
 
-    .transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property-multi {
         .transition-property(transform, color, box-shadow;);
-    }
-
-    .transition-prop {
-        .transition-property(height;);
-    }
-    .transition-multi {
-        .transition-property(height, top, left;);
     }
 
     .transforms {

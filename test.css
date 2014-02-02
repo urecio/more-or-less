@@ -157,4 +157,16 @@
   -ms-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   transform: translate(2px, 3px) rotate(3deg) scale(0.4);
 }
+input::-webkit-placeholder {
+  color: #aaaaaa;
+}
+input::-moz-placeholder {
+  color: #aaaaaa;
+}
+input:-moz-placeholder {
+  color: #aaaaaa;
+}
+input::-ms-placeholder {
+  color: #aaaaaa;
+}
 /*# sourceMappingURL=source.map */
