@@ -4,15 +4,19 @@
 
 // prop-loop
 // loop through values for vendor-prefixing
-.prop(@p;@in;@n) when     (@in <= @n)    {.-vendor(@p;@in);}
-.prop(@p;@n)     when not (isnumber(@n)) {.prop(@p;1;length(@n));}
-.prop(@p;@in;@n) when not (@in = @n)     {.prop(@p;@in + 1;@n);}
+.prop(@p;@s;@in;@n) when     (@in <= @n)    {.-vendor(@p;false;@in);}
+.prop(@p;@s;@n)     when not (isnumber(@n)) {.prop(@p;false;1;length(@n));}
+.prop(@p;@s;@in;@n) when not (@in = @n)     {.prop(@p;false;@in + 1;@n);}
 
 // prefix properties
-.-vendor(@prop;@in) {
+.-vendor(@prop;@sep;@in) {
+    // space separation is awaiting pull request
+    // property+_: is currently not supported
     @value: extract(@values, @in);
-    .-true() {@{vendorPrefix}@{prop}+: ~'@{vendorPrefix}@{value}';}
-    .-false() {@{vendorPrefix}@{prop}+: @value;}
+    .-true() when (@sep = false) {@{vendorPrefix}@{prop}+: ~'@{vendorPrefix}@{value}';}
+    //.-true() when (@sep = _) {@{vendorPrefix}@{prop}+_: ~'@{vendorPrefix}@{value}';}
+    .-false() when (@sep = false) {@{vendorPrefix}@{prop}+: @value;}
+    //.-false() when (@sep = _) {@{vendorPrefix}@{prop}+_: @value;}
     .-call(transform) {.-true;}
     .-call(box-shadow){.-true;}
     .-call(...) when (default()){.-false;}
@@ -116,7 +120,7 @@
     // http://caniuse.com/#search=transition
     .for(@vendorPrefixes);.-each(@i) {
         @vendorPrefix: extract(@vendorPrefixes, @i);
-        .prop(transition-property;@values);
+        .prop(transition-property;false;@values);
     }
 }
 
@@ -129,7 +133,7 @@
     // http://caniuse.com/#search=transform
     .for(@vendorPrefixes);.-each(@i) {
         @vendorPrefix: extract(@vendorPrefixes, @i);
-        .prop(transition-property;@values);
+        .prop(transition-property;false;@values);
 
     }
 }
