@@ -8,7 +8,7 @@
 .prop(@p;@s;@n)     when not (isnumber(@n)) {.prop(@p;false;1;length(@n));}
 .prop(@p;@s;@in;@n) when not (@in = @n)     {.prop(@p;false;@in + 1;@n);}
 
-// prefix properties
+// MIXIN: .-vendor (prefixes properties)
 .-vendor(@prop;@sep;@in) {
     // space separation is awaiting pull request
     // property+_: is currently not supported
@@ -23,6 +23,7 @@
     .-call(@value);
 }
 
+// MIXIN: .-return (returns prefixed properties)
 .-return(@prop) {
     .for(@vendorPrefixes);.-each(@i) {
         @vendorPrefix: extract(@vendorPrefixes, @i);
@@ -30,31 +31,35 @@
     }
 }
 
+// MIXIN: .background-size
 .background-size(@values...) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=background-size
     .-return(background-size);
 }
 
+// MIXIN: .border-radius
 .border-radius(@values) {
     @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=border-radius
     .-return(border-radius);
 }
 
+// MIXIN: .box-sizing
 .box-sizing(@values) {
     @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=box-sizing
     .-return(box-sizing);
 }
 
+// MIXIN: .box-shadow
 .box-shadow(@values...) {
     @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=box-sizing
     .-return(box-shadow);
-
 }
 
+// MIXIN: .calc
 .calc(@prop; @value) {
     @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=calc
@@ -65,6 +70,7 @@
     }
 }
 
+// MIXIN: .opacity
 .opacity(@value) {
     // http://caniuse.com/#search=opacity
     @msValue: (@value * 100);
@@ -73,6 +79,7 @@
     opacity: @value;
 }
 
+// MIXIN: .text-overflow
 .text-overflow(@value) {
     @vendorPrefixes: -ms-, -o-, ~'';
     // http://caniuse.com/#search=text-overflow
@@ -91,21 +98,21 @@
     *zoom: 1;
 }
 
+// MIXIN: .transform
 .transform(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transform
     .-return(transform);
-
 }
 
-
+// MIXIN: .backface-visibility
 .backface-visibility(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transform
     .-return(backface-visibility);
-
 }
 
+// MIXIN: .transition
 .transition(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
@@ -115,43 +122,35 @@
     }
 }
 
-
-
+// MIXIN: .transition-property
 .transition-property(@values) {
-
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
     // http://caniuse.com/#search=transform
     .for(@vendorPrefixes);.-each(@i) {
         @vendorPrefix: extract(@vendorPrefixes, @i);
         .prop(transition-property;false;@values);
-
     }
 }
 
-
+// MIXIN: .transition-duration
 .transition-duration(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
     .-return(transition-duration);
-
 }
 
+// MIXIN: .transition-delay
 .transition-delay(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
     .-return(transition-delay);
-
 }
 
+// MIXIN: .transition-timing-function
 .transition-timing-function(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
     .-return(transition-timing-function);
-
 }
-
-
-
-
 
