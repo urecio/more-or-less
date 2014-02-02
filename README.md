@@ -9,7 +9,9 @@ It is almost as strong as lesshat but does not use ANY inline-javaScript
 ##What does it NOT do?
 
 It does not render SVGs from gradients
-(gradients are currently not supported but will follow)
+* (gradients are currently not supported but will hopefully follow)
+It does not provide keyframes as a mixin
+* (keyframes are currently not supported but will hopefully follow)
 
 ##Notice
 

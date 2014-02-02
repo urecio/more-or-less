@@ -98,6 +98,41 @@
     *zoom: 1;
 }
 
+// MIXIN: .columns
+.columns(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=columns
+    .-return(columns);
+}
+
+// MIXIN: .column-count
+.column-count(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=columns
+    .-return(column-count);
+}
+
+// MIXIN: .column-gap
+.column-gap(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=columns
+    .-return(column-gap);
+}
+
+// MIXIN: .column-rule
+.column-rule(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=columns
+    .-return(column-rule);
+}
+
+// MIXIN: .column-width
+.column-width(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=columns
+    .-return(column-width);
+}
+
 // MIXIN: .perspective
 .perspective(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
