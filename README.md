@@ -10,6 +10,7 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
 
 ###Usage
 
+
     .border-radius {
         .border-radius(1px 2px 3px 4px;);
     }
@@ -22,9 +23,13 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
         .box-sizing(border-box);
     }
 
+    .background-size {
+        .background-size(10px auto, 100px auto;);
+    }
+
 
     .sprite-right{
-        .sprites(~'../img/sprite.png';
+        .sprites('../img/sprite.png';
                  auto;
                  90px;
                  30;
@@ -34,7 +39,7 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
     }
 
     .sprite-down{
-        .sprites(~'../img/sprite.png';
+        .sprites('../img/sprite.png';
                  90px;
                  auto;
                  30;
@@ -63,7 +68,7 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
     }
 
     .transition-oneline {
-        .transition(transform 200ms linear 400ms);
+        .transition(transform 200ms linear 400ms;);
     }
 
     .transition-separated {
@@ -94,4 +99,3 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
     .transforms {
         .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
     }
-
