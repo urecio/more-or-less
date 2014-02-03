@@ -6,10 +6,11 @@ It adds some functions and mixins for lessjs
 
 It is almost as strong as lesshat but does not use ANY inline-javaScript
 
-##What does it NOT do?
+##What does this NOT do?
 
 It does not render SVGs from gradients
 * (gradients are currently not supported but will hopefully follow)
+
 It does not provide keyframes as a mixin
 * (keyframes are currently not supported but will hopefully follow)
 
