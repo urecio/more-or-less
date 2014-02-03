@@ -230,78 +230,76 @@
 
 // MIXIN: .animation
 .animation(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation);
 }
 
 // MIXIN: .animation-delay
 .animation-delay(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-delay);
 }
 
 // MIXIN: .animation-duration
 .animation-duration(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-duration);
 }
 
 // MIXIN: .animation-direction
 .animation-direction(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-direction);
 }
 
 // MIXIN: .animation-duration
 .animation-duration(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-duration);
 }
 
 // MIXIN: .animation-fill-mode
 .animation-fill-mode(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-fill-mode);
 }
 
 // MIXIN: .animation-iteration-count
 .animation-iteration-count(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-iteration-count);
 }
 
 // MIXIN: .animation-name
 .animation-name(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-name);
 }
 
 // MIXIN: .animation-play-state
 .animation-play-state(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-play-state);
 }
 
 // MIXIN: .animation-timing-function
 .animation-timing-function(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-timing-function);
 }
 
 // MIXIN: .keyframes
-
 .keyframes(@name;@mapFrom;@mapTo) {
-    @localVendorPrefixes: -webkit-, -moz-, -o-, ~'';
     //http://caniuse.com/#search=animation
     .-from (@map...) {
         .map-frames(@map);
@@ -309,29 +307,25 @@
     .-to (@map...) {
         .map-frames(@map);
     }
-    .frames(@vendorPrefixes);.-frame(@i) when (@i = 1) {
-        @localVendorPrefix: extract(@localVendorPrefixes, @i);
-        @k: ~'@@{localVendorPrefix}keyframes @{name} { `"\n"`from ';
-        @{k} {
+    .-kf(@kf) {
+        @{kf} {
             .-from(@mapFrom);
         }
         to {
             .-to(@mapTo);
         }
     }
-    .frames(@vendorPrefixes);.-frame(@i) when (@i > 1) {
-        @localVendorPrefix: extract(@localVendorPrefixes, @i);
-        @k: ~'} `"\n"` @@{localVendorPrefix}keyframes @{name} { `"\n"`from ';
-        @{k} {
-            .-from(@mapFrom);
-        }
-        to {
-            .-to(@mapTo);
-        }
-    }
+    @kw: ~'@-webkit-keyframes @{name} { `"\n"`from ';
+    @km: ~'} `"\n"` @-moz-keyframes @{name} { `"\n"`from ';
+    @k: ~'} `"\n"` @keyframes @{name} { `"\n"`from ';
+    .-kf(@kw);
+    .-kf(@km);
+    .-kf(@k);
     @anim: ~'} `"\n"`.@{name}';
     @{anim} {
-        .animation-name(@name);
+        -webkit-animation: @name;
+        -moz-animation: @name;
+        animation: @name;
     }
 }
 

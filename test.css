@@ -189,55 +189,6 @@ to {
   height: 0px;
 }
 } 
- @-o-keyframes animation1 { 
-from  {
-  top: 0;
-  height: 200px;
-}
-to {
-  top: 200px;
-  height: 0px;
-}
-} 
- @keyframes animation1 { 
-from  {
-  top: 0;
-  height: 200px;
-}
-to {
-  top: 200px;
-  height: 0px;
-}
-@-webkit-keyframes animation1 { 
-from  {
-  top: 0;
-  height: 200px;
-}
-to {
-  top: 200px;
-  height: 0px;
-}
-} 
- @-moz-keyframes animation1 { 
-from  {
-  top: 0;
-  height: 200px;
-}
-to {
-  top: 200px;
-  height: 0px;
-}
-} 
- @-o-keyframes animation1 { 
-from  {
-  top: 0;
-  height: 200px;
-}
-to {
-  top: 200px;
-  height: 0px;
-}
-} 
  @keyframes animation1 { 
 from  {
   top: 0;
@@ -249,11 +200,9 @@ to {
 }
 } 
 .animation1 {
-  -webkit-animation-name: animation1;
-  -moz-animation-name: animation1;
-  -o-animation-name: animation1;
-  -ms-animation-name: animation1;
-  animation-name: animation1;
+  -webkit-animation: animation1;
+  -moz-animation: animation1;
+  animation: animation1;
 }
 @-webkit-keyframes animation2 { 
 from  {
@@ -266,55 +215,6 @@ to {
 }
 } 
  @-moz-keyframes animation2 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  height: #ff0000;
-}
-} 
- @-o-keyframes animation2 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  height: #ff0000;
-}
-} 
- @keyframes animation2 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  height: #ff0000;
-}
-@-webkit-keyframes animation2 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  height: #ff0000;
-}
-} 
- @-moz-keyframes animation2 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  height: #ff0000;
-}
-} 
- @-o-keyframes animation2 { 
 from  {
   left: 0;
   color: #008000;
@@ -335,10 +235,78 @@ to {
 }
 } 
 .animation2 {
-  -webkit-animation-name: animation2;
-  -moz-animation-name: animation2;
-  -o-animation-name: animation2;
-  -ms-animation-name: animation2;
-  animation-name: animation2;
+  -webkit-animation: animation2;
+  -moz-animation: animation2;
+  animation: animation2;
+}
+@-webkit-keyframes animation3 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+} 
+ @-moz-keyframes animation3 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+} 
+ @keyframes animation3 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+} 
+.animation3 {
+  -webkit-animation: animation3;
+  -moz-animation: animation3;
+  animation: animation3;
+}
+@-webkit-keyframes animation4 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+} 
+ @-moz-keyframes animation4 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+} 
+ @keyframes animation4 { 
+from  {
+  left: 0;
+  color: #008000;
+}
+to {
+  top: 10px;
+  height: #ff0000;
+}
+} 
+.animation4 {
+  -webkit-animation: animation4;
+  -moz-animation: animation4;
+  animation: animation4;
 }
 /*# sourceMappingURL=source.map */
