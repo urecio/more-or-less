@@ -155,7 +155,7 @@ This way mixins can easily be created or modified.
 
     // keyframes (hack)
     // keyframes require some ugly syntax
-    // must be wrapped. Using an "_" (underscore) works fine
+    // must be wrapped. Using a "-" (minus) works fine
     // animation steps need to be in one line and a string
     // > IN
     - {
