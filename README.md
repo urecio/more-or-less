@@ -1,6 +1,6 @@
 #more-or-less
 
-* [Baic Info](#basic-info)
+* [Basic Info](#basic-info)
     * [License](#license)
     * [Credit](#credit)
     * [Dependencies](#dependencies)
