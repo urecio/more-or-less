@@ -1,6 +1,9 @@
 #LESS CSS FUNCTIONS & MIXINS
+
 **License:** MIT (license.txt)
-**Credits:** pixelass, seven-phases-max (for some help with the basics)
+
+**Credits:** [pixelass][1], [seven-phases-max][2] (for some help with the basics)
+
 ##What does this do?
 
 It adds some functions and mixins for lessjs
@@ -91,3 +94,8 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
     .transforms {
         .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
     }
+
+
+
+ [1]: https://github.com/pixelass
+ [2]: https://github.com/seven-phases-max
