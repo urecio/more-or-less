@@ -1,29 +1,22 @@
 .border-radius {
   -webkit-border-radius: 1px 2px 3px 4px;
   -moz-border-radius: 1px 2px 3px 4px;
-  -o-border-radius: 1px 2px 3px 4px;
-  -ms-border-radius: 1px 2px 3px 4px;
   border-radius: 1px 2px 3px 4px;
 }
 .box-shadow {
   -webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 0, 0, 0.3);
   -moz-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 0, 0, 0.3);
-  -o-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 0, 0, 0.3);
-  -ms-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 0, 0, 0.3);
   box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 0, 0, 0.3);
 }
 .box-sizing {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 .background-size {
   -webkit-background-size: 10px auto, 100px auto;
   -moz-background-size: 10px auto, 100px auto;
   -o-background-size: 10px auto, 100px auto;
-  -ms-background-size: 10px auto, 100px auto;
   background-size: 10px auto, 100px auto;
 }
 .sprite-right {
@@ -94,67 +87,79 @@
   *zoom: 1;
 }
 .transition-oneline {
-  -webkit-transition-property: -webkit-transform, 200ms, linear, 400ms;
-  -moz-transition-property: -moz-transform, 200ms, linear, 400ms;
-  -o-transition-property: -o-transform, 200ms, linear, 400ms;
-  -ms-transition-property: -ms-transform, 200ms, linear, 400ms;
+  -webkit-transition: -webkit-transform, 200ms, linear, 400ms;
+  -moz-transition: -moz-transform, 200ms, linear, 400ms;
+  -o-transition: -o-transform, 200ms, linear, 400ms;
+  lolo: 1;
+  transition: transform, 200ms, linear, 400ms;
+  lolo: 2;
+  lolo: 3;
+  lolo: 4;
 }
 .transition-separated {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
-  -ms-transition-property: all;
+  lolo: 1;
+  transition-property: all;
   -webkit-transition-duration: 200ms;
   -moz-transition-duration: 200ms;
   -o-transition-duration: 200ms;
-  -ms-transition-duration: 200ms;
   transition-duration: 200ms;
   -webkit-transition-timing-function: linear;
   -moz-transition-timing-function: linear;
   -o-transition-timing-function: linear;
-  -ms-transition-timing-function: linear;
   transition-timing-function: linear;
   -webkit-transition-delay: 400ms;
   -moz-transition-delay: 400ms;
   -o-transition-delay: 400ms;
-  -ms-transition-delay: 400ms;
   transition-delay: 400ms;
 }
 .transition-prop-transform {
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   -o-transition-property: -o-transform;
-  -ms-transition-property: -ms-transform;
+  lolo: 1;
+  transition-property: transform;
 }
 .transition-prop-mutli-with-transform {
   -webkit-transition-property: -webkit-transform, color, height;
   -moz-transition-property: -moz-transform, color, height;
   -o-transition-property: -o-transform, color, height;
-  -ms-transition-property: -ms-transform, color, height;
+  lolo: 1;
+  transition-property: transform, color, height;
+  lolo: 2;
+  lolo: 3;
 }
 .transition-prop-mutli-with-transform-and-boxShadow {
   -webkit-transition-property: -webkit-transform, color, -webkit-box-shadow;
   -moz-transition-property: -moz-transform, color, -moz-box-shadow;
   -o-transition-property: -o-transform, color, -o-box-shadow;
-  -ms-transition-property: -ms-transform, color, -ms-box-shadow;
+  lolo: 1;
+  transition-property: transform, color, box-shadow;
+  lolo: 2;
+  lolo: 3;
 }
 .transition-prop {
   -webkit-transition-property: height;
   -moz-transition-property: height;
   -o-transition-property: height;
-  -ms-transition-property: height;
+  lolo: 1;
+  transition-property: height;
 }
 .transition-multi {
   -webkit-transition-property: height, top, left;
   -moz-transition-property: height, top, left;
   -o-transition-property: height, top, left;
-  -ms-transition-property: height, top, left;
+  lolo: 1;
+  transition-property: height, top, left;
+  lolo: 2;
+  lolo: 3;
 }
 .transforms {
   -webkit-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   -moz-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   -o-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
-  -ms-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   transform: translate(2px, 3px) rotate(3deg) scale(0.4);
 }
 input::-webkit-placeholder {
@@ -211,7 +216,7 @@ from  {
 }
 to {
   top: 10px;
-  height: #ff0000;
+  color: #ff0000;
 }
 } 
  @-moz-keyframes animation2 { 
@@ -221,7 +226,7 @@ from  {
 }
 to {
   top: 10px;
-  height: #ff0000;
+  color: #ff0000;
 }
 } 
  @keyframes animation2 { 
@@ -231,7 +236,7 @@ from  {
 }
 to {
   top: 10px;
-  height: #ff0000;
+  color: #ff0000;
 }
 } 
 .animation2 {
@@ -246,7 +251,7 @@ from  {
 }
 to {
   top: 10px;
-  height: #ff0000;
+  color: #ff0000;
 }
 } 
  @-moz-keyframes animation3 { 
@@ -256,7 +261,7 @@ from  {
 }
 to {
   top: 10px;
-  height: #ff0000;
+  color: #ff0000;
 }
 } 
  @keyframes animation3 { 
@@ -266,7 +271,7 @@ from  {
 }
 to {
   top: 10px;
-  height: #ff0000;
+  color: #ff0000;
 }
 } 
 .animation3 {
@@ -281,7 +286,7 @@ from  {
 }
 to {
   top: 10px;
-  height: #ff0000;
+  color: #ff0000;
 }
 } 
  @-moz-keyframes animation4 { 
@@ -291,7 +296,7 @@ from  {
 }
 to {
   top: 10px;
-  height: #ff0000;
+  color: #ff0000;
 }
 } 
  @keyframes animation4 { 
@@ -301,7 +306,7 @@ from  {
 }
 to {
   top: 10px;
-  height: #ff0000;
+  color: #ff0000;
 }
 } 
 .animation4 {

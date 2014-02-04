@@ -1,6 +1,6 @@
 @import '_fn';
 
-@vendorPrefixes: -webkit-, -moz-, -o-, -ms-, ~'';
+//@vendorPrefixes: -webkit-, -moz-, -o-, -ms-, ~'';
 
 // MIXIN: .prop (loop through values for vendor-prefixing)
 .prop(@p;@s;@in;@n) when     (@in <= @n)    {.-vendor(@p;false;@in);}
@@ -13,11 +13,11 @@
 .frames(@i;@n) when not (@i = @n)      {.frames(@i + 1;@n);}
 
 // MIXIN: .map-frames (map for keyframes)
-.map-frames (@array-list...) {
-    .for(@array-list);.-each(@i) {
-        @array: extract(@array-list, @i);
-        @prop: extract(@array, 1);
-        @{prop}: extract(@array, 2);
+.map-frames (@array...) {
+    .for(@array);
+    .-each(@i) {
+        @prop: extract(@i, 1);
+        @{prop}: extract(@i, 2);
     }
 }
 
@@ -26,10 +26,11 @@
     // space separation is awaiting pull request
     // property+_: is currently not supported
     @value: extract(@values, @in);
-    .-true() when (@sep = false) {@{vendorPrefix}@{prop}+: ~'@{vendorPrefix}@{value}';}
-    //.-true() when (@sep = _) {@{vendorPrefix}@{prop}+_: ~'@{vendorPrefix}@{value}';}
-    .-false() when (@sep = false) {@{vendorPrefix}@{prop}+: @value;}
-    //.-false() when (@sep = _) {@{vendorPrefix}@{prop}+_: @value;}
+    lolo: @in;
+    .-true() when (@sep = false) {@{i}@{prop}+: ~'@{i}@{value}';}
+    //.-true() when (@sep = _) {@{i}@{prop}+_: ~'@{i}@{value}';}
+    .-false() when (@sep = false) {@{i}@{prop}+: @value;}
+    //.-false() when (@sep = _) {@{i}@{prop}+_: @value;}
     .-call(transform) {.-true;}
     .-call(box-shadow){.-true;}
     .-call(...) when (default()){.-false;}
@@ -39,8 +40,7 @@
 // MIXIN: .-return (returns prefixed properties)
 .-return(@prop) {
     .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}@{prop}: @values;
+        @{i}@{prop}: @values;
     }
 }
 
@@ -77,9 +77,8 @@
     @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=calc
     .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
         @eValue: ~'@{value}';
-        @{prop}: ~'@{vendorPrefix}calc(@{eValue})';
+        @{prop}: ~'@{i}calc(@{eValue})';
     }
 }
 
@@ -97,8 +96,7 @@
     @vendorPrefixes: -ms-, -o-, ~'';
     // http://caniuse.com/#search=text-overflow
     .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @{vendorPrefix}text-overflow: @value;
+        @{i}text-overflow: @value;
     }
     // props needed
     display: inline-block; // may be overridden with block
@@ -191,8 +189,7 @@
     @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
     .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        .prop(transition-property;false;@values);
+        .prop(transition;false;@values);
     }
 }
 
@@ -202,7 +199,6 @@
     // http://caniuse.com/#search=transition
     // http://caniuse.com/#search=transform
     .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
         .prop(transition-property;false;@values);
     }
 }
@@ -298,36 +294,37 @@
     .-return(animation-timing-function);
 }
 
+// not happy with this yet but let's keep it in here for now
 // MIXIN: .keyframes
-.keyframes(@name;@mapFrom;@mapTo) {
-    //http://caniuse.com/#search=animation
-    .-from (@map...) {
-        .map-frames(@map);
-    }
-    .-to (@map...) {
-        .map-frames(@map);
-    }
-    .-kf(@kf) {
-        @{kf} {
-            .-from(@mapFrom);
-        }
-        to {
-            .-to(@mapTo);
-        }
-    }
-    @kw: ~'@-webkit-keyframes @{name} { `"\n"`from ';
-    @km: ~'} `"\n"` @-moz-keyframes @{name} { `"\n"`from ';
-    @k: ~'} `"\n"` @keyframes @{name} { `"\n"`from ';
-    .-kf(@kw);
-    .-kf(@km);
-    .-kf(@k);
-    @anim: ~'} `"\n"`.@{name}';
-    @{anim} {
-        -webkit-animation: @name;
-        -moz-animation: @name;
-        animation: @name;
-    }
-}
+// .keyframes(@name;@mapFrom;@mapTo) {
+//     //http://caniuse.com/#search=animation
+//     .-from (@map...) {
+//         .map-frames(@map);
+//     }
+//     .-to (@map...) {
+//         .map-frames(@map);
+//     }
+//     .-kf(@kf) {
+//         @{kf} {
+//             .-from(@mapFrom);
+//         }
+//         to {
+//             .-to(@mapTo);
+//         }
+//     }
+//     @kw: ~'@-webkit-keyframes @{name} { `"\n"`from ';
+//     @km: ~'} `"\n"` @-moz-keyframes @{name} { `"\n"`from ';
+//     @k: ~'} `"\n"` @keyframes @{name} { `"\n"`from ';
+//     .-kf(@kw);
+//     .-kf(@km);
+//     .-kf(@k);
+//     @anim: ~'} `"\n"`.@{name}';
+//     @{anim} {
+//         -webkit-animation: @name;
+//         -moz-animation: @name;
+//         animation: @name;
+//     }
+// }
 
 // MIXIN: .user-select
 .user-select(@values) {
@@ -348,8 +345,7 @@
     @vendorPrefixes: ~':-webkit-', ~':-moz-', ~'-moz-', ~':-ms-';
     // http://caniuse.com/#search=placeholder
     .for(@vendorPrefixes);.-each(@i) {
-        @vendorPrefix: extract(@vendorPrefixes, @i);
-        @selector: ~':@{vendorPrefix}placeholder';
+        @selector: ~':@{i}placeholder';
         &@{selector} {
             color: @values;
         }

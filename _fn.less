@@ -1,21 +1,35 @@
 // basic functions for global usage
 
 
-// for-loop
-// works with two integers or a list
-.for(@i;@n) when     (@i <= @n)     {.-each(@i);}
-.for(@n)    when not (isnumber(@n)) {.for(1;length(@n));}
-.for(@i;@n) when not (@i = @n)      {.for(@i + 1;@n);}
+// .for
+
+.for(@i, @n) {.-each(@i)}
+.for(@n)     when (isnumber(@n)) {.for(1, @n)}
+.for(@i, @n) when not (@i = @n)  {
+    .for((@i + ((@n - @i) / abs(@n - @i))), @n);
+}
+
+// .for-each
+
+.for(@array)   when (default()) {.for-impl_(length(@array))}
+.for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
+.for-impl_(@i)                  {.-each(extract(@array, @i));}
+
+// .find
+
+.find(@array, @value, @fallback: -1) {
+    .for(@list); .-each(...) {}
+    .-each(~'@{value}') {@-: @i}
+    .-() {@-: @fallback} .-;
+}
 
 
-// map-loop
-// set prop
-// set map with class and value
-.map (@prop;@array-list...) {
-    .for(@array-list);.-each(@i) {
-        @array: extract(@array-list, @i);
-        @class: extract(@array, 1);
-        &.@{class} {@{prop}: extract(@array, 2);}
+// .map
+
+.map (@prop;@array...) {
+    .for(@array);.-each(@i) {
+        @class: extract(@i, 1);
+        &.@{class} {@{prop}: extract(@i, 2);}
     }
 }
 
