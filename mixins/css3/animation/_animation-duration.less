@@ -1,0 +1,8 @@
+@import '../helpers/_return';
+
+// MIXIN: .animation-duration
+.animation-duration(@values) {
+    @vendorPrefixes: -webkit-, -moz-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-duration);
+}

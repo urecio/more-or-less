@@ -1,0 +1,8 @@
+@import '../helpers/_return';
+
+// MIXIN: .transform-origin
+.transform-origin(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=transform
+    .-return(transform-origin);
+}

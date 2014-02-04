@@ -1,0 +1,8 @@
+@import '../helpers/_return';
+
+// MIXIN: .perspective-origin
+.perspective-origin(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=transform
+    .-return(perspective-origin);
+}

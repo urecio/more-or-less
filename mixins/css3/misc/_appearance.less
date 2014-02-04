@@ -1,0 +1,8 @@
+@import '../helpers/_return';
+
+// MIXIN: .appearance
+.appearance(@values) {
+    @vendorPrefixes: -webkit-, -moz- ~'';
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance
+    .-return(appearance);
+}

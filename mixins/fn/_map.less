@@ -1,0 +1,10 @@
+
+// .map
+
+.map (@prop;@array...) {
+    .for(@array);.-each(@i) {
+        @class: extract(@i, 1);
+        &.@{class} {@{prop}: extract(@i, 2);}
+    }
+}
+

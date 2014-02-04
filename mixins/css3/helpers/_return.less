@@ -1,0 +1,8 @@
+@import '../../_fn';
+
+// MIXIN: .-return (returns prefixed properties)
+.-return(@prop) {
+    .for(@vendorPrefixes);.-each(@i) {
+        @{i}@{prop}: @values;
+    }
+}

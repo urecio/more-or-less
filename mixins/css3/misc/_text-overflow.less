@@ -1,0 +1,19 @@
+@import '../../fn/_for';
+
+// MIXIN: .text-overflow
+.text-overflow(@value) {
+    @vendorPrefixes: -ms-, -o-, ~'';
+    // http://caniuse.com/#search=text-overflow
+    .for(@vendorPrefixes);.-each(@i) {
+        @{i}text-overflow: @value;
+    }
+    // props needed
+    display: inline-block; // may be overridden with block
+    max-width: 100%;
+    overflow: hidden;
+    white-space: no-wrap;
+    word-wrap: normal;
+    // IE fixes
+    *display: inline;
+    *zoom: 1;
+}

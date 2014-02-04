@@ -1,0 +1,8 @@
+@import '../helpers/_return';
+
+// MIXIN: .animation-name
+.animation-name(@values) {
+    @vendorPrefixes: -webkit-, -moz-, ~'';
+    // http://caniuse.com/#search=animation
+    .-return(animation-name);
+}

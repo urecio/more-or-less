@@ -1,0 +1,8 @@
+
+// .find
+
+.find(@array, @value, @fallback: -1) {
+    .for(@list); .-each(...) {}
+    .-each(~'@{value}') {@-: @i}
+    .-() {@-: @fallback} .-;
+}

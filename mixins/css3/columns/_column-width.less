@@ -1,0 +1,8 @@
+@import '../helpers/_return';
+
+// MIXIN: .column-width
+.column-width(@values) {
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    // http://caniuse.com/#search=columns
+    .-return(column-width);
+}

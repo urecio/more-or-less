@@ -1,0 +1,9 @@
+
+// MIXIN: .opacity
+.opacity(@value) {
+    // http://caniuse.com/#search=opacity
+    @msValue: (@value * 100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{msValue})";
+    filter: alpha(opacity=@msValue);
+    opacity: @value;
+}
