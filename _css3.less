@@ -7,20 +7,6 @@
 .prop(@p;@s;@n)     when not (isnumber(@n)) {.prop(@p;false;1;length(@n));}
 .prop(@p;@s;@in;@n) when not (@in = @n)     {.prop(@p;false;@in + 1;@n);}
 
-// MIXIN: .-frames (loop throug frames for kayframe-animations)
-.frames(@i;@n) when     (@i < @n)     {.-frame(@i);}
-.frames(@n)    when not (isnumber(@n)) {.frames(1;length(@n));}
-.frames(@i;@n) when not (@i = @n)      {.frames(@i + 1;@n);}
-
-// MIXIN: .map-frames (map for keyframes)
-.map-frames (@array...) {
-    .for(@array);
-    .-each(@i) {
-        @prop: extract(@i, 1);
-        @{prop}: extract(@i, 2);
-    }
-}
-
 // MIXIN: .-vendor (prefixes properties)
 .-vendor(@prop;@sep;@in) {
     // space separation is awaiting pull request
