@@ -11,7 +11,9 @@
 * [How mixins are built](#how-mixins-are-built)
     * [Example mixin](#example-mixin)
 * [Usage](#usage)
-    * [keyframes](#keyframes)
+    * [Keyframes](#keyframes)
+        * [Keyframes input](#keyframes-input)
+        * [Keyframes output](#keyframes-output)
 
 
 
@@ -153,22 +155,30 @@ This way mixins can easily be created or modified.
 
 ###Keyframes
 
-    // keyframes (hack)
-    // keyframes require some ugly syntax
-    // must be wrapped. Using a "-" (minus) works fine
-    // animation steps need to be in one line and a string
-    // > IN
+> keyframes require some ugly syntax
+
+> The mixin call must be wrapped in a selector e.g. `-{}`.
+
+> Using a "-" (minus) works fine.
+
+> animation steps need to be in one line and a string
+
+####Keyframes INPUT
+
     - {
         .keyframes(
             slideout;
             "{0% {left: 0;} 100% {left: 100%;}");
     }
 
-    // unecessary output is produced (will be ignored but it looks ugly)
-    // -{-:-} /*  important output is in here  */
-    // -{-:-} <-- THIS IS JUNK
-    //················································
-    // > OUT
+> unecessary output is produced (will be ignored but it looks ugly)
+
+> `-{-:-} /*  important output is in here  */`
+
+> `-{-:-} <-- THIS IS JUNK`
+
+####Keyframes OUTPUT
+
     -{-:-} @-webkit-keyframes {0% {left: 0;} 100% {left: 100%;}}
     -{-:-} @-moz-keyframes {0% {left: 0;} 100% {left: 100%;}}
     -{-:-} @keyframes {0% {left: 0;} 100% {left: 100%;}}
