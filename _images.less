@@ -10,7 +10,7 @@
         @pos: (-(@st * @in) + @st);
         @class: e(extract(@list, @in));
     }
-    .for(@list);
+    .for(1,length(@list));
     .-each(@i) when (@height = auto) {
         .-i(@i;@step);
         &.@{class}{background-position: 0 ~'@{pos}px';}
