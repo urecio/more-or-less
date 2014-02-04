@@ -1,5 +1,4 @@
-@import '../mixins/_css3';
-@import '../mixins/_images';
+@import '../more';
 
 
 // TESTS
@@ -102,4 +101,10 @@ _ {
     .keyframes(
         slideout;
         "{0% {left: 0;} 100% {left: 100%;}");
+}
+
+_ {
+    .keyframes(
+        slidein;
+        "{0% {left: -100%;} 100% {left: 0;}");
 }
