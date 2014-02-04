@@ -96,7 +96,7 @@ This way mixins can easily be created or modified.
 
 ##Notice
 
-> Auto-prefixis ugly. It is advised to use libraries like [autoprefixer][6] or similar.
+> Auto-prefixing is ugly. It is advised to use libraries like [autoprefixer][6] or similar.
 
 >  Aaaaanyways... if you want to use auto-prefixing mixins you can use:
 
