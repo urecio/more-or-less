@@ -1,6 +1,6 @@
 #LESS CSS FUNCTIONS & MIXINS
 
-**License:** MIT (license.txt)
+**License:** MIT ([license.txt][0])
 
 **Credits:** [pixelass][1], [seven-phases-max][2] (for some help with the basics)
 
@@ -96,6 +96,6 @@ Anyways.. if you want to use auto-prefixing mixins you can use the _css3.less fi
     }
 
 
-
+ [0]: https://github.com/pixelass/more-or-less/blob/master/license.txt
  [1]: https://github.com/pixelass
  [2]: https://github.com/seven-phases-max
