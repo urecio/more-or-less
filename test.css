@@ -90,17 +90,12 @@
   -webkit-transition: -webkit-transform, 200ms, linear, 400ms;
   -moz-transition: -moz-transform, 200ms, linear, 400ms;
   -o-transition: -o-transform, 200ms, linear, 400ms;
-  lolo: 1;
   transition: transform, 200ms, linear, 400ms;
-  lolo: 2;
-  lolo: 3;
-  lolo: 4;
 }
 .transition-separated {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
-  lolo: 1;
   transition-property: all;
   -webkit-transition-duration: 200ms;
   -moz-transition-duration: 200ms;
@@ -119,42 +114,31 @@
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   -o-transition-property: -o-transform;
-  lolo: 1;
   transition-property: transform;
 }
 .transition-prop-mutli-with-transform {
   -webkit-transition-property: -webkit-transform, color, height;
   -moz-transition-property: -moz-transform, color, height;
   -o-transition-property: -o-transform, color, height;
-  lolo: 1;
   transition-property: transform, color, height;
-  lolo: 2;
-  lolo: 3;
 }
 .transition-prop-mutli-with-transform-and-boxShadow {
   -webkit-transition-property: -webkit-transform, color, -webkit-box-shadow;
   -moz-transition-property: -moz-transform, color, -moz-box-shadow;
   -o-transition-property: -o-transform, color, -o-box-shadow;
-  lolo: 1;
   transition-property: transform, color, box-shadow;
-  lolo: 2;
-  lolo: 3;
 }
 .transition-prop {
   -webkit-transition-property: height;
   -moz-transition-property: height;
   -o-transition-property: height;
-  lolo: 1;
   transition-property: height;
 }
 .transition-multi {
   -webkit-transition-property: height, top, left;
   -moz-transition-property: height, top, left;
   -o-transition-property: height, top, left;
-  lolo: 1;
   transition-property: height, top, left;
-  lolo: 2;
-  lolo: 3;
 }
 .transforms {
   -webkit-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
@@ -173,145 +157,5 @@ input:-moz-placeholder {
 }
 input::-ms-placeholder {
   color: #aaaaaa;
-}
-@-webkit-keyframes animation1 { 
-from  {
-  top: 0;
-  height: 200px;
-}
-to {
-  top: 200px;
-  height: 0px;
-}
-} 
- @-moz-keyframes animation1 { 
-from  {
-  top: 0;
-  height: 200px;
-}
-to {
-  top: 200px;
-  height: 0px;
-}
-} 
- @keyframes animation1 { 
-from  {
-  top: 0;
-  height: 200px;
-}
-to {
-  top: 200px;
-  height: 0px;
-}
-} 
-.animation1 {
-  -webkit-animation: animation1;
-  -moz-animation: animation1;
-  animation: animation1;
-}
-@-webkit-keyframes animation2 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  color: #ff0000;
-}
-} 
- @-moz-keyframes animation2 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  color: #ff0000;
-}
-} 
- @keyframes animation2 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  color: #ff0000;
-}
-} 
-.animation2 {
-  -webkit-animation: animation2;
-  -moz-animation: animation2;
-  animation: animation2;
-}
-@-webkit-keyframes animation3 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  color: #ff0000;
-}
-} 
- @-moz-keyframes animation3 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  color: #ff0000;
-}
-} 
- @keyframes animation3 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  color: #ff0000;
-}
-} 
-.animation3 {
-  -webkit-animation: animation3;
-  -moz-animation: animation3;
-  animation: animation3;
-}
-@-webkit-keyframes animation4 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  color: #ff0000;
-}
-} 
- @-moz-keyframes animation4 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  color: #ff0000;
-}
-} 
- @keyframes animation4 { 
-from  {
-  left: 0;
-  color: #008000;
-}
-to {
-  top: 10px;
-  color: #ff0000;
-}
-} 
-.animation4 {
-  -webkit-animation: animation4;
-  -moz-animation: animation4;
-  animation: animation4;
 }
 /*# sourceMappingURL=source.map */
