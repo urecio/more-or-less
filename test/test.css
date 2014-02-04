@@ -158,21 +158,21 @@ input:-moz-placeholder {
 input::-ms-placeholder {
   color: #aaaaaa;
 }
-_ {
-  -: ''; } @-webkit-keyframes {0% {left: 0;} 100% {left: 100%;} ;
+- {
+  -: -} @-webkit-keyframes {0% {left: 0;} 100% {left: 100%;};
 }
-_ {
-  -: ''; } @-moz-keyframes {0% {left: 0;} 100% {left: 100%;} ;
+- {
+  -: -} @-moz-keyframes {0% {left: 0;} 100% {left: 100%;};
 }
-_ {
-  -: ''; } @keyframes {0% {left: 0;} 100% {left: 100%;} ;
+- {
+  -: -} @keyframes {0% {left: 0;} 100% {left: 100%;};
 }
-_ {
-  -: ''; } @-webkit-keyframes {0% {left: -100%;} 100% {left: 0;} ;
+- {
+  -: -} @-webkit-keyframes {0% {left: -100%;} 100% {left: 0;};
 }
-_ {
-  -: ''; } @-moz-keyframes {0% {left: -100%;} 100% {left: 0;} ;
+- {
+  -: -} @-moz-keyframes {0% {left: -100%;} 100% {left: 0;};
 }
-_ {
-  -: ''; } @keyframes {0% {left: -100%;} 100% {left: 0;} ;
+- {
+  -: -} @keyframes {0% {left: -100%;} 100% {left: 0;};
 }

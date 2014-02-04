@@ -2,10 +2,10 @@
 
 // MIXIN: .calc
 .calc(@prop; @value...) {
-    @vendorPrefixes: -webkit-, -moz-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, '';
     // http://caniuse.com/#search=calc
     .for(@vendorPrefixes);.-each(@i) {
-        @eValue: ~'@{value}';
-        @{prop}: ~'@{i}calc(@{eValue})';
+        @eValue: e('@{value}');
+        @{prop}: e('@{i}calc(@{eValue})');
     }
 }

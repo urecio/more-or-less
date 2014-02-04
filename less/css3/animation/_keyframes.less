@@ -2,9 +2,9 @@
 // not happy with this yet but let’s keep it in here for now
 // MIXIN: .keyframes
 .keyframes(@name; @frames...) {
-    @vendorPrefixes: -webkit-, -moz-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, '';
     // http://caniuse.com/#search=animation
     .for(@vendorPrefixes);.-each(@i) {
-        & {-+: ~"''; } @@{i}keyframes @{frames} "}
+        & {-:e("-} @@{i}keyframes @{frames}")}
     }
 }

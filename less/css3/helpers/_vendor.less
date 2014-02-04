@@ -4,8 +4,8 @@
     // space separation is awaiting pull request
     // property+_: is currently not supported
     @value: extract(@values, @in);
-    .-true() when (@sep = false) {@{i}@{prop}+: ~'@{i}@{value}';}
-    //.-true() when (@sep = _) {@{i}@{prop}+_: ~'@{i}@{value}';}
+    .-true() when (@sep = false) {@{i}@{prop}+: e('@{i}@{value}');}
+    //.-true() when (@sep = _) {@{i}@{prop}+_: e('@{i}@{value}');}
     .-false() when (@sep = false) {@{i}@{prop}+: @value;}
     //.-false() when (@sep = _) {@{i}@{prop}+_: @value;}
     .-call(transform) {.-true;}

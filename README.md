@@ -85,7 +85,7 @@ This way mixins can easily be created or modified.
     .box-shadow(@values...) {
 
         // define the prefixes that should be generated
-        @vendorPrefixes: -webkit-, -moz-, ~'';
+        @vendorPrefixes: -webkit-, -moz-, '';
         // http://caniuse.com/#search=box-sizing
 
         // return the mixin for this property
@@ -158,27 +158,20 @@ This way mixins can easily be created or modified.
     // must be wrapped. Using an "_" (underscore) works fine
     // animation steps need to be in one line and a string
     // > IN
-    _ {
+    - {
         .keyframes(
             slideout;
             "{0% {left: 0;} 100% {left: 100%;}");
     }
 
     // unecessary output is produced (will be ignored but it looks ugly)
-    // _{-:'';} /*  important output is in here  */ ;
-    // _{-:'';} ────────── THIS IS JUNK ────────────┐
-    // @keyframes {0% {left: 0;} 100% {left: 100%;} ;
+    // -{-:-} /*  important output is in here  */
+    // -{-:-} <-- THIS IS JUNK
     //················································
     // > OUT
-    _ {
-      -: ''; } @-webkit-keyframes {0% {left: 0;} 100% {left: 100%;} ;
-    }
-    _ {
-      -: ''; } @-moz-keyframes {0% {left: 0;} 100% {left: 100%;} ;
-    }
-    _ {
-      -: ''; } @keyframes {0% {left: 0;} 100% {left: 100%;} ;
-    }
+    -{-:-} @-webkit-keyframes {0% {left: 0;} 100% {left: 100%;}}
+    -{-:-} @-moz-keyframes {0% {left: 0;} 100% {left: 100%;}}
+    -{-:-} @keyframes {0% {left: 0;} 100% {left: 100%;}}
 
 
  [0]: https://github.com/pixelass/more-or-less/blob/master/license.tx

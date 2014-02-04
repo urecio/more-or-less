@@ -2,10 +2,10 @@
 
 // MIXIN: .placeholder
 .placeholder(@values) {
-    @vendorPrefixes: ~':-webkit-', ~':-moz-', ~'-moz-', ~':-ms-';
+    @vendorPrefixes: ':-webkit-', ':-moz-', '-moz-', ':-ms-';
     // http://caniuse.com/#search=placeholder
     .for(@vendorPrefixes);.-each(@i) {
-        @selector: ~':@{i}placeholder';
+        @selector: e(':@{i}placeholder');
         &@{selector} {
             color: @values;
         }

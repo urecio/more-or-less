@@ -12,10 +12,10 @@
     .for(1,length(@list));
     .-each(@i) when (@height = auto) {
         .-i(@i;@step);
-        &.@{class}{background-position: 0 ~'@{pos}px';}
+        &.@{class}{background-position: 0 e('@{pos}px');}
     }
     .-each(@i) when (@width = auto) {
         .-i(@i;@step);
-        &.@{class}{background-position: ~'@{pos}px' 0;}
+        &.@{class}{background-position: e('@{pos}px') 0;}
     }
 }

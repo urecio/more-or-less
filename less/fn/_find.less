@@ -2,7 +2,8 @@
 // .find
 
 .find(@array, @value, @fallback: -1) {
+    @v: e('@{value}');
     .for(@list); .-each(...) {}
-    .-each(~'@{value}') {@-: @i}
+    .-each(@v) {@-: @i}
     .-() {@-: @fallback} .-;
 }
