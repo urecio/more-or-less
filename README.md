@@ -39,7 +39,7 @@ It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
 
 It allows to use "more or less" of the library
 
-Simply `@import 'more';` to get access to the entire library
+Simply `@import '_more';` to get access to the entire library
 
 ###Example for "less" imports
 
