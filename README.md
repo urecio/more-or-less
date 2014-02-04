@@ -9,7 +9,7 @@
 * [What does this not do](#what-does-this-not-do)
 * [Notice](#notice)
 * [How mixins are built](#how-mixins-are-built)
-    * [Example mixin](#example-mixin)
+    * [Example CSS3 mixin](#example-css3-mixin)
 * [Usage](#usage)
     * [Keyframes](#keyframes)
         * [Keyframes input](#keyframes-input)
@@ -26,6 +26,8 @@
 
 * [pixelass][1]
 * [seven-phases-max][2] (for some help with the basics)
+* [Eric Meyer][9] (reset.css)
+* [Nicolas Gallagher][10] (normalize.css)
 
 ###Dependencies:
 
@@ -39,7 +41,14 @@ It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
 
 It allows to use "more or less" of the library
 
-Simply `@import '_more';` to get access to the entire library
+It allows to import [reset][7] or [normalize][8]
+
+`@import 'less/reset';`
+
+`@import 'less/normalize'`
+
+
+Simply `@import '_more';` to get access to the entire library (normalize and reset not included)
 
 ###Example for "less" imports
 
@@ -66,8 +75,8 @@ Simply `@import '_more';` to get access to the entire library
 * <del>It does not provide keyframes as a mixin</del>
     * (keyframes are supported but the syntax is hacky and ugly)
     * Example usage: [keyframes](#keyframes)
-* It does not provide a "reset" or "normalize" (yet)
-    * will definitely follow
+* <del>It does not provide a "reset" or "normalize" (yet)</del>
+    * has been added
 * transform "oneliner" does not work properly
     * requires a [lessjs][4] [pullrequest][5] to be merged
 
@@ -77,26 +86,17 @@ Instead of writing redundant code this library offers an pretty complex but well
 
 This way mixins can easily be created or modified.
 
-## Example Mixin
+## Example CSS3 Mixin
 
     @import '../helpers/_return';
-
-    // MIXIN: .box-shadow
-
-    // provide the mixin
     .box-shadow(@values...) {
-
-        // define the prefixes that should be generated
         @vendorPrefixes: -webkit-, -moz-, '';
-        // http://caniuse.com/#search=box-sizing
-
-        // return the mixin for this property
         .-return(box-shadow);
     }
 
 ##Notice
 
-> Auto-prefixed css-properties should not be used. It is advised to use libraries like [autoprefixer][6] or similar.
+> Auto-prefixis ugly. It is advised to use libraries like [autoprefixer][6] or similar.
 
 >  Aaaaanyways... if you want to use auto-prefixing mixins you can use:
 
@@ -184,10 +184,14 @@ This way mixins can easily be created or modified.
     -{-:-} @keyframes {0% {left: 0;} 100% {left: 100%;}}
 
 
- [0]: https://github.com/pixelass/more-or-less/blob/master/license.tx
- [1]: https://github.com/pixelass
- [2]: https://github.com/seven-phases-max
- [3]: https://github.com/csshat/lesshat
- [4]: https://github.com/less/less.js
- [5]: https://github.com/less/less.js/pull/1788
- [6]: https://github.com/ai/autoprefixer
+ [0]:  https://github.com/pixelass/more-or-less/blob/master/license.tx
+ [1]:  https://github.com/pixelass
+ [2]:  https://github.com/seven-phases-max
+ [3]:  https://github.com/csshat/lesshat
+ [4]:  https://github.com/less/less.js
+ [5]:  https://github.com/less/less.js/pull/1788
+ [6]:  https://github.com/ai/autoprefixer
+ [7]:  http://meyerweb.com/eric/tools/css/reset/
+ [8]:  https://github.com/necolas/normalize.css/
+ [9]:  http://meyerweb.com/
+ [10]: https://github.com/necolas
