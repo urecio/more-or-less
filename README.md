@@ -86,7 +86,7 @@ Instead of writing redundant code this library offers an pretty complex but well
 
 This way mixins can easily be created or modified.
 
-## Example CSS3 Mixin
+###Example CSS3 Mixin
 
     @import '../helpers/_return';
     .box-shadow(@values...) {
