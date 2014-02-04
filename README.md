@@ -98,7 +98,7 @@ This way mixins can easily be created or modified.
 
 >  Aaaaanyways... if you want to use auto-prefixing mixins you can use:
 
->  `@import 'mixins/_css3.less';`
+>  `@import 'less/_css3';` or it's decendants
 
 ##Usage
 
