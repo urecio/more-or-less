@@ -8,6 +8,8 @@
     * [Example import](#example-import)
 * [What does this not do](#what-does-this-not-do)
 * [Notice](#notice)
+* [How mixins are built](#how-mixins-are-built)
+    * [Example mixin](#example-mixin)
 * [Usage](#usage)
     * [keyframes](#keyframes)
 
@@ -66,6 +68,29 @@ Simply `@import 'more';` to get access to the entire library
     * will definitely follow
 * transform "oneliner" does not work properly
     * requires a [lessjs][4] [pullrequest][5] to be merged
+
+##How mixins are built
+
+Instead of writing redundant code this library offers an pretty complex but well thought through architecture.
+
+This way mixins can easily be created or modified.
+
+## Example Mixin
+
+    @import '../helpers/_return';
+
+    // MIXIN: .box-shadow
+
+    // provide the mixin
+    .box-shadow(@values...) {
+
+        // define the prefixes that should be generated
+        @vendorPrefixes: -webkit-, -moz-, ~'';
+        // http://caniuse.com/#search=box-sizing
+
+        // return the mixin for this property
+        .-return(box-shadow);
+    }
 
 ##Notice
 
