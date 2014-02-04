@@ -31,13 +31,15 @@
 
 It adds some functions and mixins for lessjs
 
-It is "almost" as strong as [lesshat][3] but does not use ANY inline-javaScript
+It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
 
 It allows to use "more or less" of the library
 
-###Example import
+Simply `@import 'more';` to get access to the entire library
 
-    @import 'mixins/css3/_transition';
+###Example for "less" imports
+
+    @import 'less/css3/_transition';
     // only transitions are imported
     //················································
     .transtion(height 100ms linear 100ms);
@@ -47,7 +49,7 @@ It allows to use "more or less" of the library
     .transition-delay(0ms, 100ms, 300ms);
 
 
-    @import 'mixins/css3/transition/_transition';
+    @import 'less/css3/transition/_transition';
     // only the transition-one-liner is imported
     //················································
     .transtion(height 100ms linear 100ms);
@@ -88,10 +90,10 @@ It allows to use "more or less" of the library
     //················································
         .box-sizing(border-box);
 
-    // background-size
+    // calc
     //················································
-        .background-size(10px auto, 100px auto;);
-
+        .calc(height;
+              '100% - 10px');
 
     // sprite (right)
     //················································
@@ -102,15 +104,6 @@ It allows to use "more or less" of the library
                  one;
                  two;
                  three;);
-
-    // calc
-    //················································
-        .calc(height;
-              '100% - 10px');
-
-    // opacity
-    //················································
-        .opacity(0.4);
 
     // text-overflow
     //················································
@@ -128,13 +121,10 @@ It allows to use "more or less" of the library
         .transition-delay(400ms);
 
 
-    // transition (multiple properties)
+    // transition (separated & multiple properties)
     //················································
         .transition-property(transform, color, box-shadow;);
 
-    // transforms
-    //················································
-        .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
 
 ###Keyframes
 
