@@ -1,13 +1,30 @@
-#LESS CSS FUNCTIONS & MIXINS
+#more-or-less
 
-**License:** MIT ([license.txt][0])
+* [Baic Info](#basic-info)
+    * [License](#license)
+    * [Credit](#credit)
+    * [Dependencies](#dependencies)
+* [What does this do](#what-does-this-do)
+    * [Example import](#example-import)
+* [What does this not do](#what-does-this-not-do)
+* [Notice](#notice)
+* [Usage](#usage)
 
-**Credits:**
+
+
+##Basic Info
+###License:
+
+* MIT ([license.txt][0])
+
+###Credit:
 
 * [pixelass][1]
 * [seven-phases-max][2] (for some help with the basics)
 
-**Dependencies:** [lessjs][4] 1.6.x
+###Dependencies:
+
+* [lessjs][4] 1.6.x
 
 ##What does this do?
 
@@ -17,7 +34,7 @@ It is "almost" as strong as [lesshat][3] but does not use ANY inline-javaScript
 
 It allows to use "more or less" of the library
 
-###Example
+###Example import
 
     @import 'mixins/css3/_transition';
     // only transitions are imported
@@ -54,7 +71,7 @@ It allows to use "more or less" of the library
 
 >  `@import 'mixins/_css3.less';`
 
-###Example Usage
+##Usage
 
 
     // border-radius
