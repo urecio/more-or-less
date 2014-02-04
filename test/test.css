@@ -158,3 +158,12 @@ input:-moz-placeholder {
 input::-ms-placeholder {
   color: #aaaaaa;
 }
+_ {
+  -: ''; } @-webkit-keyframes {0% {left: 0;} 100% {left: 100%;} ;
+}
+_ {
+  -: ''; } @-moz-keyframes {0% {left: 0;} 100% {left: 100%;} ;
+}
+_ {
+  -: ''; } @keyframes {0% {left: 0;} 100% {left: 100%;} ;
+}

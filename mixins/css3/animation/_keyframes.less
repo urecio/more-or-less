@@ -1,32 +1,10 @@
 
 // not happy with this yet but let’s keep it in here for now
 // MIXIN: .keyframes
-// .keyframes(@name;@mapFrom;@mapTo) {
-//     //http://caniuse.com/#search=animation
-//     .-from (@map...) {
-//         .map-frames(@map);
-//     }
-//     .-to (@map...) {
-//         .map-frames(@map);
-//     }
-//     .-kf(@kf) {
-//         @{kf} {
-//             .-from(@mapFrom);
-//         }
-//         to {
-//             .-to(@mapTo);
-//         }
-//     }
-//     @kw: ~'@-webkit-keyframes @{name} { `"\n"`from ';
-//     @km: ~'} `"\n"` @-moz-keyframes @{name} { `"\n"`from ';
-//     @k: ~'} `"\n"` @keyframes @{name} { `"\n"`from ';
-//     .-kf(@kw);
-//     .-kf(@km);
-//     .-kf(@k);
-//     @anim: ~'} `"\n"`.@{name}';
-//     @{anim} {
-//         -webkit-animation: @name;
-//         -moz-animation: @name;
-//         animation: @name;
-//     }
-// }
+.keyframes(@name; @frames...) {
+    @vendorPrefixes: -webkit-, -moz-, ~'';
+    // http://caniuse.com/#search=animation
+    .for(@vendorPrefixes);.-each(@i) {
+        & {-+: ~"''; } @@{i}keyframes @{frames} "}
+    }
+}

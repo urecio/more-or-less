@@ -22,30 +22,30 @@
 
 
 .sprite-right{
-    .sprites('../img/sprite.png';
-       auto;
-       90px;
-       30;
-       one;
-       two;
-       three;);
+    .sprites(
+        '../img/sprite.png';
+        auto;
+        90px;
+        30;
+        one;
+        two;
+        three;);
 }
 
 .sprite-down{
-    .sprites('../img/sprite.png';
-       90px;
-       auto;
-       30;
-       four;
-       five;
-       six;);
+    .sprites(
+        '../img/sprite.png';
+        90px;
+        auto;
+        30;
+        four;
+        five;
+        six;);
 }
 
 .calc {
-    .calc(height;
-      '100% - 10px');
-    .calc(width;
-      '50% - 20px');
+    .calc(height;'100% - 10px');
+    .calc(width;'50% - 20px');
 }
 
 .opacity {
@@ -98,22 +98,8 @@ input {
 }
 
 
-
-
-// not happy with this yet but let’s keep it in here for now
-// .keyframes (animation1;
-//             top 0, height 200px;
-//             top 200px, height 0px;);
-
-// .keyframes (animation2;
-//             left 0, color green;
-//             top 10px, color red;);
-
-// .keyframes (animation3;
-//             left 0, color green;
-//             top 10px, color red;);
-
-// .keyframes (animation4;
-//             left 0, color green;
-//             top 10px, color red;);
-
+_ {
+    .keyframes(
+        slideout;
+        "{0% {left: 0;} 100% {left: 100%;}");
+}

@@ -9,6 +9,7 @@
 * [What does this not do](#what-does-this-not-do)
 * [Notice](#notice)
 * [Usage](#usage)
+    * [keyframes](#keyframes)
 
 
 
@@ -56,8 +57,9 @@ It allows to use "more or less" of the library
 
 * It does not render SVGs from gradients
     * (gradients are currently not supported but will hopefully follow)
-* It does not provide keyframes as a mixin
-    * (keyframes are currently not supported but will hopefully follow)
+* <del>It does not provide keyframes as a mixin</del>
+    * (keyframes are supported but the syntax is hacky and ugly)
+    * Example usage: [keyframes](#keyframes)
 * It does not provide a "reset" or "normalize" (yet)
     * will definitely follow
 * transform "oneliner" does not work properly
@@ -133,6 +135,35 @@ It allows to use "more or less" of the library
     // transforms
     //················································
         .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+
+###Keyframes
+
+    // keyframes (hack)
+    // keyframes require some ugly syntax
+    // must be wrapped. Using an "_" (underscore) works fine
+    // animation steps need to be in one line and a string
+    // > IN
+    _ {
+        .keyframes(
+            slideout;
+            "{0% {left: 0;} 100% {left: 100%;}");
+    }
+
+    // unecessary output is produced (will be ignored but it looks ugly)
+    // _{-:'';} /*  important output is in here  */ ;
+    // _{-:'';} ────────── THIS IS JUNK ────────────┐
+    // @keyframes {0% {left: 0;} 100% {left: 100%;} ;
+    //················································
+    // > OUT
+    _ {
+      -: ''; } @-webkit-keyframes {0% {left: 0;} 100% {left: 100%;} ;
+    }
+    _ {
+      -: ''; } @-moz-keyframes {0% {left: 0;} 100% {left: 100%;} ;
+    }
+    _ {
+      -: ''; } @keyframes {0% {left: 0;} 100% {left: 100%;} ;
+    }
 
 
  [0]: https://github.com/pixelass/more-or-less/blob/master/license.tx
