@@ -159,20 +159,20 @@ input::-ms-placeholder {
   color: #aaaaaa;
 }
 - {
-  -: -} @-webkit-keyframes {0% {left: 0;} 100% {left: 100%;};
+  -: -} @-webkit-keyframes slideout {0% {left: 0;} 100% {left: 100%;};
 }
 - {
-  -: -} @-moz-keyframes {0% {left: 0;} 100% {left: 100%;};
+  -: -} @-moz-keyframes slideout {0% {left: 0;} 100% {left: 100%;};
 }
 - {
-  -: -} @keyframes {0% {left: 0;} 100% {left: 100%;};
+  -: -} @keyframes slideout {0% {left: 0;} 100% {left: 100%;};
 }
 - {
-  -: -} @-webkit-keyframes {0% {left: -100%;} 100% {left: 0;};
+  -: -} @-webkit-keyframes slidein {0% {left: -100%;} 100% {left: 0;};
 }
 - {
-  -: -} @-moz-keyframes {0% {left: -100%;} 100% {left: 0;};
+  -: -} @-moz-keyframes slidein {0% {left: -100%;} 100% {left: 0;};
 }
 - {
-  -: -} @keyframes {0% {left: -100%;} 100% {left: 0;};
+  -: -} @keyframes slidein {0% {left: -100%;} 100% {left: 0;};
 }
