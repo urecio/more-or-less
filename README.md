@@ -1,5 +1,6 @@
 #LESS CSS FUNCTIONS & MIXINS
-
+**License:** MIT (license.txt)
+**Credits:** pixelass, seven-phases-max (for some help with the basics)
 ##What does this do?
 
 It adds some functions and mixins for lessjs
