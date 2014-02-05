@@ -84,7 +84,7 @@ This way mixins can easily be created or modified.
 ```less
 @import '../helpers/_return';
 .box-shadow(@values...) {
-    @vendorPrefixes: -webkit-, -moz-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, '';
     .-return(box-shadow);
 }
 ```
@@ -150,19 +150,19 @@ This way mixins can easily be created or modified.
 
 > keyframes require some ugly syntax
 
-> The mixin call must be wrapped in a selector e.g. `-{}`.
+> The mixin call must be wrapped in a selector e.g. `&{}`.
 
-> Using a "-" (minus) works fine.
+> Using an "&" (ampersand) works fine.
 
 > animation steps need to be in one line and a string
 
 #### Keyframes INPUT
 
 ```less
-- {
+& {
     .keyframes(
         slideout;
-        "{0% {left: 0;} 100% {left: 100%;}");
+        "0% {left: 0;} 100% {left: 100%;}");
 }
 ```
 > unecessary output is produced (will be ignored but it looks ugly)
