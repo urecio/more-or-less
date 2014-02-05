@@ -3,7 +3,7 @@
 
 // MIXIN: .transition
 .transition(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
+    @vendorPrefixes: -webkit-, -moz-, -o-, '';
     // http://caniuse.com/#search=transition
     .for(@vendorPrefixes);.-each(@i) {
         .prop(transition;false;@values);

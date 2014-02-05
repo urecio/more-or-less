@@ -3,6 +3,7 @@
 // MIXIN: .-return (returns prefixed properties)
 .-return(@prop) {
     .for(@vendorPrefixes);.-each(@i) {
-        @{i}@{prop}: @values;
+        @eProp: e('@{i}@{prop}');
+        @{eProp}: @values;
     }
 }

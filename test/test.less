@@ -97,14 +97,14 @@ input {
 }
 
 
-    - {
+    & {
         .keyframes(
             slideout;
-            "{0% {left: 0;} 100% {left: 100%;}")
+            "0% {left: 0} 100% {left: 100%}")
     }
 
-    @kf1: "0% {left: -100%;}";
-    @kf2: "0% {left: 0;}";
+    @kf1: "0% {left: -100%}";
+    @kf2: "100% {left: 0}";
 
-    -{.keyframes(slidein;"{@{kf1} @{kf2}}")}
+    &{.keyframes(slidein;"@{kf1} @{kf2}")}
 

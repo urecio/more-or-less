@@ -2,7 +2,7 @@
 
 // MIXIN: .text-overflow
 .text-overflow(@value) {
-    @vendorPrefixes: -ms-, -o-, ~'';
+    @vendorPrefixes: -ms-, -o-, '';
     // http://caniuse.com/#search=text-overflow
     .for(@vendorPrefixes);.-each(@i) {
         @{i}text-overflow: @value;
