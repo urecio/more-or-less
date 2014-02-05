@@ -69,8 +69,6 @@
 * <del>It does not provide keyframes as a mixin</del>
     * (keyframes are supported but the syntax is hacky and ugly)
     * Example usage: [keyframes](#keyframes)
-* <del>It does not provide a "reset" or "normalize" (yet)</del>
-    * has been added
 * transform "oneliner" does not work properly
     * requires a [lessjs][4] [pullrequest][5] to be merged
 
