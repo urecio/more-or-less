@@ -84,7 +84,7 @@ This way mixins can easily be created or modified.
 ```less
 @import '../helpers/_return';
 .box-shadow(@values...) {
-    @vendorPrefixes: -webkit-, -moz-, '';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     .-return(box-shadow);
 }
 ```
