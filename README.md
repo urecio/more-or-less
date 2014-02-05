@@ -35,20 +35,14 @@
 
 ##What does this do?
 
-It adds some functions and mixins for lessjs
-
-It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
-
-It allows to use "more or less" of the library
-
-It allows to import [reset][7] or [normalize][8]
-
-`@import 'less/reset';`
-
-`@import 'less/normalize'`
-
-
-Simply `@import '_more';` to get access to the entire library (normalize and reset not included)
+* It adds some functions and mixins for lessjs
+* It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
+* It allows to import [reset][7] or [normalize][8]
+    * `@import 'lib/reset';` to import the reset styles
+    * `@import 'lib/normalize'` to import the normalize styles
+* It allows to use "more or less" of the library
+    * `@import '_more';` to get access to the entire library of mixins
+    * `'less/css3/_transition';` to get access to the transition library
 
 ###Example for "less" imports
 
@@ -82,9 +76,7 @@ Simply `@import '_more';` to get access to the entire library (normalize and res
 
 ##How mixins are built
 
-Instead of writing redundant code this library offers an pretty complex but well thought through architecture.
-
-This way mixins can easily be created or modified.
+Instead of writing redundant code this library offers an pretty complex but well thought through architecture. This way mixins can easily be created or modified.
 
 ###Example CSS3 Mixin
 
