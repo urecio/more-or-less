@@ -2,7 +2,7 @@
 
 // MIXIN: .box-sizing
 .box-sizing(@values) {
-    @vendorPrefixes: -webkit-, -moz-, '';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=box-sizing
     .-return(box-sizing);
 }

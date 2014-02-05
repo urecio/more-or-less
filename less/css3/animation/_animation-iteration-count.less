@@ -2,7 +2,7 @@
 
 // MIXIN: .animation-iteration-count
 .animation-iteration-count(@values) {
-    @vendorPrefixes: -webkit-, -moz-, '';
+    @vendorPrefixes: -webkit-, -moz-, ~'';
     // http://caniuse.com/#search=animation
     .-return(animation-iteration-count);
 }

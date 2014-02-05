@@ -2,7 +2,7 @@
 
 // MIXIN: .backface-visibility
 .backface-visibility(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, '';
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transform
     .-return(backface-visibility);
 }

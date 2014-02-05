@@ -2,7 +2,7 @@
 
 // MIXIN: .column-rule
 .column-rule(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, '';
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=columns
     .-return(column-rule);
 }

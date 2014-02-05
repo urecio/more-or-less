@@ -3,7 +3,7 @@
 
 // MIXIN: .transition-property
 .transition-property(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, '';
+    @vendorPrefixes: -webkit-, -moz-, -o-, ~'';
     // http://caniuse.com/#search=transition
     // http://caniuse.com/#search=transform
     .for(@vendorPrefixes);.-each(@i) {
