@@ -76,7 +76,7 @@
 
 ## How mixins are built
 
-Instead of writing redundant code this library offers an pretty complex but well thought through architecture. 
+Instead of writing redundant code this library offers an pretty complex but well thought through architecture.  
 This way mixins can easily be created or modified.
 
 ### Example CSS3 Mixin
@@ -91,9 +91,9 @@ This way mixins can easily be created or modified.
 
 ## Notice
 
-> Auto-prefixing is ugly. It is advised to use libraries like [autoprefixer][6] or similar. 
->  Aaaaanyways... if you want to use auto-prefixing mixins you can use: 
->  `@import 'less/_css3';` or it's decendants
+> Auto-prefixing is ugly. It is advised to use libraries like [autoprefixer][6] or similar.  
+>  Aaaaanyways... if you want to use auto-prefixing mixins you can use:  
+>  `@import 'less/_css3';` or it's decendants  
 
 ## Usage
 
@@ -148,13 +148,11 @@ This way mixins can easily be created or modified.
 
 ### Keyframes
 
-> keyframes require some ugly syntax
-
-> The mixin call must be wrapped in a selector e.g. `&{}`.
-
-> Using an "&" (ampersand) works fine.
-
+> keyframes require some ugly syntax  
+> The mixin call must be wrapped in a selector e.g. `&{}`.  
+> Using an "&" (ampersand) works fine.  
 > animation steps need to be in one line and a string
+
 
 #### Keyframes INPUT
 
@@ -165,10 +163,8 @@ This way mixins can easily be created or modified.
         "0% {left: 0;} 100% {left: 100%;}");
 }
 ```
-> unecessary output is produced (will be ignored but it looks ugly)
-
-> `-{-:-} /*  important output is in here  */`
-
+> unecessary output is produced (will be ignored but it looks ugly)  
+> `-{-:-} /*  important output is in here  */`  
 > `-{-:-} <-- THIS IS JUNK`
 
 #### Keyframes OUTPUT
