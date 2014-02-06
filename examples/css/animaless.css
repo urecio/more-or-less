@@ -211,7 +211,7 @@ body {
   content: url('../images/duck.png');
 }
 .animal.duck:after {
-  content: 'The duck lives on a farm      is a bird   ';
+  content: 'The duck lives on a farm      is a bird can fly  ';
 }
 .animal.elasmosaurus:before {
   content: url('../images/elasmosaurus.png');
