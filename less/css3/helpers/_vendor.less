@@ -1,14 +1,14 @@
 @import '../../fn/_in';
 
 // MIXIN: .-vendor (prefixes properties)
-.-vendor(@prop;@sep;@in) {
+.-vendor(@prop;@space;@in) {
     @prefixed: transform, box-shadow;
     // space separation is awaiting pull request
     // property+_: is currently not supported
     @value: extract(@values, @in);
     @eProp: e('@{i}@{prop}');
     .in(@prefixed, @value);
-    .-try(...) when (@-) and not (@sep){@{eProp}+: e('@{i}@{value}');}
-    .-try(...) when not (@-) and not (@sep){@{eProp}+: e('@{value}');}
+    .-try(...) when (@-) and not (@space){@{eProp}+: e('@{i}@{value}');}
+    .-try(...) when not (@-) and not (@space){@{eProp}+: e('@{value}');}
     .-try(@value);
 }
