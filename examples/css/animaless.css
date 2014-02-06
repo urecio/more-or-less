@@ -175,7 +175,7 @@ body {
   content: url('../images/bee.png');
 }
 .animal.bee:after {
-  content: 'The bee      lives in a forest    ';
+  content: 'The bee      lives in a forest  can fly  ';
 }
 .animal.cat:before {
   content: url('../images/cat.png');
