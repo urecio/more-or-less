@@ -9,15 +9,21 @@
 @isDangerous: '';
 @isForest: '';
 @isBird: '';
+@isFly: '';
+@isUnderwater: '';
+@isExtinct: '';
 
 @animals: alpaca, bat, bear, beaver, bee, cat, chicken, cow, crocodile, dog, duck, elasmosaurus, elephant, giraffe, gnu, goat, hippo, kangaroo, leopard, lion, monkey, moose, mouse, owl, panda, peacock, penguin, pig, prontosaurus, pterodactylus, rabbit, rhino, sheep, squirrel, tiger, trex, triceratops, turkey, zebra;
 @bird: chicken, duck, owl, peacock, penguin, turkey;
 @dinosaur: elasmosaurus, prontosaurus, pterodactylus, trex, triceratops;
+@extinct: elasmosaurus, prontosaurus, pterodactylus, trex, triceratops;
+@underwater: elasmosaurus;
 @pet: cat, dog, mouse, rabbit;
 @safari: alpaca, crocodile, elephant, giraffe, hippo, gnu, leopard, lion, monkey, moose, rhino, tiger, zebra;
-@dangerous: bear, crocodile, elephant, gnu, hippo, kangaroo, leopard, lion, panda, rhino, tiger;
+@dangerous: bear, crocodile, elephant, gnu, hippo, kangaroo, leopard, lion, panda, rhino, tiger, elasmosaurus, prontosaurus, pterodactylus, trex, triceratops;
 @farm: chicken, cow, dog, duck, goat, mouse, pig, rabbit, sheep, turkey;
 @forest: bear, beaver, bee, mouse, owl, rabbit, squirrel;
+@fly: bat, chicken, owl, pterodactylus, turkey;
 
 
 .bird(@bool) when (@bool) {
@@ -33,13 +39,22 @@
     @isPet:  'can be held as a pet';
 }
 .dinosaur(@bool) when (@bool) {
-    @isDinosaur:  'is extinct';
+    @isDinosaur:  'is a dinosaur';
 }
 .safari(@bool) when (@bool) {
     @isSafari:  'can be seen on a safari';
 }
 .farm(@bool) when (@bool) {
     @isFarm:  'lives on a farm';
+}
+.fly(@bool) when (@bool) {
+    @isFly:  'can fly';
+}
+.extinct(@bool) when (@bool) {
+    @isExtinct:  'is extinct';
+}
+.underwater(@bool) when (@bool) {
+    @isUnderwater:  'lives underwater';
 }
 
 body {
@@ -67,28 +82,39 @@ body {
                 content: url('../images/@{i}.png');
             }
             &:after {
-                 & {
-                    .in(@forest, @i);
-                    .forest(@-);
+             & {
+                .in(@forest, @i);
+                .forest(@-);
+                & {
+                    .in(@dangerous, @i);
+                    .dangerous(@-);
                     & {
-                        .in(@dangerous, @i);
-                        .dangerous(@-);
+                        .in(@dinosaur, @i);
+                        .dinosaur(@-);
                         & {
-                            .in(@dinosaur, @i);
-                            .dinosaur(@-);
+                            .in(@farm, @i);
+                            .farm(@-);
                             & {
-                                .in(@farm, @i);
-                                .farm(@-);
+                                .in(@pet, @i);
+                                .pet(@-);
                                 & {
-                                    .in(@pet, @i);
-                                    .pet(@-);
+                                    .in(@bird, @i);
+                                    .bird(@-);
                                     & {
-                                        .in(@bird, @i);
-                                        .bird(@-);
+                                        .in(@safari, @i);
+                                        .safari(@-);
                                         & {
-                                            .in(@safari, @i);
-                                            .safari(@-);
-                                            content+: 'The @{i} @{isFarm} @{isSafari} @{isDinosaur} @{isPet} @{isDangerous} @{isForest} @{isBird}';
+                                            .in(@fly, @i);
+                                            .fly(@-);
+                                            & {
+                                                .in(@underwater, @i);
+                                                .underwater(@-);
+                                                & {
+                                                    .in(@extinct, @i);
+                                                    .extinct(@-);
+                                                    content+: 'The @{i} @{isFarm} @{isSafari} @{isDinosaur} @{isPet} @{isDangerous} @{isForest} @{isBird} @{isFly} @{isExtinct} @{isUnderwater}';
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -96,7 +122,8 @@ body {
                         }
                     }
                 }
-             }
-         }
-     }
- }
+            }
+        }
+    }
+}
+}
