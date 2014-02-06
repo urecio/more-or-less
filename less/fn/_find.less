@@ -1,9 +1,9 @@
+@import '_for';
 
 // .find
 
 .find(@array, @value, @fallback: -1) {
-    @v: e('@{value}');
-    .for(@list); .-each(...) {}
-    .-each(@v) {@-: @i}
+    .for(@array); .-each(...) {}
+    .-each(~'@{value}') {@-: @i}
     .-() {@-: @fallback} .-;
 }

@@ -1,0 +1,8 @@
+@import '_for';
+
+//MIXIN: .in
+.in(@array, @value) {
+    .for(@array); .-each(...) {}
+    .-each(~'@{value}') {@-: true}
+    .-() {@-: false} .-;
+}
