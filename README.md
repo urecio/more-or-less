@@ -14,6 +14,9 @@
     * [Keyframes](#keyframes)
         * [Keyframes input](#keyframes-input)
         * [Keyframes output](#keyframes-output)
+* [Examples](#examples)
+    * [Animaless](#animaless)
+        * [Demo][11]
 
 
 
@@ -174,6 +177,54 @@ This way mixins can easily be created or modified.
 -{-:-} @-moz-keyframes {0% {left: 0;} 100% {left: 100%;}}
 -{-:-} @keyframes {0% {left: 0;} 100% {left: 100%;}}
 ```
+## Examples
+
+### Animaless
+
+I created a loop to check if an animal belongs to a group (e.g. Owl = bird + forest, Bear = dangerous + forest)
+The example result can be found [here: animaless][11]
+#### Animaless HTML
+As you can see the entire logic is done in less.
+No JavaScript is needed. No text is inside the HTML.
+
+```html
+<ul>
+    <li class="animal alpaca"></li>
+    <li class="animal bat"></li>
+    <li class="animal bear"></li>
+    <li class="animal beaver"></li>
+    <li class="animal bee"></li>
+    <li class="animal cat"></li>
+    <li class="animal chicken"></li>
+    <li class="animal cow"></li>
+    <li class="animal crocodile"></li>
+    <li class="animal dog"></li>
+    <li class="animal duck"></li>
+    <li class="animal elasmosaurus"></li>
+    <li class="animal elephant"></li>
+    <li class="animal giraffe"></li>
+    <li class="animal lion"></li>
+    <li class="animal monkey"></li>
+    <li class="animal moose"></li>
+    <li class="animal mouse"></li>
+    <li class="animal owl"></li>
+    <li class="animal panda"></li>
+    <li class="animal peacock"></li>
+    <li class="animal penguin"></li>
+    <li class="animal pig"></li>
+    <li class="animal prontosaurus"></li>
+    <li class="animal pterodactylus"></li>
+    <li class="animal rabbit"></li>
+    <li class="animal rhino"></li>
+    <li class="animal sheep"></li>
+    <li class="animal squirrel"></li>
+    <li class="animal tiger"></li>
+    <li class="animal trex"></li>
+    <li class="animal triceratops"></li>
+    <li class="animal turkey"></li>
+    <li class="animal zebra"></li>
+</ul>
+````
 
  [0]:  https://github.com/pixelass/more-or-less/blob/master/license.tx
  [1]:  https://github.com/pixelass
@@ -186,3 +237,4 @@ This way mixins can easily be created or modified.
  [8]:  https://github.com/necolas/normalize.css/
  [9]:  http://meyerweb.com/
  [10]: https://github.com/necolas
+ [11]: http://pixelass.github.io/more-or-less/examples/animaless.html
