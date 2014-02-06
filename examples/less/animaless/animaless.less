@@ -22,31 +22,24 @@
 
 .bird(@bool) when (@bool) {
     @isBird:  'is a bird';
-    //content+: ' is a bird';
 }
 .forest(@bool) when (@bool) {
     @isForest:  'lives in a forest';
-    //content+: ' lives in a forest';
 }
 .dangerous(@bool) when (@bool) {
     @isDangerous:  'can be dangerous';
-    //content+: ' can be dangerous';
 }
 .pet(@bool) when (@bool) {
     @isPet:  'can be held as a pet';
-   //content+: ' can be held as a pet';
 }
 .dinosaur(@bool) when (@bool) {
     @isDinosaur:  'is extinct';
-    //content+: ' is extinct';
 }
 .safari(@bool) when (@bool) {
     @isSafari:  'can be seen on a safari';
-    //content+: ' can be seen on a safari';
 }
 .farm(@bool) when (@bool) {
     @isFarm:  'lives on a farm';
-    //content+: ' lives on a farm';
 }
 
 body {
@@ -57,7 +50,6 @@ body {
     vertical-align: top;
     white-space: nowrap;
     background: #ffffff;
-    //background: url('../images/sprites/animaless.jpg');
     position: relative;
     font-weight: 700;
     font-family: sans-serif;
@@ -93,23 +85,17 @@ body {
                                     & {
                                         .in(@bird, @i);
                                         .bird(@-);
-
                                         & {
                                             .in(@safari, @i);
                                             .safari(@-);
                                             content+: 'The @{i} @{isFarm} @{isSafari} @{isDinosaur} @{isPet} @{isDangerous} @{isForest} @{isBird}';
-
                                         }
                                     }
                                 }
                             }
                         }
                     }
-
                 }
-
-                 //content+: '@{isAnimal} @{isFarm} @{isDinosaur} @{isPet} @{isDangerous} @{isForest} @{isBird}';
-
              }
          }
      }
