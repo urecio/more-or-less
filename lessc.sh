@@ -6,16 +6,16 @@
 ## modify these to fit your needs ##
 
 ## locaion of less files ###########
-lessPath="test"
+lessPath="examples/less/animaless"
 
 ## locaion of css files ############
-cssPath="test"
+cssPath="examples/css"
 
 ## name of less file ###############
-inputFile="test.less"
+inputFile="animaless.less"
 
 ## name of css files ###############
-outputFile="test.css"
+outputFile="animaless.css"
 
 #################### END CONFIG #########################
 #########################################################
