@@ -1,0 +1,116 @@
+@import '../../../less/fn/_in';
+@import '../../../lib/reset';
+
+@imageDim: 50px;
+@isFarm: '';
+@isSafari: '';
+@isDinosaur: '';
+@isPet: '';
+@isDangerous: '';
+@isForest: '';
+@isBird: '';
+
+@animals: alpaca, bat, bear, beaver, bee, cat, chicken, cow, crocodile, dog, duck, elasmosaurus, elephant, giraffe, gnu, goat, hippo, kangaroo, leopard, lion, monkey, moose, mouse, owl, panda, peacock, penguin, pig, prontosaurus, pterodactylus, rabbit, rhino, sheep, squirrel, tiger, trex, triceratops, turkey, zebra;
+@bird: chicken, duck, owl, peacock, penguin, turkey;
+@dinosaur: elasmosaurus, prontosaurus, pterodactylus, trex, triceratops;
+@pet: cat, dog, mouse, rabbit;
+@safari: alpaca, crocodile, elephant, giraffe, hippo, gnu, leopard, lion, monkey, moose, rhino, tiger, zebra;
+@dangerous: bear, crocodile, elephant, gnu, hippo, kangaroo, leopard, lion, panda, rhino, tiger;
+@farm: chicken, cow, dog, duck, goat, mouse, owl, panda, penguin, pig, rabbit, sheep, squirrel, turkey;
+@forest: bear, beaver, bee, mouse, owl, rabbit, squirrel;
+
+
+.bird(@bool) when (@bool) {
+    @isBird:  'is a bird';
+    //content+: ' is a bird';
+}
+.forest(@bool) when (@bool) {
+    @isForest:  'lives in a forest';
+    //content+: ' lives in a forest';
+}
+.dangerous(@bool) when (@bool) {
+    @isDangerous:  'can be dangerous';
+    //content+: ' can be dangerous';
+}
+.pet(@bool) when (@bool) {
+    @isPet:  'can be held as a pet';
+   //content+: ' can be held as a pet';
+}
+.dinosaur(@bool) when (@bool) {
+    @isDinosaur:  'is extinct';
+    //content+: ' is extinct';
+}
+.safari(@bool) when (@bool) {
+    @isSafari:  'can be seen on a safari';
+    //content+: ' can be seen on a safari';
+}
+.farm(@bool) when (@bool) {
+    @isFarm:  'lives on a farm';
+    //content+: ' lives on a farm';
+}
+
+body {
+    background: #dedede;
+}
+.animal {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    background: #ffffff;
+    //background: url('../images/sprites/animaless.jpg');
+    position: relative;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 10px;
+    padding-right: 10px;
+    &:after ,&:before {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px;
+    }
+    .for(@animals);.-each(@i){
+        &.@{i} {
+            &:before {
+                content: url('../images/@{i}.png');
+            }
+            &:after {
+                 & {
+                    .in(@forest, @i);
+                    .forest(@-);
+                    & {
+                        .in(@dangerous, @i);
+                        .dangerous(@-);
+                        & {
+                            .in(@dinosaur, @i);
+                            .dinosaur(@-);
+                            & {
+                                .in(@farm, @i);
+                                .farm(@-);
+                                & {
+                                    .in(@pet, @i);
+                                    .pet(@-);
+                                    & {
+                                        .in(@bird, @i);
+                                        .bird(@-);
+
+                                        & {
+                                            .in(@safari, @i);
+                                            .safari(@-);
+                                            content+: 'The @{i} @{isFarm} @{isSafari} @{isDinosaur} @{isPet} @{isDangerous} @{isForest} @{isBird}';
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                 //content+: '@{isAnimal} @{isFarm} @{isDinosaur} @{isPet} @{isDangerous} @{isForest} @{isBird}';
+
+             }
+         }
+     }
+ }
