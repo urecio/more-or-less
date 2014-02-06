@@ -289,13 +289,13 @@ body {
   content: url('../images/owl.png');
 }
 .animal.owl:after {
-  content: 'The owl lives on a farm     lives in a forest is a bird';
+  content: 'The owl      lives in a forest is a bird';
 }
 .animal.panda:before {
   content: url('../images/panda.png');
 }
 .animal.panda:after {
-  content: 'The panda lives on a farm    can be dangerous  ';
+  content: 'The panda     can be dangerous  ';
 }
 .animal.peacock:before {
   content: url('../images/peacock.png');
@@ -307,7 +307,7 @@ body {
   content: url('../images/penguin.png');
 }
 .animal.penguin:after {
-  content: 'The penguin lives on a farm      is a bird';
+  content: 'The penguin       is a bird';
 }
 .animal.pig:before {
   content: url('../images/pig.png');
@@ -349,7 +349,7 @@ body {
   content: url('../images/squirrel.png');
 }
 .animal.squirrel:after {
-  content: 'The squirrel lives on a farm     lives in a forest ';
+  content: 'The squirrel      lives in a forest ';
 }
 .animal.tiger:before {
   content: url('../images/tiger.png');
