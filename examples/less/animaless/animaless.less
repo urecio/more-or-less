@@ -82,37 +82,38 @@ body {
                 content: url('../images/@{i}.png');
             }
             &:after {
-             & {
-                .in(@forest, @i);
-                .forest(@-);
                 & {
-                    .in(@dangerous, @i);
-                    .dangerous(@-);
+                    .in(@forest, @i);
+                    .forest(@-);
                     & {
-                        .in(@dinosaur, @i);
-                        .dinosaur(@-);
+                        .in(@dangerous, @i);
+                        .dangerous(@-);
                         & {
-                            .in(@farm, @i);
-                            .farm(@-);
+                            .in(@dinosaur, @i);
+                            .dinosaur(@-);
                             & {
-                                .in(@pet, @i);
-                                .pet(@-);
+                                .in(@farm, @i);
+                                .farm(@-);
                                 & {
-                                    .in(@bird, @i);
-                                    .bird(@-);
+                                    .in(@pet, @i);
+                                    .pet(@-);
                                     & {
-                                        .in(@safari, @i);
-                                        .safari(@-);
+                                        .in(@bird, @i);
+                                        .bird(@-);
                                         & {
-                                            .in(@fly, @i);
-                                            .fly(@-);
+                                            .in(@safari, @i);
+                                            .safari(@-);
                                             & {
-                                                .in(@underwater, @i);
-                                                .underwater(@-);
+                                                .in(@fly, @i);
+                                                .fly(@-);
                                                 & {
-                                                    .in(@extinct, @i);
-                                                    .extinct(@-);
-                                                    content+: 'The @{i} @{isFarm} @{isSafari} @{isDinosaur} @{isPet} @{isDangerous} @{isForest} @{isBird} @{isFly} @{isExtinct} @{isUnderwater}';
+                                                    .in(@underwater, @i);
+                                                    .underwater(@-);
+                                                    & {
+                                                        .in(@extinct, @i);
+                                                        .extinct(@-);
+                                                        content+: 'The @{i} @{isFarm} @{isSafari} @{isDinosaur} @{isPet} @{isDangerous} @{isForest} @{isBird} @{isFly} @{isExtinct} @{isUnderwater}';
+                                                    }
                                                 }
                                             }
                                         }
@@ -125,5 +126,4 @@ body {
             }
         }
     }
-}
 }
