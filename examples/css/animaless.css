@@ -1,133 +1,14 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 body {
   background: #dedede;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .animal {
   display: inline-block;
@@ -140,6 +21,7 @@ body {
   font-size: 12px;
   margin: 10px;
   padding-right: 10px;
+  list-style: none;
 }
 .animal:after,
 .animal:before {
@@ -147,237 +29,269 @@ body {
   vertical-align: middle;
   padding: 10px;
 }
-.animal.alpaca:before {
-  content: url('../images/alpaca.png');
+.animal:before {
+  background-image: url('../images/sprites/animaless.jpg');
+  background-size: auto 100px;
+  height: 50px;
+  width: 50px;
+  content: '';
 }
-.animal.alpaca:after {
-  content: 'The alpaca  can be seen on a safari        ';
+.animal.alpaca:before {
+  background-position: 0px -50px;
+  background-position: 0px 0;
 }
 .animal.bat:before {
-  content: url('../images/bat.png');
-}
-.animal.bat:after {
-  content: 'The bat        can fly  ';
+  background-position: -50px -50px;
+  background-position: -50px 0;
 }
 .animal.bear:before {
-  content: url('../images/bear.png');
-}
-.animal.bear:after {
-  content: 'The bear     can be dangerous lives in a forest    ';
+  background-position: -100px -50px;
+  background-position: -100px 0;
 }
 .animal.beaver:before {
-  content: url('../images/beaver.png');
-}
-.animal.beaver:after {
-  content: 'The beaver      lives in a forest    ';
+  background-position: -150px -50px;
+  background-position: -150px 0;
 }
 .animal.bee:before {
-  content: url('../images/bee.png');
-}
-.animal.bee:after {
-  content: 'The bee      lives in a forest  can fly  ';
+  background-position: -200px -50px;
+  background-position: -200px 0;
 }
 .animal.cat:before {
-  content: url('../images/cat.png');
-}
-.animal.cat:after {
-  content: 'The cat    can be held as a pet      ';
+  background-position: -250px -50px;
+  background-position: -250px 0;
 }
 .animal.chicken:before {
-  content: url('../images/chicken.png');
-}
-.animal.chicken:after {
-  content: 'The chicken lives on a farm      is a bird can fly  ';
+  background-position: -300px -50px;
+  background-position: -300px 0;
 }
 .animal.cow:before {
-  content: url('../images/cow.png');
-}
-.animal.cow:after {
-  content: 'The cow lives on a farm         ';
+  background-position: -350px -50px;
+  background-position: -350px 0;
 }
 .animal.crocodile:before {
-  content: url('../images/crocodile.png');
-}
-.animal.crocodile:after {
-  content: 'The crocodile  can be seen on a safari   can be dangerous     ';
+  background-position: -400px -50px;
+  background-position: -400px 0;
 }
 .animal.dog:before {
-  content: url('../images/dog.png');
-}
-.animal.dog:after {
-  content: 'The dog lives on a farm   can be held as a pet      ';
+  background-position: -450px -50px;
+  background-position: -450px 0;
 }
 .animal.duck:before {
-  content: url('../images/duck.png');
-}
-.animal.duck:after {
-  content: 'The duck lives on a farm      is a bird can fly  ';
+  background-position: -500px -50px;
+  background-position: -500px 0;
 }
 .animal.elasmosaurus:before {
-  content: url('../images/elasmosaurus.png');
-}
-.animal.elasmosaurus:after {
-  content: 'The elasmosaurus   is a dinosaur  can be dangerous    is extinct lives underwater';
+  background-position: -550px -50px;
+  background-position: -550px 0;
 }
 .animal.elephant:before {
-  content: url('../images/elephant.png');
-}
-.animal.elephant:after {
-  content: 'The elephant  can be seen on a safari   can be dangerous     ';
+  background-position: -600px -50px;
+  background-position: -600px 0;
 }
 .animal.giraffe:before {
-  content: url('../images/giraffe.png');
-}
-.animal.giraffe:after {
-  content: 'The giraffe  can be seen on a safari        ';
+  background-position: -650px -50px;
+  background-position: -650px 0;
 }
 .animal.gnu:before {
-  content: url('../images/gnu.png');
-}
-.animal.gnu:after {
-  content: 'The gnu  can be seen on a safari   can be dangerous     ';
+  background-position: -700px -50px;
+  background-position: -700px 0;
 }
 .animal.goat:before {
-  content: url('../images/goat.png');
-}
-.animal.goat:after {
-  content: 'The goat lives on a farm         ';
+  background-position: -750px -50px;
+  background-position: -750px 0;
 }
 .animal.hippo:before {
-  content: url('../images/hippo.png');
-}
-.animal.hippo:after {
-  content: 'The hippo  can be seen on a safari   can be dangerous     ';
+  background-position: -800px -50px;
+  background-position: -800px 0;
 }
 .animal.kangaroo:before {
-  content: url('../images/kangaroo.png');
-}
-.animal.kangaroo:after {
-  content: 'The kangaroo     can be dangerous     ';
+  background-position: -850px -50px;
+  background-position: -850px 0;
 }
 .animal.leopard:before {
-  content: url('../images/leopard.png');
-}
-.animal.leopard:after {
-  content: 'The leopard  can be seen on a safari   can be dangerous     ';
+  background-position: -900px -50px;
+  background-position: -900px 0;
 }
 .animal.lion:before {
-  content: url('../images/lion.png');
-}
-.animal.lion:after {
-  content: 'The lion  can be seen on a safari   can be dangerous     ';
+  background-position: -950px -50px;
+  background-position: -950px 0;
 }
 .animal.monkey:before {
-  content: url('../images/monkey.png');
-}
-.animal.monkey:after {
-  content: 'The monkey  can be seen on a safari        ';
+  background-position: -1000px -50px;
 }
 .animal.moose:before {
-  content: url('../images/moose.png');
-}
-.animal.moose:after {
-  content: 'The moose  can be seen on a safari        ';
+  background-position: -1050px -50px;
 }
 .animal.mouse:before {
-  content: url('../images/mouse.png');
-}
-.animal.mouse:after {
-  content: 'The mouse lives on a farm   can be held as a pet  lives in a forest    ';
+  background-position: -1100px -50px;
 }
 .animal.owl:before {
-  content: url('../images/owl.png');
-}
-.animal.owl:after {
-  content: 'The owl      lives in a forest is a bird can fly  ';
+  background-position: -1150px -50px;
 }
 .animal.panda:before {
-  content: url('../images/panda.png');
-}
-.animal.panda:after {
-  content: 'The panda     can be dangerous     ';
+  background-position: -1200px -50px;
 }
 .animal.peacock:before {
-  content: url('../images/peacock.png');
-}
-.animal.peacock:after {
-  content: 'The peacock       is a bird   ';
+  background-position: -1250px -50px;
 }
 .animal.penguin:before {
-  content: url('../images/penguin.png');
-}
-.animal.penguin:after {
-  content: 'The penguin       is a bird   ';
+  background-position: -1300px -50px;
 }
 .animal.pig:before {
-  content: url('../images/pig.png');
-}
-.animal.pig:after {
-  content: 'The pig lives on a farm         ';
+  background-position: -1350px -50px;
 }
 .animal.prontosaurus:before {
-  content: url('../images/prontosaurus.png');
-}
-.animal.prontosaurus:after {
-  content: 'The prontosaurus   is a dinosaur  can be dangerous    is extinct ';
+  background-position: -1400px -50px;
 }
 .animal.pterodactylus:before {
-  content: url('../images/pterodactylus.png');
-}
-.animal.pterodactylus:after {
-  content: 'The pterodactylus   is a dinosaur  can be dangerous   can fly is extinct ';
+  background-position: -1450px -50px;
 }
 .animal.rabbit:before {
-  content: url('../images/rabbit.png');
-}
-.animal.rabbit:after {
-  content: 'The rabbit lives on a farm   can be held as a pet  lives in a forest    ';
+  background-position: -1500px -50px;
 }
 .animal.rhino:before {
-  content: url('../images/rhino.png');
-}
-.animal.rhino:after {
-  content: 'The rhino  can be seen on a safari   can be dangerous     ';
+  background-position: -1550px -50px;
 }
 .animal.sheep:before {
-  content: url('../images/sheep.png');
-}
-.animal.sheep:after {
-  content: 'The sheep lives on a farm         ';
+  background-position: -1600px -50px;
 }
 .animal.squirrel:before {
-  content: url('../images/squirrel.png');
-}
-.animal.squirrel:after {
-  content: 'The squirrel      lives in a forest    ';
+  background-position: -1650px -50px;
 }
 .animal.tiger:before {
-  content: url('../images/tiger.png');
-}
-.animal.tiger:after {
-  content: 'The tiger  can be seen on a safari   can be dangerous     ';
+  background-position: -1700px -50px;
 }
 .animal.trex:before {
-  content: url('../images/trex.png');
-}
-.animal.trex:after {
-  content: 'The trex   is a dinosaur  can be dangerous    is extinct ';
+  background-position: -1750px -50px;
 }
 .animal.triceratops:before {
-  content: url('../images/triceratops.png');
-}
-.animal.triceratops:after {
-  content: 'The triceratops   is a dinosaur  can be dangerous    is extinct ';
+  background-position: -1800px -50px;
 }
 .animal.turkey:before {
-  content: url('../images/turkey.png');
-}
-.animal.turkey:after {
-  content: 'The turkey lives on a farm      is a bird can fly  ';
+  background-position: -1850px -50px;
 }
 .animal.zebra:before {
-  content: url('../images/zebra.png');
+  background-position: -1900px -50px;
+}
+.animal.alpaca:after {
+  content: 'The alpaca can be seen on a safari.';
+}
+.animal.bat:after {
+  content: 'The bat can fly.';
+}
+.animal.bear:after {
+  content: 'The bear lives in a forest is dangerous.';
+}
+.animal.beaver:after {
+  content: 'The beaver lives in a forest.';
+}
+.animal.bee:after {
+  content: 'The bee lives in a forest can fly.';
+}
+.animal.cat:after {
+  content: 'The cat can be held as a pet.';
+}
+.animal.chicken:after {
+  content: 'The chicken lives on a farm is a bird can fly.';
+}
+.animal.cow:after {
+  content: 'The cow lives on a farm.';
+}
+.animal.crocodile:after {
+  content: 'The crocodile can be seen on a safari is dangerous.';
+}
+.animal.dog:after {
+  content: 'The dog lives on a farm can be held as a pet.';
+}
+.animal.duck:after {
+  content: 'The duck lives on a farm is a bird can fly.';
+}
+.animal.elasmosaurus:after {
+  content: 'The elasmosaurus is dangerous lives underwater is a dinosaur is extinct.';
+}
+.animal.elephant:after {
+  content: 'The elephant can be seen on a safari is dangerous.';
+}
+.animal.giraffe:after {
+  content: 'The giraffe can be seen on a safari.';
+}
+.animal.gnu:after {
+  content: 'The gnu can be seen on a safari is dangerous.';
+}
+.animal.goat:after {
+  content: 'The goat lives on a farm.';
+}
+.animal.hippo:after {
+  content: 'The hippo can be seen on a safari is dangerous.';
+}
+.animal.kangaroo:after {
+  content: 'The kangaroo is dangerous.';
+}
+.animal.leopard:after {
+  content: 'The leopard can be seen on a safari is dangerous.';
+}
+.animal.lion:after {
+  content: 'The lion can be seen on a safari is dangerous.';
+}
+.animal.monkey:after {
+  content: 'The monkey can be seen on a safari.';
+}
+.animal.moose:after {
+  content: 'The moose can be seen on a safari.';
+}
+.animal.mouse:after {
+  content: 'The mouse lives on a farm lives in a forest can be held as a pet.';
+}
+.animal.owl:after {
+  content: 'The owl lives in a forest is a bird can fly.';
+}
+.animal.panda:after {
+  content: 'The panda is dangerous.';
+}
+.animal.peacock:after {
+  content: 'The peacock is a bird.';
+}
+.animal.penguin:after {
+  content: 'The penguin is a bird.';
+}
+.animal.pig:after {
+  content: 'The pig lives on a farm.';
+}
+.animal.prontosaurus:after {
+  content: 'The prontosaurus is dangerous is a dinosaur is extinct.';
+}
+.animal.pterodactylus:after {
+  content: 'The pterodactylus is dangerous can fly is a dinosaur is extinct.';
+}
+.animal.rabbit:after {
+  content: 'The rabbit lives on a farm lives in a forest can be held as a pet.';
+}
+.animal.rhino:after {
+  content: 'The rhino can be seen on a safari is dangerous.';
+}
+.animal.sheep:after {
+  content: 'The sheep lives on a farm.';
+}
+.animal.squirrel:after {
+  content: 'The squirrel lives in a forest.';
+}
+.animal.tiger:after {
+  content: 'The tiger can be seen on a safari is dangerous.';
+}
+.animal.trex:after {
+  content: 'The trex is dangerous is a dinosaur is extinct.';
+}
+.animal.triceratops:after {
+  content: 'The triceratops is dangerous is a dinosaur is extinct.';
+}
+.animal.turkey:after {
+  content: 'The turkey lives on a farm is a bird can fly.';
 }
 .animal.zebra:after {
-  content: 'The zebra  can be seen on a safari        ';
+  content: 'The zebra can be seen on a safari.';
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .animal:before {
+    background-image: url('../images/sprites/animaless@2x.jpg');
+  }
 }
