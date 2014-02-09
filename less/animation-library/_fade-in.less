@@ -1,0 +1,15 @@
+// .fade-in
+
+.fade-in() {
+    & {
+        @step-1: '0%{opacity:0}';
+        @step-2: '100%{opacity:1}';
+        @animation: fade-in
+        '@{step-1}@{step-2}';
+        & {
+            @animation-name: extract(@animation,1);
+            @animation-frames: extract(@animation,2);
+            .keyframes(@animation-name;@animation-frames;);
+        }
+    }
+}

@@ -1,3 +1,6 @@
+/***********************
+testing CSS3 misc-mixins
+***********************/
 .border-radius {
   -webkit-border-radius: 1px 2px 3px 4px;
   -moz-border-radius: 1px 2px 3px 4px;
@@ -19,36 +22,6 @@
   -o-background-size: 10px auto, 100px auto;
   background-size: 10px auto, 100px auto;
 }
-.sprite-right {
-  background-color: transparent;
-  background-image: url('../img/sprite.png');
-  background-size: auto 90px;
-  background-repeat: no-repeat;
-}
-.sprite-right.one {
-  background-position: 0px 0;
-}
-.sprite-right.two {
-  background-position: -30px 0;
-}
-.sprite-right.three {
-  background-position: -60px 0;
-}
-.sprite-down {
-  background-color: transparent;
-  background-image: url('../img/sprite.png');
-  background-size: 90px auto;
-  background-repeat: no-repeat;
-}
-.sprite-down.four {
-  background-position: 0 0px;
-}
-.sprite-down.five {
-  background-position: 0 -30px;
-}
-.sprite-down.six {
-  background-position: 0 -60px;
-}
 .calc {
   height: -webkit-calc(100% - 10px);
   height: -moz-calc(100% - 10px);
@@ -61,6 +34,18 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
   filter: alpha(opacity=40);
   opacity: 0.4;
+}
+input::-webkit-placeholder {
+  color: #aaaaaa;
+}
+input::-moz-placeholder {
+  color: #aaaaaa;
+}
+input:-moz-placeholder {
+  color: #aaaaaa;
+}
+input::-ms-placeholder {
+  color: #aaaaaa;
 }
 .text-overflow-ellipsis {
   -ms-text-overflow: ellipsis;
@@ -86,7 +71,11 @@
   *display: inline;
   *zoom: 1;
 }
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
 .transition-oneline {
+  /* currently fails */
   -webkit-transition: -webkit-transform, 200ms, linear, 400ms;
   -moz-transition: -moz-transform, 200ms, linear, 400ms;
   -o-transition: -o-transform, 200ms, linear, 400ms;
@@ -140,39 +129,99 @@
   -o-transition-property: height, top, left;
   transition-property: height, top, left;
 }
+/****************************
+testing CSS3 transform-mixins
+****************************/
 .transforms {
   -webkit-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   -moz-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   -o-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   transform: translate(2px, 3px) rotate(3deg) scale(0.4);
 }
-input::-webkit-placeholder {
-  color: #aaaaaa;
+/*******************
+testing image-mixins
+*******************/
+.sprite-right {
+  background-color: transparent;
+  background-image: url('../img/sprite.png');
+  background-size: auto 90px;
+  background-repeat: no-repeat;
 }
-input::-moz-placeholder {
-  color: #aaaaaa;
+.sprite-right.one {
+  background-position: 0px 0;
 }
-input:-moz-placeholder {
-  color: #aaaaaa;
+.sprite-right.two {
+  background-position: -30px 0;
 }
-input::-ms-placeholder {
-  color: #aaaaaa;
+.sprite-right.three {
+  background-position: -60px 0;
 }
-- {
-  -: -} @-webkit-keyframes slideout {0% {left: 0} 100% {left: 100%};
+.sprite-down {
+  background-color: transparent;
+  background-image: url('../img/sprite.png');
+  background-size: 90px auto;
+  background-repeat: no-repeat;
 }
-- {
-  -: -} @-moz-keyframes slideout {0% {left: 0} 100% {left: 100%};
+.sprite-down.four {
+  background-position: 0 0px;
 }
-- {
-  -: -} @keyframes slideout {0% {left: 0} 100% {left: 100%};
+.sprite-down.five {
+  background-position: 0 -30px;
 }
-- {
-  -: -} @-webkit-keyframes slidein {0% {left: -100%} 100% {left: 0};
+.sprite-down.six {
+  background-position: 0 -60px;
 }
-- {
-  -: -} @-moz-keyframes slidein {0% {left: -100%} 100% {left: 0};
+/****************
+testing keyframes
+****************/
+/* -webkit- {
+  slideout: */
+@-webkit-keyframes slideout {0% {left: 0} 100% {left: 100%};
 }
-- {
-  -: -} @keyframes slidein {0% {left: -100%} 100% {left: 0};
+/* -moz- {
+  slideout: */
+@-moz-keyframes slideout {0% {left: 0} 100% {left: 100%};
+}
+/*  {
+  slideout: */
+@keyframes slideout {0% {left: 0} 100% {left: 100%};
+}
+/* -webkit- {
+  slidein: */
+@-webkit-keyframes slidein {0% {left: -100%} 100% {left: 0};
+}
+/* -moz- {
+  slidein: */
+@-moz-keyframes slidein {0% {left: -100%} 100% {left: 0};
+}
+/*  {
+  slidein: */
+@keyframes slidein {0% {left: -100%} 100% {left: 0};
+}
+/************************
+testing animation-library
+************************/
+/* -webkit- {
+  fade-in: */
+@-webkit-keyframes fade-in {0%{opacity:0}100%{opacity:1};
+}
+/* -moz- {
+  fade-in: */
+@-moz-keyframes fade-in {0%{opacity:0}100%{opacity:1};
+}
+/*  {
+  fade-in: */
+@keyframes fade-in {0%{opacity:0}100%{opacity:1};
+}
+/* -webkit- {
+  fade-out: */
+@-webkit-keyframes fade-out {0%{opacity:1}100%{opacity:0};
+}
+/* -moz- {
+  fade-out: */
+@-moz-keyframes fade-out {0%{opacity:1}100%{opacity:0};
+}
+/*  {
+  fade-out: */
+@keyframes fade-out {0%{opacity:1}100%{opacity:0};
 }

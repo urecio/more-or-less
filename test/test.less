@@ -1,8 +1,9 @@
 @import '../_more';
 
 
-// TESTS
-
+/***********************
+testing CSS3 misc-mixins
+***********************/
 .border-radius {
     .border-radius(1px 2px 3px 4px;);
 }
@@ -19,29 +20,6 @@
     .background-size(10px auto, 100px auto;);
 }
 
-
-.sprite-right{
-    .sprites(
-        '../img/sprite.png';
-        auto;
-        90px;
-        30;
-        one;
-        two;
-        three;);
-}
-
-.sprite-down{
-    .sprites(
-        '../img/sprite.png';
-        90px;
-        auto;
-        30;
-        four;
-        five;
-        six;);
-}
-
 .calc {
     .calc(height;'100% - 10px');
     .calc(width;'50% - 20px');
@@ -49,6 +27,10 @@
 
 .opacity {
     .opacity(0.4);
+}
+
+input {
+    .placeholder(#aaa);
 }
 
 .text-overflow-ellipsis {
@@ -59,7 +41,11 @@
     .text-overflow(clip);
 }
 
-.transition-oneline {
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline { /* currently fails */
     .transition(transform 200ms linear 400ms;);
 }
 
@@ -87,15 +73,43 @@
 .transition-multi {
     .transition-property(height, top, left;);
 }
+/****************************
+testing CSS3 transform-mixins
+****************************/
 
 .transforms {
     .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
 }
 
-input {
-    .placeholder(#aaa);
+/*******************
+testing image-mixins
+*******************/
+
+.sprite-right{
+    .sprites(
+        '../img/sprite.png';
+        auto;
+        90px;
+        30;
+        one;
+        two;
+        three;);
 }
 
+.sprite-down{
+    .sprites(
+        '../img/sprite.png';
+        90px;
+        auto;
+        30;
+        four;
+        five;
+        six;);
+}
+
+/****************
+testing keyframes
+****************/
 
 & {
     .keyframes(
@@ -108,3 +122,9 @@ input {
 
 &{.keyframes(slidein;"@{kf1} @{kf2}")}
 
+/************************
+testing animation-library
+************************/
+
+& {.fade-in;}
+& {.fade-out;}
