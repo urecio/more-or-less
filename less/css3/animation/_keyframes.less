@@ -4,11 +4,20 @@
 .keyframes(@name; @frames...) {
     @vendorPrefixes: -webkit-, -moz-, '';
     // http://caniuse.com/#search=animation
-    @newline: e("`'\n'`");
+
+    // hacky stuff
+    @newline: `'\n'`;
+    @tab: `'\t'`;
     @comment-hack: e("/*");
+    @close: e("*/");
     @null: e(" ");
+
+    // beautify @frames
+    @rules: '{@{newline}    @{frames}@{newline}}@{newline}';
+
     .for(@vendorPrefixes);.-each(@i) {
-        @keyframe-selector-hack: e('*/@{newline}@@{i}keyframes @{name} {@{frames}');
+        @keyframe-selector-hack: e('*/@{newline}@@{i}keyframes @{name} @{rules}/*');
         @{comment-hack}{@{null}: @keyframe-selector-hack}
+        /**/
     }
 }
