@@ -58,6 +58,13 @@ slidein
     1
     forwards,
 
+marquee
+    '0%{left:100%}100%{left:-100%}'
+    @animation-duration
+    @animation-timing-function
+    infinite
+    none,
+
 fadeout
     '0%{opacity:1}100%{opacity:0}'
     @animation-duration
@@ -84,7 +91,7 @@ rainbow
     (@animation-duration * 6)
     @animation-timing-function
     infinite
-    forwards,
+    none,
 
 blink
     '0%,50%,100%{opacity:0}50.01%,99.99%{opacity:1}'
@@ -237,7 +244,8 @@ body {
         top: @movement;
     }
 
-    .slidein & {
+    .slidein &,
+    .marquee & {
         left: 100%;
     }
 

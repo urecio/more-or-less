@@ -59,7 +59,8 @@ body {
 .rise .box-inner {
   top: 105px;
 }
-.slidein .box-inner {
+.slidein .box-inner,
+.marquee .box-inner {
   left: 100%;
 }
 .diamond-run .box-inner {
@@ -98,6 +99,17 @@ body {
 .box.slidein:before {
   content: 'slidein';
 }
+.box.marquee:hover .box-inner {
+  -webkit-animation: marquee 500ms linear infinite;
+  -moz-animation: marquee 500ms linear infinite;
+  animation: marquee 500ms linear infinite;
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+.box.marquee:before {
+  content: 'marquee';
+}
 .box.fadeout:hover .box-inner {
   -webkit-animation: fadeout 500ms linear 1;
   -moz-animation: fadeout 500ms linear 1;
@@ -135,9 +147,9 @@ body {
   -webkit-animation: rainbow 3000ms linear infinite;
   -moz-animation: rainbow 3000ms linear infinite;
   animation: rainbow 3000ms linear infinite;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  animation-fill-mode: none;
 }
 .box.rainbow:before {
   content: 'rainbow';
@@ -308,6 +320,18 @@ body {
 /*  {
   slidein: */
 @keyframes slidein {0%{left:100%}100%{left:0};
+}
+/* -webkit- {
+  marquee: */
+@-webkit-keyframes marquee {0%{left:100%}100%{left:-100%};
+}
+/* -moz- {
+  marquee: */
+@-moz-keyframes marquee {0%{left:100%}100%{left:-100%};
+}
+/*  {
+  marquee: */
+@keyframes marquee {0%{left:100%}100%{left:-100%};
 }
 /* -webkit- {
   fadeout: */
