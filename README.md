@@ -71,7 +71,6 @@
 @import 'less/css3/transition/_transition';
 
 .transtion(height 100ms linear 100ms);
-
 ```
 
 ## What does this NOT do?
@@ -174,16 +173,20 @@ This way mixins can easily be created or modified.
 }
 ```
 > unecessary output is produced (will be ignored but it looks ugly)  
-> `-{-:-} /*  important output is in here  */`  
-> `-{-:-} <-- THIS IS JUNK`
+> `/*{-:*/ /*  important output is in here  */`  
+> `/*{-:*/ <-- THIS IS JUNK`
 
 #### Keyframes OUTPUT
 
 ```less
--{-:-} @-webkit-keyframes {0% {left: 0;} 100% {left: 100%;}}
--{-:-} @-moz-keyframes {0% {left: 0;} 100% {left: 100%;}}
--{-:-} @keyframes {0% {left: 0;} 100% {left: 100%;}}
+/*{-:*/ 
+@-webkit-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
+/*{-:*/ 
+@-moz-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
+/*{-:*/ 
+@keyframes fadeout {0%{opacity:1}100%{opacity:0}}
 ```
+
 ## Examples
 
 ### Animaless
