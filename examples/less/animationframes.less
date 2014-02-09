@@ -7,7 +7,7 @@
 @boxSmallDimension: (@boxBigDimension / 2);
 @border-radius: (@boxSmallDimension / 4);
 @movement: (@boxBigDimension - @boxSmallDimension);
-@boxSideMargin: 10px;
+@boxMargin: 10px;
 @animation-duration: 500ms;
 @animation-timing-function: linear;
 
@@ -173,14 +173,14 @@ body {
 }
 
 #content {
-    max-width: 6 * (@boxBigDimension + (@boxSideMargin * 2));
+    max-width: 6 * (@boxBigDimension + (@boxMargin * 2));
     margin: 0 auto;
 }
 
 .box {
     height: @boxBigDimension;
     width: @boxBigDimension;
-    margin: 30px @boxSideMargin @boxSideMargin;
+    margin:@boxMargin;
     background: #cec79c;
     position: relative;
     list-style: none;

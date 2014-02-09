@@ -17,7 +17,7 @@ body {
 .box {
   height: 140px;
   width: 140px;
-  margin: 30px 10px 10px;
+  margin: 10px;
   background: #cec79c;
   position: relative;
   list-style: none;
