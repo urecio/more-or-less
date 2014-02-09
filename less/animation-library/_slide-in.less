@@ -1,0 +1,11 @@
+// .slide-in
+
+.slide-in(@direction: left;) {
+    @step-1: '0%{@{direction}:-100%}';
+    @step-2: '100%{@{direction}:0}';
+    @animation: e('slide-in-@{direction}')
+    '@{step-1}@{step-2}';
+    @animation-name: extract(@animation,1);
+    @animation-frames: extract(@animation,2);
+    .keyframes(@animation-name;@animation-frames;);
+}
