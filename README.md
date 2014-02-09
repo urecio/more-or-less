@@ -201,7 +201,7 @@ A loop to batch create keyframe-animations.
 * The example result can be found [here][14]
 
 
- [0]:  https://github.com/pixelass/more-or-less/blob/master/license.tx
+ [0]:  https://github.com/pixelass/more-or-less/blob/master/license.txt
  [1]:  https://github.com/pixelass
  [2]:  https://github.com/seven-phases-max
  [3]:  https://github.com/csshat/lesshat
