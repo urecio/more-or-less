@@ -5,7 +5,8 @@
     @vendorPrefixes: -ms-, -o-, '';
     // http://caniuse.com/#search=text-overflow
     .for(@vendorPrefixes);.-each(@i) {
-        @{i}text-overflow: @value;
+        @prop: e('@{i}text-overflow');
+        @{prop}: @value;
     }
     // props needed
     display: inline-block; // may be overridden with block

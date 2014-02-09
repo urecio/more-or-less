@@ -50,7 +50,7 @@ input::-ms-placeholder {
 .text-overflow-ellipsis {
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
-  ''text-overflow: ellipsis;
+  text-overflow: ellipsis;
   display: inline-block;
   max-width: 100%;
   overflow: hidden;
@@ -62,7 +62,7 @@ input::-ms-placeholder {
 .text-overflow-clip {
   -ms-text-overflow: clip;
   -o-text-overflow: clip;
-  ''text-overflow: clip;
+  text-overflow: clip;
   display: inline-block;
   max-width: 100%;
   overflow: hidden;
@@ -188,15 +188,15 @@ testing keyframes
 }
 /* -webkit- {
   slidein: */
-@-webkit-keyframes slidein {0% {left: -100%} 100% {left: 0};
+@-webkit-keyframes slidein {0% {left: -100%}100% {left: 0};
 }
 /* -moz- {
   slidein: */
-@-moz-keyframes slidein {0% {left: -100%} 100% {left: 0};
+@-moz-keyframes slidein {0% {left: -100%}100% {left: 0};
 }
 /*  {
   slidein: */
-@keyframes slidein {0% {left: -100%} 100% {left: 0};
+@keyframes slidein {0% {left: -100%}100% {left: 0};
 }
 /************************
 testing animation-library

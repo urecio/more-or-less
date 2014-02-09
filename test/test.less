@@ -117,10 +117,12 @@ testing keyframes
         "0% {left: 0} 100% {left: 100%}")
 }
 
-@kf1: "0% {left: -100%}";
-@kf2: "100% {left: 0}";
 
-&{.keyframes(slidein;"@{kf1} @{kf2}")}
+&{
+    @step-1: "0% {left: -100%}";
+    @step-2: "100% {left: 0}";
+    .keyframes(slidein;"@{step-1}@{step-2}");
+}
 
 /************************
 testing animation-library
