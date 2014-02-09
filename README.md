@@ -5,7 +5,10 @@
     * [Credit](#credit)
     * [Dependencies](#dependencies)
 * [What does this do](#what-does-this-do)
-    * [Example import](#example-import)
+    * [Example for "less" import](#example-for-less-imports)
+        * [Import all transitions](#import-all-transitions)
+        * [Import transition oneliner only](#import-transition-oneliner-only)
+
 * [What does this not do](#what-does-this-not-do)
 * [Notice](#notice)
 * [How mixins are built](#how-mixins-are-built)
@@ -16,7 +19,7 @@
         * [Keyframes output](#keyframes-output)
 * [Examples](#examples)
     * [Animaless](#animaless)
-        * [Demo][11]
+    * [Animationframes](#animationframes)
 
 
 
@@ -40,6 +43,7 @@
 
 * It adds some functions and mixins for lessjs
 * It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
+* It is adds helpul functions (e.g. to create loops or compare lists)
 * It allows to import [reset][7] or [normalize][8]
     * `@import 'lib/reset';` to import the reset styles
     * `@import 'lib/normalize'` to import the normalize styles
@@ -49,22 +53,25 @@
 
 ### Example for "less" imports
 
+#### import all transitions
+
 ```less
 @import 'less/css3/_transition';
-// only transitions are imported
-//················································
+
 .transtion(height 100ms linear 100ms);
 .transition-property(height, left, top);
 .transition-duration(100ms, 200ms, 300ms);
 .transition-timing-function(linear, ease-out, ease);
 .transition-delay(0ms, 100ms, 300ms);
+```
 
+#### import transition oneliner only
 
+```less
 @import 'less/css3/transition/_transition';
-// only the transition-one-liner is imported
-//················································
+
 .transtion(height 100ms linear 100ms);
-// transition: [property] [duration] [timing-function] [delay];
+
 ```
 
 ## What does this NOT do?
@@ -181,50 +188,18 @@ This way mixins can easily be created or modified.
 
 ### Animaless
 
-I created a loop to check if an animal belongs to a group (e.g. Owl = bird + forest, Bear = dangerous + forest)
-The example result can be found [here: animaless][11]
-#### Animaless HTML
-As you can see the entire logic is done in less.
-No JavaScript is needed. No text is inside the HTML.
+A loop to check if an animal belongs to a group (e.g. Owl = bird + forest, Bear = dangerous + forest).
 
-```html
-<ul>
-    <li class="animal alpaca"></li>
-    <li class="animal bat"></li>
-    <li class="animal bear"></li>
-    <li class="animal beaver"></li>
-    <li class="animal bee"></li>
-    <li class="animal cat"></li>
-    <li class="animal chicken"></li>
-    <li class="animal cow"></li>
-    <li class="animal crocodile"></li>
-    <li class="animal dog"></li>
-    <li class="animal duck"></li>
-    <li class="animal elasmosaurus"></li>
-    <li class="animal elephant"></li>
-    <li class="animal giraffe"></li>
-    <li class="animal lion"></li>
-    <li class="animal monkey"></li>
-    <li class="animal moose"></li>
-    <li class="animal mouse"></li>
-    <li class="animal owl"></li>
-    <li class="animal panda"></li>
-    <li class="animal peacock"></li>
-    <li class="animal penguin"></li>
-    <li class="animal pig"></li>
-    <li class="animal prontosaurus"></li>
-    <li class="animal pterodactylus"></li>
-    <li class="animal rabbit"></li>
-    <li class="animal rhino"></li>
-    <li class="animal sheep"></li>
-    <li class="animal squirrel"></li>
-    <li class="animal tiger"></li>
-    <li class="animal trex"></li>
-    <li class="animal triceratops"></li>
-    <li class="animal turkey"></li>
-    <li class="animal zebra"></li>
-</ul>
-````
+* The example source can be found [here][11]
+* The example result can be found [here][12]
+
+### Animationframes
+
+A loop to batch create keyframe-animations.
+
+* The example source can be found [here][13]
+* The example result can be found [here][14]
+
 
  [0]:  https://github.com/pixelass/more-or-less/blob/master/license.tx
  [1]:  https://github.com/pixelass
@@ -237,4 +212,7 @@ No JavaScript is needed. No text is inside the HTML.
  [8]:  https://github.com/necolas/normalize.css/
  [9]:  http://meyerweb.com/
  [10]: https://github.com/necolas
- [11]: http://pixelass.github.io/more-or-less/examples/animaless.html
+ [11]: http://pixelass.github.io/more-or-less/examples/less/animaless.less
+ [12]: http://pixelass.github.io/more-or-less/examples/animaless.html
+ [13]: http://pixelass.github.io/more-or-less/examples/animationframes.html
+ [14]: http://pixelass.github.io/more-or-less/examples/less/animationframes.less

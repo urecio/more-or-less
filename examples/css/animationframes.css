@@ -1,0 +1,369 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff8c2;
+}
+#content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.box {
+  height: 140px;
+  width: 140px;
+  margin: 30px 10px 10px;
+  background: #cec79c;
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+}
+.box:before {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  z-index: 0;
+  height: 30px;
+  width: 140px;
+  line-height: 30px;
+  text-align: center;
+  color: #605d48;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.box-inner {
+  height: 70px;
+  width: 70px;
+  background: #605d48;
+  position: absolute;
+  display: block;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+}
+.fadein .box-inner,
+.fadein-grow .box-inner {
+  opacity: 0;
+}
+.rise .box-inner {
+  top: 70px;
+}
+.shrink .box-inner,
+.fadeout-shrink .box-inner,
+.fadein .box-inner,
+.fadeout .box-inner,
+.blink .box-inner,
+.colorfade .box-inner,
+.old-lightbulb .box-inner {
+  height: 140px;
+  width: 140px;
+}
+.box.fadeout:hover .box-inner {
+  -webkit-animation: fadeout 500ms linear 1;
+  -moz-animation: fadeout 500ms linear 1;
+  animation: fadeout 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.fadeout:before {
+  content: 'fadeout';
+}
+.box.fadein:hover .box-inner {
+  -webkit-animation: fadein 500ms linear 1;
+  -moz-animation: fadein 500ms linear 1;
+  animation: fadein 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.fadein:before {
+  content: 'fadein';
+}
+.box.colorfade:hover .box-inner {
+  -webkit-animation: colorfade 500ms linear 1;
+  -moz-animation: colorfade 500ms linear 1;
+  animation: colorfade 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.colorfade:before {
+  content: 'colorfade';
+}
+.box.blink:hover .box-inner {
+  -webkit-animation: blink 500ms linear infinite;
+  -moz-animation: blink 500ms linear infinite;
+  animation: blink 500ms linear infinite;
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+.box.blink:before {
+  content: 'blink';
+}
+.box.old-lightbulb:hover .box-inner {
+  -webkit-animation: old-lightbulb 500ms linear infinite;
+  -moz-animation: old-lightbulb 500ms linear infinite;
+  animation: old-lightbulb 500ms linear infinite;
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+.box.old-lightbulb:before {
+  content: 'old-lightbulb';
+}
+.box.grow:hover .box-inner {
+  -webkit-animation: grow 500ms linear 1;
+  -moz-animation: grow 500ms linear 1;
+  animation: grow 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.grow:before {
+  content: 'grow';
+}
+.box.shrink:hover .box-inner {
+  -webkit-animation: shrink 500ms linear 1;
+  -moz-animation: shrink 500ms linear 1;
+  animation: shrink 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.shrink:before {
+  content: 'shrink';
+}
+.box.fadein-grow:hover .box-inner {
+  -webkit-animation: fadein-grow 500ms linear 1;
+  -moz-animation: fadein-grow 500ms linear 1;
+  animation: fadein-grow 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.fadein-grow:before {
+  content: 'fadein-grow';
+}
+.box.fadeout-shrink:hover .box-inner {
+  -webkit-animation: fadeout-shrink 500ms linear 1;
+  -moz-animation: fadeout-shrink 500ms linear 1;
+  animation: fadeout-shrink 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.fadeout-shrink:before {
+  content: 'fadeout-shrink';
+}
+.box.bounce-y:hover .box-inner {
+  -webkit-animation: bounce-y 500ms linear infinite;
+  -moz-animation: bounce-y 500ms linear infinite;
+  animation: bounce-y 500ms linear infinite;
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+.box.bounce-y:before {
+  content: 'bounce-y';
+}
+.box.bounce-x:hover .box-inner {
+  -webkit-animation: bounce-x 500ms linear infinite;
+  -moz-animation: bounce-x 500ms linear infinite;
+  animation: bounce-x 500ms linear infinite;
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+.box.bounce-x:before {
+  content: 'bounce-x';
+}
+.box.bounce-xy:hover .box-inner {
+  -webkit-animation: bounce-xy 500ms linear infinite;
+  -moz-animation: bounce-xy 500ms linear infinite;
+  animation: bounce-xy 500ms linear infinite;
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+.box.bounce-xy:before {
+  content: 'bounce-xy';
+}
+.box.drop:hover .box-inner {
+  -webkit-animation: drop 500ms linear 1;
+  -moz-animation: drop 500ms linear 1;
+  animation: drop 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.drop:before {
+  content: 'drop';
+}
+.box.rise:hover .box-inner {
+  -webkit-animation: rise 500ms linear 1;
+  -moz-animation: rise 500ms linear 1;
+  animation: rise 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.rise:before {
+  content: 'rise';
+}
+.box.run:hover .box-inner {
+  -webkit-animation: run 2000ms linear infinite;
+  -moz-animation: run 2000ms linear infinite;
+  animation: run 2000ms linear infinite;
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+.box.run:before {
+  content: 'run';
+}
+- {
+  -: -} @-webkit-keyframes fadeout {0%{opacity:1}100%{opacity:0};
+}
+- {
+  -: -} @-moz-keyframes fadeout {0%{opacity:1}100%{opacity:0};
+}
+- {
+  -: -} @keyframes fadeout {0%{opacity:1}100%{opacity:0};
+}
+- {
+  -: -} @-webkit-keyframes fadein {0%{opacity:0}100%{opacity:1};
+}
+- {
+  -: -} @-moz-keyframes fadein {0%{opacity:0}100%{opacity:1};
+}
+- {
+  -: -} @keyframes fadein {0%{opacity:0}100%{opacity:1};
+}
+- {
+  -: -} @-webkit-keyframes colorfade {0%{background-color:#605d48}100%{background-color:#49ad80};
+}
+- {
+  -: -} @-moz-keyframes colorfade {0%{background-color:#605d48}100%{background-color:#49ad80};
+}
+- {
+  -: -} @keyframes colorfade {0%{background-color:#605d48}100%{background-color:#49ad80};
+}
+- {
+  -: -} @-webkit-keyframes blink {0%,50%,100%{opacity:0}50.01%,99.99%{opacity:1};
+}
+- {
+  -: -} @-moz-keyframes blink {0%,50%,100%{opacity:0}50.01%,99.99%{opacity:1};
+}
+- {
+  -: -} @keyframes blink {0%,50%,100%{opacity:0}50.01%,99.99%{opacity:1};
+}
+- {
+  -: -} @-webkit-keyframes old-lightbulb {0%,5%,20%,25%,100%{opacity:0}5.01%,19.99%,25.01%,99.99%{opacity:1};
+}
+- {
+  -: -} @-moz-keyframes old-lightbulb {0%,5%,20%,25%,100%{opacity:0}5.01%,19.99%,25.01%,99.99%{opacity:1};
+}
+- {
+  -: -} @keyframes old-lightbulb {0%,5%,20%,25%,100%{opacity:0}5.01%,19.99%,25.01%,99.99%{opacity:1};
+}
+- {
+  -: -} @-webkit-keyframes grow {0%{height:70px;width:70px}100%{height:140px;width:140px};
+}
+- {
+  -: -} @-moz-keyframes grow {0%{height:70px;width:70px}100%{height:140px;width:140px};
+}
+- {
+  -: -} @keyframes grow {0%{height:70px;width:70px}100%{height:140px;width:140px};
+}
+- {
+  -: -} @-webkit-keyframes shrink {0%{height:140px;width:140px}100%{height:70px;width:70px};
+}
+- {
+  -: -} @-moz-keyframes shrink {0%{height:140px;width:140px}100%{height:70px;width:70px};
+}
+- {
+  -: -} @keyframes shrink {0%{height:140px;width:140px}100%{height:70px;width:70px};
+}
+- {
+  -: -} @-webkit-keyframes fadein-grow {0%{opacity:0;height:70px;width:70px}100%{opacity:1;height:140px;width:140px};
+}
+- {
+  -: -} @-moz-keyframes fadein-grow {0%{opacity:0;height:70px;width:70px}100%{opacity:1;height:140px;width:140px};
+}
+- {
+  -: -} @keyframes fadein-grow {0%{opacity:0;height:70px;width:70px}100%{opacity:1;height:140px;width:140px};
+}
+- {
+  -: -} @-webkit-keyframes fadeout-shrink {0%{opacity:1;height:140px;width:140px}100%{opacity:0;height:70px;width:70px};
+}
+- {
+  -: -} @-moz-keyframes fadeout-shrink {0%{opacity:1;height:140px;width:140px}100%{opacity:0;height:70px;width:70px};
+}
+- {
+  -: -} @keyframes fadeout-shrink {0%{opacity:1;height:140px;width:140px}100%{opacity:0;height:70px;width:70px};
+}
+- {
+  -: -} @-webkit-keyframes bounce-y {0%,100%{top:0;}50%{top:70px};
+}
+- {
+  -: -} @-moz-keyframes bounce-y {0%,100%{top:0;}50%{top:70px};
+}
+- {
+  -: -} @keyframes bounce-y {0%,100%{top:0;}50%{top:70px};
+}
+- {
+  -: -} @-webkit-keyframes bounce-x {0%,100%{left:0;}50%{left:70px};
+}
+- {
+  -: -} @-moz-keyframes bounce-x {0%,100%{left:0;}50%{left:70px};
+}
+- {
+  -: -} @keyframes bounce-x {0%,100%{left:0;}50%{left:70px};
+}
+- {
+  -: -} @-webkit-keyframes bounce-xy {0%,100%{top:0;left:0;}50%{top:70px;left:70px};
+}
+- {
+  -: -} @-moz-keyframes bounce-xy {0%,100%{top:0;left:0;}50%{top:70px;left:70px};
+}
+- {
+  -: -} @keyframes bounce-xy {0%,100%{top:0;left:0;}50%{top:70px;left:70px};
+}
+- {
+  -: -} @-webkit-keyframes drop {0%{top:0;}100%{top:70px};
+}
+- {
+  -: -} @-moz-keyframes drop {0%{top:0;}100%{top:70px};
+}
+- {
+  -: -} @keyframes drop {0%{top:0;}100%{top:70px};
+}
+- {
+  -: -} @-webkit-keyframes rise {0%{top:70px}100%{top:0;};
+}
+- {
+  -: -} @-moz-keyframes rise {0%{top:70px}100%{top:0;};
+}
+- {
+  -: -} @keyframes rise {0%{top:70px}100%{top:0;};
+}
+- {
+  -: -} @-webkit-keyframes run {0%,10%,100%{top:0;left:0;}25%,35%{top:0;left:70px;}50%,60%{top:70px;left:70px;}75%,85%{top:70px;left:0;};
+}
+- {
+  -: -} @-moz-keyframes run {0%,10%,100%{top:0;left:0;}25%,35%{top:0;left:70px;}50%,60%{top:70px;left:70px;}75%,85%{top:70px;left:0;};
+}
+- {
+  -: -} @keyframes run {0%,10%,100%{top:0;left:0;}25%,35%{top:0;left:70px;}50%,60%{top:70px;left:70px;}75%,85%{top:70px;left:0;};
+}

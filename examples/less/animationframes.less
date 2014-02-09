@@ -1,0 +1,238 @@
+@import '../../less/fn/_for';
+@import '../../less/css3/_animation';
+@import '../../less/css3/misc/_box-sizing';
+@import '../../less/css3/misc/_border-radius';
+
+@boxBigDimension: 140px;
+@boxSmallDimension: (@boxBigDimension / 2);
+@border-radius: (@boxSmallDimension / 2);
+@movement: (@boxBigDimension - @boxSmallDimension);
+@boxSideMargin: 10px;
+@animation-duration: 500ms;
+@animation-timing-function: linear;
+
+@run0: '0%,10%,100%{top:0;left:0;}';
+@run25: '25%,35%{top:0;left:@{movement};}';
+@run50: '50%,60%{top:@{movement};left:@{movement};}';
+@run75: '75%,85%{top:@{movement};left:0;}';
+
+@shrink0: '0%{height:@{boxBigDimension};width:@{boxBigDimension}}';
+@shrink100: '100%{height:@{boxSmallDimension};width:@{boxSmallDimension}}';
+
+@grow0: '0%{height:@{boxSmallDimension};width:@{boxSmallDimension}}';
+@grow100: '100%{height:@{boxBigDimension};width:@{boxBigDimension}}';
+
+@fadeout-shrink0: '0%{opacity:1;height:@{boxBigDimension};width:@{boxBigDimension}}';
+@fadeout-shrink100: '100%{opacity:0;height:@{boxSmallDimension};width:@{boxSmallDimension}}';
+
+@fadein-grow0: '0%{opacity:0;height:@{boxSmallDimension};width:@{boxSmallDimension}}';
+@fadein-grow100: '100%{opacity:1;height:@{boxBigDimension};width:@{boxBigDimension}}';
+
+@animations:
+fadeout
+    '0%{opacity:1}100%{opacity:0}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+fadein
+    '0%{opacity:0}100%{opacity:1}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+colorfade
+    '0%{background-color:#605d48}100%{background-color:#49ad80}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+blink
+    '0%,50%,100%{opacity:0}50.01%,99.99%{opacity:1}'
+    @animation-duration
+    @animation-timing-function
+    infinite
+    none,
+
+old-lightbulb
+    '0%,5%,20%,25%,100%{opacity:0}5.01%,19.99%,25.01%,99.99%{opacity:1}'
+    @animation-duration
+    @animation-timing-function
+    infinite
+    none,
+
+grow
+    '@{grow0}@{grow100}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+shrink
+    '@{shrink0}@{shrink100}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+fadein-grow
+    '@{fadein-grow0}@{fadein-grow100}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+fadeout-shrink
+    '@{fadeout-shrink0}@{fadeout-shrink100}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+bounce-y
+    '0%,100%{top:0;}50%{top:@{movement}}'
+    @animation-duration
+    @animation-timing-function
+    infinite
+    none,
+
+bounce-x
+    '0%,100%{left:0;}50%{left:@{movement}}'
+    @animation-duration
+    @animation-timing-function
+    infinite
+    none,
+
+bounce-xy
+    '0%,100%{top:0;left:0;}50%{top:@{movement};left:@{movement}}'
+    @animation-duration
+    @animation-timing-function
+    infinite
+    none,
+
+drop
+    '0%{top:0;}100%{top:@{movement}}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+rise
+    '0%{top:@{movement}}100%{top:0;}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+run
+    '@{run0}@{run25}@{run50}@{run75}'
+    (@animation-duration * 4)
+    @animation-timing-function
+    infinite
+    none;
+
+*, *:before, *:after {
+    .box-sizing(border-box);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff8c2;
+}
+
+#content {
+    max-width: 6 * (@boxBigDimension + (@boxSideMargin * 2));
+    margin: 0 auto;
+}
+
+.box {
+    height: @boxBigDimension;
+    width: @boxBigDimension;
+    margin: 30px @boxSideMargin @boxSideMargin;
+    background: #cec79c;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    .border-radius(@border-radius);
+
+    &:before {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        z-index: 0;
+        height: 30px;
+        width: @boxBigDimension;
+        line-height: 30px;
+        text-align: center;
+        color: #605d48;
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+
+.box-inner {
+    height: @boxSmallDimension;
+    width: @boxSmallDimension;
+    background: #605d48;
+    position: absolute;
+    display: block;
+    .border-radius(@border-radius);
+
+    .fadein &,
+    .fadein-grow & {
+        opacity: 0;
+    }
+
+    .rise & {
+        top: @movement;
+    }
+
+    .shrink &,
+    .fadeout-shrink &,
+    .fadein &,
+    .fadeout &,
+    .blink &,
+    .colorfade &,
+    .old-lightbulb &{
+        height: @boxBigDimension;
+        width+: @boxBigDimension;
+    }
+}
+
+.box {
+    .for(@animations);.-each(@i) {
+        @animation-name: extract(@i,1);
+        @animation-duration: extract(@i,3);
+        @animation-timing-function: extract(@i,4);
+        @animation-iteration-count: extract(@i,5);
+        @animation-fill-mode: extract(@i,6);
+
+        &.@{animation-name}:hover .box-inner  {
+            .animation(@animation-name
+             @animation-duration
+             @animation-timing-function
+             @animation-iteration-count;);
+
+            .animation-fill-mode(@animation-fill-mode);
+        }
+
+        &.@{animation-name}:before  {
+            content: '@{animation-name}';
+        }
+    }
+}
+
+& {
+    .for(@animations);.-each(@i) {
+        @animation-name: extract(@i,1);
+        @animation-frames: extract(@i,2);
+
+        .keyframes(@animation-name;@animation-frames;);
+    }
+}
+
