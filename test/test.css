@@ -186,10 +186,16 @@ testing keyframes
 /*;
 }
 /**/
+/* @start testing pretty output (with newlines and 4-space-indents)*/
 /* {
    : */
 @-webkit-keyframes slidein {
-    0% {left: -100%}100% {left: 0}
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
 }
 /*;
 }
@@ -197,7 +203,12 @@ testing keyframes
 /* {
    : */
 @-moz-keyframes slidein {
-    0% {left: -100%}100% {left: 0}
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
 }
 /*;
 }
@@ -205,11 +216,17 @@ testing keyframes
 /* {
    : */
 @keyframes slidein {
-    0% {left: -100%}100% {left: 0}
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
 }
 /*;
 }
 /**/
+/* @end testing pretty output (with newlines and 4-space-indents)*/
 /************************
 testing animation-library
 ************************/

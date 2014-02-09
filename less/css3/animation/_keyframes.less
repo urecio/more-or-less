@@ -7,13 +7,13 @@
 
     // hacky stuff
     @newline: `'\n'`;
-    @tab: `'\t'`;
+    @tab: "    ";
     @comment-hack: e("/*");
     @close: e("*/");
     @null: e(" ");
 
     // beautify @frames
-    @rules: '{@{newline}    @{frames}@{newline}}@{newline}';
+    @rules: '{@{newline}@{tab}@{frames}@{newline}}@{newline}';
 
     .for(@vendorPrefixes);.-each(@i) {
         @keyframe-selector-hack: e('*/@{newline}@@{i}keyframes @{name} @{rules}/*');

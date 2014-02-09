@@ -114,10 +114,16 @@ testing keyframes
 }
 
 
-&{
-    @step-1: "0% {left: -100%}";
-    @step-2: "100% {left: 0}";
+& {
+    /* @start testing pretty output (with newlines and 4-space-indents)*/
+    @nl: `'\n'`;
+    @t: '    ';
+    @nlt: '@{nl}@{t}';
+    @nltt: '@{nlt}@{t}';
+    @step-1: "0% {@{nltt}left: -100%;@{nlt}}@{nlt}";
+    @step-2: "100% {@{nltt}left: 0;@{nlt}}";
     .keyframes(slidein;"@{step-1}@{step-2}");
+    /* @end testing pretty output (with newlines and 4-space-indents)*/
 }
 
 /************************
