@@ -22,33 +22,35 @@ body {
   position: relative;
   list-style: none;
   display: inline-block;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  border-radius: 35px;
+  -webkit-border-radius: 17.5px;
+  -moz-border-radius: 17.5px;
+  border-radius: 17.5px;
+  overflow: hidden;
 }
 .box:before {
   position: absolute;
-  top: -30px;
+  bottom: 0;
   left: 0;
-  z-index: 0;
+  z-index: 2;
   height: 30px;
   width: 140px;
   line-height: 30px;
   text-align: center;
-  color: #605d48;
+  color: #333226;
   font-family: sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
 }
 .box-inner {
   height: 70px;
   width: 70px;
-  background: #605d48;
+  background: #868692;
   position: absolute;
   display: block;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  border-radius: 35px;
+  -webkit-border-radius: 17.5px;
+  -moz-border-radius: 17.5px;
+  border-radius: 17.5px;
+  z-index: 0;
 }
 .fadein .box-inner,
 .fadein-grow .box-inner {
@@ -56,6 +58,12 @@ body {
 }
 .rise .box-inner {
   top: 70px;
+}
+.slidein .box-inner {
+  left: 100%;
+}
+.diamond-run .box-inner {
+  left: 35px;
 }
 .shrink .box-inner,
 .fadeout-shrink .box-inner,
@@ -66,6 +74,28 @@ body {
 .old-lightbulb .box-inner {
   height: 140px;
   width: 140px;
+}
+.box.slideout:hover .box-inner {
+  -webkit-animation: slideout 500ms linear 1;
+  -moz-animation: slideout 500ms linear 1;
+  animation: slideout 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.slideout:before {
+  content: 'slideout';
+}
+.box.slidein:hover .box-inner {
+  -webkit-animation: slidein 500ms linear 1;
+  -moz-animation: slidein 500ms linear 1;
+  animation: slidein 500ms linear 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.box.slidein:before {
+  content: 'slidein';
 }
 .box.fadeout:hover .box-inner {
   -webkit-animation: fadeout 500ms linear 1;
@@ -232,6 +262,35 @@ body {
 .box.run:before {
   content: 'run';
 }
+.box.diamond-run:hover .box-inner {
+  -webkit-animation: diamond-run 2000ms linear infinite;
+  -moz-animation: diamond-run 2000ms linear infinite;
+  animation: diamond-run 2000ms linear infinite;
+  -webkit-animation-fill-mode: none;
+  -moz-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+.box.diamond-run:before {
+  content: 'diamond-run';
+}
+/* {
+  -: */ @-webkit-keyframes slideout {0%{left:0}100%{left:100%};
+}
+/* {
+  -: */ @-moz-keyframes slideout {0%{left:0}100%{left:100%};
+}
+/* {
+  -: */ @keyframes slideout {0%{left:0}100%{left:100%};
+}
+/* {
+  -: */ @-webkit-keyframes slidein {0%{left:100%}100%{left:0};
+}
+/* {
+  -: */ @-moz-keyframes slidein {0%{left:100%}100%{left:0};
+}
+/* {
+  -: */ @keyframes slidein {0%{left:100%}100%{left:0};
+}
 /* {
   -: */ @-webkit-keyframes fadeout {0%{opacity:1}100%{opacity:0};
 }
@@ -366,4 +425,13 @@ body {
 }
 /* {
   -: */ @keyframes run {0%,10%,100%{top:0;left:0;}25%,35%{top:0;left:70px;}50%,60%{top:70px;left:70px;}75%,85%{top:70px;left:0;};
+}
+/* {
+  -: */ @-webkit-keyframes diamond-run {0%,10%,100%{top:0;left:35px;}25%,35%{top:35px;left:70px;}50%,60%{top:70px;left:35px;}75%,85%{top:35px;left:0;};
+}
+/* {
+  -: */ @-moz-keyframes diamond-run {0%,10%,100%{top:0;left:35px;}25%,35%{top:35px;left:70px;}50%,60%{top:70px;left:35px;}75%,85%{top:35px;left:0;};
+}
+/* {
+  -: */ @keyframes diamond-run {0%,10%,100%{top:0;left:35px;}25%,35%{top:35px;left:70px;}50%,60%{top:70px;left:35px;}75%,85%{top:35px;left:0;};
 }

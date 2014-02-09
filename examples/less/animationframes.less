@@ -5,7 +5,7 @@
 
 @boxBigDimension: 140px;
 @boxSmallDimension: (@boxBigDimension / 2);
-@border-radius: (@boxSmallDimension / 2);
+@border-radius: (@boxSmallDimension / 4);
 @movement: (@boxBigDimension - @boxSmallDimension);
 @boxSideMargin: 10px;
 @animation-duration: 500ms;
@@ -15,6 +15,13 @@
 @run25: '25%,35%{top:0;left:@{movement};}';
 @run50: '50%,60%{top:@{movement};left:@{movement};}';
 @run75: '75%,85%{top:@{movement};left:0;}';
+
+@boxSmallDimensionHalf: (@boxSmallDimension * 0.5);
+
+@diamond-run0: '0%,10%,100%{top:0;left:@{boxSmallDimensionHalf};}';
+@diamond-run25: '25%,35%{top:@{boxSmallDimensionHalf};left:@{movement};}';
+@diamond-run50: '50%,60%{top:@{movement};left:@{boxSmallDimensionHalf};}';
+@diamond-run75: '75%,85%{top:@{boxSmallDimensionHalf};left:0;}';
 
 @shrink0: '0%{height:@{boxBigDimension};width:@{boxBigDimension}}';
 @shrink100: '100%{height:@{boxSmallDimension};width:@{boxSmallDimension}}';
@@ -29,6 +36,20 @@
 @fadein-grow100: '100%{opacity:1;height:@{boxBigDimension};width:@{boxBigDimension}}';
 
 @animations:
+slideout
+    '0%{left:0}100%{left:100%}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+slidein
+    '0%{left:100%}100%{left:0}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
 fadeout
     '0%{opacity:1}100%{opacity:0}'
     @animation-duration
@@ -132,6 +153,13 @@ run
     (@animation-duration * 4)
     @animation-timing-function
     infinite
+    none,
+
+diamond-run
+    '@{diamond-run0}@{diamond-run25}@{diamond-run50}@{diamond-run75}'
+    (@animation-duration * 4)
+    @animation-timing-function
+    infinite
     none;
 
 *, *:before, *:after {
@@ -158,30 +186,32 @@ body {
     list-style: none;
     display: inline-block;
     .border-radius(@border-radius);
+    overflow: hidden;
 
     &:before {
         position: absolute;
-        top: -30px;
+        bottom: 0;
         left: 0;
-        z-index: 0;
+        z-index: 2;
         height: 30px;
         width: @boxBigDimension;
         line-height: 30px;
         text-align: center;
-        color: #605d48;
+        color: #333226;
         font-family: sans-serif;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
 .box-inner {
     height: @boxSmallDimension;
     width: @boxSmallDimension;
-    background: #605d48;
+    background: #868692;
     position: absolute;
     display: block;
     .border-radius(@border-radius);
+    z-index: 0;
 
     .fadein &,
     .fadein-grow & {
@@ -190,6 +220,14 @@ body {
 
     .rise & {
         top: @movement;
+    }
+
+    .slidein & {
+        left: 100%;
+    }
+
+    .diamond-run & {
+        left: @boxSmallDimensionHalf;
     }
 
     .shrink &,
