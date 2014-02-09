@@ -4,7 +4,9 @@
 .keyframes(@name; @frames...) {
     @vendorPrefixes: -webkit-, -moz-, '';
     // http://caniuse.com/#search=animation
+    @keyframe-selector-hack: e('*/ @@{i}keyframes @{name} {@{frames}');
+    @comment-hack: e("/*");
     .for(@vendorPrefixes);.-each(@i) {
-        -{-:e("-} @@{i}keyframes @{name} {@{frames}")}
+        @{comment-hack}{-: @keyframe-selector-hack}
     }
 }
