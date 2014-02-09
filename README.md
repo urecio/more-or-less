@@ -174,18 +174,21 @@ This way mixins can easily be created or modified.
 }
 ```
 > unecessary output is produced (will be ignored but it looks ugly)  
-> `/*{:*/ /*  important output is in here  */`  
-> `/*{:*/ <-- THIS IS JUNK`
+> `/*{:*/ /*-->  important output is in here  <--*/ /*;}/**/`  
+> `/*{:*/ <-- THIS IS JUNK` --> /*;}/**/
 
 #### Keyframes OUTPUT
 
 ```less
 /*{:*/ 
 @-webkit-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
+/*;}/**/
 /*{:*/ 
 @-moz-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
+/*;}/**/
 /*{:*/ 
 @keyframes fadeout {0%{opacity:1}100%{opacity:0}}
+/*;}/**/
 ```
 
 ## Examples
