@@ -175,7 +175,7 @@ This way mixins can easily be created or modified.
 ```
 > unecessary output is produced (will be ignored but it looks ugly)  
 > `/*{:*/ /*-->  important output is in here  <--*/ /*;}/**/`  
-> `/*{:*/ <-- THIS IS JUNK` --> /*;}/**/
+> `/*{:*/ <-- THIS IS JUNK --> /*;}/**/`
 
 #### Keyframes OUTPUT
 
