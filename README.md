@@ -180,14 +180,11 @@ This way mixins can easily be created or modified.
 #### Keyframes OUTPUT
 
 ```less
-/* {
-    : */ 
+/*{:*/ 
 @-webkit-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
-/* {
-    : */ 
+/*{:*/ 
 @-moz-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
-/* {
-    : */ 
+/*{:*/ 
 @keyframes fadeout {0%{opacity:1}100%{opacity:0}}
 ```
 
