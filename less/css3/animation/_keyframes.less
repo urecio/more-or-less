@@ -5,9 +5,9 @@
     @vendorPrefixes: -webkit-, -moz-, '';
     // http://caniuse.com/#search=animation
     @newline: e("`'\n'`");
+    @comment-hack: e("/*");
+    @null: e(" ");
     .for(@vendorPrefixes);.-each(@i) {
-        @comment-hack: e("/*");
-        @null: e(" ");
         @keyframe-selector-hack: e('*/@{newline}@@{i}keyframes @{name} {@{frames}');
         @{comment-hack}{@{null}: @keyframe-selector-hack}
     }
