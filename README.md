@@ -212,7 +212,7 @@ A loop to batch create keyframe-animations.
  [8]:  https://github.com/necolas/normalize.css/
  [9]:  http://meyerweb.com/
  [10]: https://github.com/necolas
- [11]: http://pixelass.github.io/more-or-less/examples/less/animaless.less
+ [11]: https://github.com/pixelass/more-or-less/blob/master/examples/less/animaless.less
  [12]: http://pixelass.github.io/more-or-less/examples/animaless.html
- [13]: http://pixelass.github.io/more-or-less/examples/animationframes.html
- [14]: http://pixelass.github.io/more-or-less/examples/less/animationframes.less
+ [13]: https://github.com/pixelass/more-or-less/blob/master/examples/less/animationframes.less
+ [14]: http://pixelass.github.io/more-or-less/examples/animationframes.html
