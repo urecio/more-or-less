@@ -59,18 +59,6 @@ input::-ms-placeholder {
   *display: inline;
   *zoom: 1;
 }
-.text-overflow-clip {
-  -ms-text-overflow: clip;
-  -o-text-overflow: clip;
-  text-overflow: clip;
-  display: inline-block;
-  max-width: 100%;
-  overflow: hidden;
-  white-space: no-wrap;
-  word-wrap: normal;
-  *display: inline;
-  *zoom: 1;
-}
 /*****************************
 testing CSS3 transition-mixins
 *****************************/

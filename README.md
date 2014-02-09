@@ -81,7 +81,8 @@
     * (keyframes are supported but the syntax is hacky and ugly)
     * Example usage: [keyframes](#keyframes)
 * transform "oneliner" does not work properly
-    * requires a [lessjs][4] [pullrequest][5] to be merged
+    * <del>requires a [lessjs][4] [pullrequest][5] to be merged</del>
+    * The pullrequest has been merged and will be available in 1.6.4
 
 ## How mixins are built
 
