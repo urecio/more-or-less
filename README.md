@@ -86,7 +86,7 @@
 
 ## How mixins are built
 
-Instead of writing redundant code this library offers an pretty complex but well thought through architecture.  
+Instead of writing redundant code this library offers a pretty complex but well thought through architecture.  
 This way mixins can easily be created or modified.
 
 ### Example CSS3 Mixin
