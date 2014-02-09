@@ -4,8 +4,8 @@
 @import '../../less/css3/misc/_border-radius';
 
 @boxBigDimension: 140px;
-@boxSmallDimension: (@boxBigDimension / 2);
-@border-radius: (@boxSmallDimension / 4);
+@boxSmallDimension: (@boxBigDimension / 4);
+@border-radius: (@boxSmallDimension / 8);
 @movement: (@boxBigDimension - @boxSmallDimension);
 @boxMargin: 10px;
 @animation-duration: 500ms;
@@ -16,12 +16,12 @@
 @run50: '50%,60%{top:@{movement};left:@{movement};}';
 @run75: '75%,85%{top:@{movement};left:0;}';
 
-@boxSmallDimensionHalf: (@boxSmallDimension * 0.5);
+@movementMiddle: (@boxBigDimension * 0.5) - (@boxSmallDimension * 0.5);
 
-@diamond-run0: '0%,10%,100%{top:0;left:@{boxSmallDimensionHalf};}';
-@diamond-run25: '25%,35%{top:@{boxSmallDimensionHalf};left:@{movement};}';
-@diamond-run50: '50%,60%{top:@{movement};left:@{boxSmallDimensionHalf};}';
-@diamond-run75: '75%,85%{top:@{boxSmallDimensionHalf};left:0;}';
+@diamond-run0: '0%,10%,100%{top:0;left:@{movementMiddle};}';
+@diamond-run25: '25%,35%{top:@{movementMiddle};left:@{movement};}';
+@diamond-run50: '50%,60%{top:@{movement};left:@{movementMiddle};}';
+@diamond-run75: '75%,85%{top:@{movementMiddle};left:0;}';
 
 @shrink0: '0%{height:@{boxBigDimension};width:@{boxBigDimension}}';
 @shrink100: '100%{height:@{boxSmallDimension};width:@{boxSmallDimension}}';
@@ -34,6 +34,14 @@
 
 @fadein-grow0: '0%{opacity:0;height:@{boxSmallDimension};width:@{boxSmallDimension}}';
 @fadein-grow100: '100%{opacity:1;height:@{boxBigDimension};width:@{boxBigDimension}}';
+
+@rainbow1: '0%,100%{background:#868692}';
+@rainbow2: '16.66%{background:#809287}';
+@rainbow3: '33.33%{background:#929281}';
+@rainbow4: '49.99%{background:#928377}';
+@rainbow5: '66.66%{background:#92646c}';
+@rainbow6: '73.33%{background:#926d8e}';
+
 
 @animations:
 slideout
@@ -71,6 +79,13 @@ colorfade
     1
     forwards,
 
+rainbow
+    '@{rainbow1}@{rainbow2}@{rainbow3}@{rainbow4}@{rainbow5}@{rainbow6}'
+    (@animation-duration * 6)
+    @animation-timing-function
+    infinite
+    forwards,
+
 blink
     '0%,50%,100%{opacity:0}50.01%,99.99%{opacity:1}'
     @animation-duration
@@ -78,7 +93,7 @@ blink
     infinite
     none,
 
-old-lightbulb
+flicker
     '0%,5%,20%,25%,100%{opacity:0}5.01%,19.99%,25.01%,99.99%{opacity:1}'
     @animation-duration
     @animation-timing-function
@@ -173,7 +188,7 @@ body {
 }
 
 #content {
-    max-width: 6 * (@boxBigDimension + (@boxMargin * 2));
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -227,7 +242,7 @@ body {
     }
 
     .diamond-run & {
-        left: @boxSmallDimensionHalf;
+        left: @movementMiddle;
     }
 
     .shrink &,
@@ -236,7 +251,8 @@ body {
     .fadeout &,
     .blink &,
     .colorfade &,
-    .old-lightbulb &{
+    .rainbow &,
+    .flicker &{
         height: @boxBigDimension;
         width+: @boxBigDimension;
     }
@@ -269,7 +285,6 @@ body {
     .for(@animations);.-each(@i) {
         @animation-name: extract(@i,1);
         @animation-frames: extract(@i,2);
-
         .keyframes(@animation-name;@animation-frames;);
     }
 }
