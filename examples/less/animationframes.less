@@ -1,27 +1,34 @@
 @import '../../less/fn/_for';
 @import '../../less/css3/_animation';
+@import '../../less/css3/helpers/_vendor';
 @import '../../less/css3/misc/_box-sizing';
 @import '../../less/css3/misc/_border-radius';
 
 @boxBigDimension: 140px;
-@boxSmallDimension: (@boxBigDimension / 4);
+@boxSmallDimension: (@boxBigDimension / 2);
 @border-radius: (@boxSmallDimension / 8);
 @movement: (@boxBigDimension - @boxSmallDimension);
 @boxMargin: 10px;
 @animation-duration: 500ms;
 @animation-timing-function: linear;
 
-@run0: '0%,10%,100%{top:0;left:0;}';
-@run25: '25%,35%{top:0;left:@{movement};}';
-@run50: '50%,60%{top:@{movement};left:@{movement};}';
-@run75: '75%,85%{top:@{movement};left:0;}';
+@run1: '0%,100%{top:0;left:0;}';
+@run2: '25%{top:0;left:@{movement};}';
+@run3: '50%{top:@{movement};left:@{movement};}';
+@run4: '75%{top:@{movement};left:0;}';
 
 @movementMiddle: (@boxBigDimension * 0.5) - (@boxSmallDimension * 0.5);
 
-@diamond-run0: '0%,10%,100%{top:0;left:@{movementMiddle};}';
-@diamond-run25: '25%,35%{top:@{movementMiddle};left:@{movement};}';
-@diamond-run50: '50%,60%{top:@{movement};left:@{movementMiddle};}';
-@diamond-run75: '75%,85%{top:@{movementMiddle};left:0;}';
+@diamond-run1: '0%,100%{top:0;left:@{movementMiddle};}';
+@diamond-run2: '25%{top:@{movementMiddle};left:@{movement};}';
+@diamond-run3: '50%{top:@{movement};left:@{movementMiddle};}';
+@diamond-run4: '75%{top:@{movementMiddle};left:0;}';
+
+@cross-run1: '0%,100%{top:0;left:@{movementMiddle};}';
+@cross-run2: '12.5%,37.5%,62.5%,87.5%{top:@{movementMiddle};left:@{movementMiddle};}';
+@cross-run3: '25%{top:@{movementMiddle};left:@{movement};}';
+@cross-run4: '50%{top:@{movement};left:@{movementMiddle};}';
+@cross-run5: '75%{top:@{movementMiddle};left:0;}';
 
 @shrink0: '0%{height:@{boxBigDimension};width:@{boxBigDimension}}';
 @shrink100: '100%{height:@{boxSmallDimension};width:@{boxSmallDimension}}';
@@ -36,14 +43,15 @@
 @fadein-grow100: '100%{opacity:1;height:@{boxBigDimension};width:@{boxBigDimension}}';
 
 @rainbow1: '0%,100%{background:#868692}';
-@rainbow2: '16.66%{background:#809287}';
-@rainbow3: '33.33%{background:#929281}';
-@rainbow4: '49.99%{background:#928377}';
+@rainbow2: '16.66%{background:#6f927f}';
+@rainbow3: '33.33%{background:#928974}';
+@rainbow4: '49.99%{background:#927169}';
 @rainbow5: '66.66%{background:#92646c}';
 @rainbow6: '73.33%{background:#926d8e}';
 
 
 @animations:
+
 slideout
     '0%{left:0}100%{left:100%}'
     @animation-duration
@@ -60,7 +68,7 @@ slidein
 
 marquee
     '0%{left:100%}100%{left:-100%}'
-    @animation-duration
+    (@animation-duration * 2)
     @animation-timing-function
     infinite
     none,
@@ -80,7 +88,7 @@ fadein
     forwards,
 
 colorfade
-    '0%{background-color:#605d48}100%{background-color:#49ad80}'
+    '0%{background-color:#605d48}100%{background-color:#92646c}'
     @animation-duration
     @animation-timing-function
     1
@@ -137,21 +145,21 @@ fadeout-shrink
 
 bounce-y
     '0%,100%{top:0;}50%{top:@{movement}}'
-    @animation-duration
+    (@animation-duration * 2)
     @animation-timing-function
     infinite
     none,
 
 bounce-x
     '0%,100%{left:0;}50%{left:@{movement}}'
-    @animation-duration
+    (@animation-duration * 2)
     @animation-timing-function
     infinite
     none,
 
 bounce-xy
     '0%,100%{top:0;left:0;}50%{top:@{movement};left:@{movement}}'
-    @animation-duration
+    (@animation-duration * 2)
     @animation-timing-function
     infinite
     none,
@@ -170,15 +178,43 @@ rise
     1
     forwards,
 
+kaleidoscope-in
+    '0%{border-width:0}100%{border-width:@{boxSmallDimension}}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+kaleidoscope-out
+    '0%{border-width:@{boxSmallDimension}}100%{border-width:0}'
+    @animation-duration
+    @animation-timing-function
+    1
+    forwards,
+
+radar
+    '0%,100%{border-width:0}50%{border-width:@{boxBigDimension}}'
+    (@animation-duration * 2)
+    @animation-timing-function
+    infinite
+    none,
+
 run
-    '@{run0}@{run25}@{run50}@{run75}'
+    '@{run1}@{run2}@{run3}@{run4}'
     (@animation-duration * 4)
     @animation-timing-function
     infinite
     none,
 
+cross-run
+    '@{cross-run1}@{cross-run2}@{cross-run3}@{cross-run4}@{cross-run5}'
+    (@animation-duration * 8)
+    @animation-timing-function
+    infinite
+    none,
+
 diamond-run
-    '@{diamond-run0}@{diamond-run25}@{diamond-run50}@{diamond-run75}'
+    '@{diamond-run1}@{diamond-run2}@{diamond-run3}@{diamond-run4}'
     (@animation-duration * 4)
     @animation-timing-function
     infinite
@@ -244,25 +280,51 @@ body {
         top: @movement;
     }
 
+    .kaleidoscope-in &{
+        background: none;
+        border: 0 dashed #868692;
+   }
+
+    .kaleidoscope-out & {
+        background: none;
+        border: @boxSmallDimension dashed #868692;
+    }
+
+    .radar & {
+        background: none;
+        border: 0 double #868692;
+        height: (@boxBigDimension * 2);
+        width: (@boxBigDimension * 2);
+        top: (@boxBigDimension / -2);
+        left: (@boxBigDimension / -2);
+        .border-radius(@boxBigDimension);
+    }
+
     .slidein &,
     .marquee & {
         left: 100%;
     }
 
-    .diamond-run & {
+    .diamond-run &,
+    .cross-run & {
         left: @movementMiddle;
     }
 
     .shrink &,
     .fadeout-shrink &,
+    .slidein &,
+    .slideout &,
+    .marquee &,
     .fadein &,
     .fadeout &,
+    .kaleidoscope-in &,
+    .kaleidoscope-out &,
     .blink &,
     .colorfade &,
     .rainbow &,
     .flicker &{
         height: @boxBigDimension;
-        width+: @boxBigDimension;
+        width: @boxBigDimension;
     }
 }
 
