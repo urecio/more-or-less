@@ -162,90 +162,90 @@ testing image-mixins
 /****************
 testing keyframes
 ****************/
-/* -webkit- {
-  slideout: */
+/* {
+   : */
 @-webkit-keyframes slideout {0% {left: 0} 100% {left: 100%};
 }
-/* -moz- {
-  slideout: */
+/* {
+   : */
 @-moz-keyframes slideout {0% {left: 0} 100% {left: 100%};
 }
-/*  {
-  slideout: */
+/* {
+   : */
 @keyframes slideout {0% {left: 0} 100% {left: 100%};
 }
-/* -webkit- {
-  slidein: */
+/* {
+   : */
 @-webkit-keyframes slidein {0% {left: -100%}100% {left: 0};
 }
-/* -moz- {
-  slidein: */
+/* {
+   : */
 @-moz-keyframes slidein {0% {left: -100%}100% {left: 0};
 }
-/*  {
-  slidein: */
+/* {
+   : */
 @keyframes slidein {0% {left: -100%}100% {left: 0};
 }
 /************************
 testing animation-library
 ************************/
-/* -webkit- {
-  fade-in: */
+/* {
+   : */
 @-webkit-keyframes fade-in {0%{opacity:0}100%{opacity:1};
 }
-/* -moz- {
-  fade-in: */
+/* {
+   : */
 @-moz-keyframes fade-in {0%{opacity:0}100%{opacity:1};
 }
-/*  {
-  fade-in: */
+/* {
+   : */
 @keyframes fade-in {0%{opacity:0}100%{opacity:1};
 }
-/* -webkit- {
-  fade-out: */
+/* {
+   : */
 @-webkit-keyframes fade-out {0%{opacity:1}100%{opacity:0};
 }
-/* -moz- {
-  fade-out: */
+/* {
+   : */
 @-moz-keyframes fade-out {0%{opacity:1}100%{opacity:0};
 }
-/*  {
-  fade-out: */
+/* {
+   : */
 @keyframes fade-out {0%{opacity:1}100%{opacity:0};
 }
-/* -webkit- {
-  slide-out-left: */
+/* {
+   : */
 @-webkit-keyframes slide-out-left {0%{left:0}100%{left:-100%};
 }
-/* -moz- {
-  slide-out-left: */
+/* {
+   : */
 @-moz-keyframes slide-out-left {0%{left:0}100%{left:-100%};
 }
-/*  {
-  slide-out-left: */
+/* {
+   : */
 @keyframes slide-out-left {0%{left:0}100%{left:-100%};
 }
-/* -webkit- {
-  slide-out-top: */
+/* {
+   : */
 @-webkit-keyframes slide-out-top {0%{top:0}100%{top:-100%};
 }
-/* -moz- {
-  slide-out-top: */
+/* {
+   : */
 @-moz-keyframes slide-out-top {0%{top:0}100%{top:-100%};
 }
-/*  {
-  slide-out-top: */
+/* {
+   : */
 @keyframes slide-out-top {0%{top:0}100%{top:-100%};
 }
-/* -webkit- {
-  slide-in-right: */
+/* {
+   : */
 @-webkit-keyframes slide-in-right {0%{right:-100%}100%{right:0};
 }
-/* -moz- {
-  slide-in-right: */
+/* {
+   : */
 @-moz-keyframes slide-in-right {0%{right:-100%}100%{right:0};
 }
-/*  {
-  slide-in-right: */
+/* {
+   : */
 @keyframes slide-in-right {0%{right:-100%}100%{right:0};
 }
