@@ -20,6 +20,7 @@
 * [Examples](#examples)
     * [Animaless](#animaless)
     * [Animationframes](#animationframes)
+    * [flip](#flip)
 
 
 
@@ -79,6 +80,7 @@
     * (gradients are currently not supported but will hopefully follow)
 * <del>It does not provide keyframes as a mixin</del>
     * (keyframes are supported but the syntax is hacky and ugly)
+    * (vendor-prefixed prperties need some special care)
     * Example usage: [keyframes](#keyframes)
 * transform "oneliner" does not work properly
     * <del>requires a [lessjs][4] [pullrequest][5] to be merged</del>
@@ -207,6 +209,13 @@ A loop to batch create keyframe-animations.
 * The example source can be found [here][13]
 * The example result can be found [here][14]
 
+### Flip
+
+Allow vendor-prefixed prperties in keyframes.
+
+* The example source can be found [here][15]
+* The example result can be found [here][16]
+
 
  [0]:  https://github.com/pixelass/more-or-less/blob/master/license.txt
  [1]:  https://github.com/pixelass
@@ -223,3 +232,5 @@ A loop to batch create keyframe-animations.
  [12]: http://pixelass.github.io/more-or-less/examples/animaless.html
  [13]: https://github.com/pixelass/more-or-less/blob/master/examples/less/animationframes.less
  [14]: http://pixelass.github.io/more-or-less/examples/animationframes.html
+ [15]: https://github.com/pixelass/more-or-less/blob/master/examples/less/flip.less
+ [16]: http://pixelass.github.io/more-or-less/examples/flip.html

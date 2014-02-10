@@ -350,3 +350,15 @@ testing animation-library
 /*;
 }
 /**/
+/* {
+   : */@-webkit-keyframes flip-x {0%,100% {-webkit-transform:rotateX(0deg)}@{step-2}/*;
+}
+/**/
+/* {
+   : */@-moz-keyframes flip-x {0%,100% {-moz-transform:rotateX(0deg)}@{step-2}/*;
+}
+/**/
+/* {
+   : */@keyframes flip-x {0%,100% {transform:rotateX(0deg)}@{step-2}/*;
+}
+/**/

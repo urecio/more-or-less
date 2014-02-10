@@ -6,17 +6,16 @@
     // http://caniuse.com/#search=animation
 
     // hacky stuff
-    @newline: `'\n'`;
-    @tab: "    ";
+    @nl: `'\n'`;
+    @t: "    ";
     @comment-hack: e("/*");
-    @close: e("*/");
     @null: e(" ");
 
     // beautify @frames
-    @rules: '{@{newline}@{tab}@{frames}@{newline}}@{newline}';
+    @rules: '{@{nl}@{t}@{frames}@{nl}}@{nl}';
 
     .for(@vendorPrefixes);.-each(@i) {
-        @keyframe-selector-hack: e('*/@{newline}@@{i}keyframes @{name} @{rules}/*');
+        @keyframe-selector-hack: e('*/@{nl}@@{i}keyframes @{name} @{rules}/*');
         @{comment-hack}{@{null}: @keyframe-selector-hack}
         /**/
     }

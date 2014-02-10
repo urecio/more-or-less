@@ -135,3 +135,17 @@ testing animation-library
 & {.slide-out;}
 & {.slide-out(top);}
 & {.slide-in(right);}
+
+
+
+
+& {
+    @vendorPrefixes: -webkit-, -moz-, '';
+    @step-1: "0%,100% {@{transform}:rotateX(0deg)}";
+    @step-2: "50% {@{transform}:rotateX(-180deg)}";
+    .for(@vendorPrefixes);.-each(@i) {
+        @transform: '@{i}transform';
+        .keyframes-prevendored(flip-x;"@{step-1}@{step-2";)
+    }
+}
+
