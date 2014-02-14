@@ -79,34 +79,46 @@ body {
 @animations:
 
 flip-x
-    @animation-duration
-    @animation-timing-function
-    infinite
-    none,
+@animation-duration
+@animation-timing-function
+infinite
+none,
 
 flip-y
-    @animation-duration
-    @animation-timing-function
-    infinite
-    none,
+@animation-duration
+@animation-timing-function
+infinite
+none,
 
 flip-z
-    @animation-duration 
-    @animation-timing-function
-    infinite
-    none,
+@animation-duration
+@animation-timing-function
+infinite
+none,
 
 flip-xy
-    @animation-duration 
-    @animation-timing-function
-    infinite
-    none,
+@animation-duration
+@animation-timing-function
+infinite
+none,
 
 flip-xyz
-    @animation-duration 
-    @animation-timing-function
-    infinite
-    none;
+@animation-duration
+@animation-timing-function
+infinite
+none,
+
+fade-in-out
+@animation-duration
+@animation-timing-function
+infinite
+none,
+
+beat
+@animation-duration
+@animation-timing-function
+infinite
+none;
 
 .box {
     .for(@animations);.-each(@i) {
@@ -117,10 +129,11 @@ flip-xyz
         @animation-fill-mode: extract(@i,5);
 
         &.@{animation-name}:hover .box-inner  {
-            .animation(@animation-name
-             @animation-duration
-             @animation-timing-function
-             @animation-iteration-count;);
+            .animation(
+                @animation-name
+                @animation-duration
+                @animation-timing-function
+                @animation-iteration-count;);
 
             .animation-fill-mode(@animation-fill-mode);
         }
@@ -177,5 +190,25 @@ flip-xyz
     .for(@vendorPrefixes);.-each(@i) {
         @transform: '@{i}transform';
         .keyframes-prevendored(flip-xyz;"@{step-1}@{step-2}";)
+    }
+}
+
+& {
+    @vendorPrefixes: -webkit-, -moz-, '';
+    @step-1: "0%,100% {@{opacity}:0}";
+    @step-2: "50% {@{opacity}:1}";
+    .for(@vendorPrefixes);.-each(@i) {
+        @opacity: '@{i}opacity';
+        .keyframes-prevendored(fade-in-out;"@{step-1}@{step-2}";)
+    }
+}
+
+& {
+    @vendorPrefixes: -webkit-, -moz-, '';
+    @step-1: "0%,30%,100%{@{transform}:scale(1)}";
+    @step-2: "20%,50% {@{transform}:scale(1.2)}";
+    .for(@vendorPrefixes);.-each(@i) {
+        @transform: '@{i}transform';
+        .keyframes-prevendored(beat;"@{step-1}@{step-2}";)
     }
 }

@@ -337,10 +337,11 @@ body {
         @animation-fill-mode: extract(@i,6);
 
         &.@{animation-name}:hover .box-inner  {
-            .animation(@animation-name
-             @animation-duration
-             @animation-timing-function
-             @animation-iteration-count;);
+            .animation(
+                @animation-name
+                @animation-duration
+                @animation-timing-function
+                @animation-iteration-count;);
 
             .animation-fill-mode(@animation-fill-mode);
         }

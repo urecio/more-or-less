@@ -362,3 +362,21 @@ testing animation-library
    : */@keyframes flip-x {0%,100% {transform:rotateX(0deg)}@{step-2}/*;
 }
 /**/
+test {
+  test: foo;
+}
+test + test {
+  test: foo;
+}
+test + test + test {
+  test: foo;
+}
+test + test + test + test {
+  test: foo;
+}
+test + test + test + test + test {
+  test: foo;
+}
+console {
+  log: cat + tiger + lion;
+}

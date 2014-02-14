@@ -32,7 +32,7 @@
 }
 .sprite-position(@i) when (@i < 21){
     background-position: ((@i - 1) * -@imageDim) 0 ;
-} 
+}
 
 
 .bird(@bool) when (@bool) {
@@ -87,7 +87,7 @@ body {
     padding: @gutter;
     list-style: none;
     & {
-    .box-shadow(0 0 4px 1px rgba(0,0,0,0.2) inset;);
+        .box-shadow(0 0 4px 1px rgba(0,0,0,0.2) inset;);
     }
 
     &:after ,&:before {
@@ -110,7 +110,7 @@ body {
             }
         }
     }
-    .for(@animals);.-each(@i){
+    .for(@animals);.-each(@i) {
         &.@{i} {
             &:after {
                 & {.in(@forest, @i);.forest(@-);
@@ -142,10 +142,11 @@ body {
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (   -moz-min-device-pixel-ratio: 2),
+only screen and (   -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
+only screen and (           min-resolution: 192dpi),
+only screen and (            min-resolution: 2dppx) {
     .animal:before {
         background-image: url('../images/sprites/animaless@2x.jpg');
 

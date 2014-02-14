@@ -149,3 +149,31 @@ testing animation-library
     }
 }
 
+
+
+
+& {
+    @selector: ~'test';
+    .for(5); .-each(@i) {
+        .repeat('@{selector}', ' + ', @i);
+
+        @{string} {
+            test: foo;
+        }
+
+    }
+
+
+}
+
+
+
+& {
+    @animals: 'cat', 'tiger', 'lion';
+    .join(@animals, ' + ');
+
+    console {
+        log: @string;
+    }
+
+}
