@@ -40,7 +40,7 @@
     * find (find the index of a value in an array)
     * for (create a for loop with a callback)
     * repeat (repeats a string @n times and returns it with an optional @glue)
-    * join (joins vlues from an array with a @glue)
+    * join (joins values from an array with a @glue)
     * in (checks if a value is in an array and return a boolean)
 * It allows to import [reset][7] or [normalize][8]
     * `@import 'lib/reset';` to import the reset styles
@@ -153,20 +153,20 @@ This way mixins can easily be created or modified.
         "0% {left: 0;} 100% {left: 100%;}");
 }
 ```
-> unecessary output is produced (will be ignored but it looks ugly)  
+> unecessary output is produced  
 > `/*{:*/ -->  important output is in here  <-- /*;}/**/`  
-> `/*{:*/ <-- THIS IS JUNK --> /*;}/**/`
+> `/*{:*/ <--          THIS IS JUNK         --> /*;}/**/`  
 
 #### Keyframes OUTPUT
 
 ```less
-/*{:*/ 
+/*{:*/
 @-webkit-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
 /*;}/**/
-/*{:*/ 
+/*{:*/
 @-moz-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
 /*;}/**/
-/*{:*/ 
+/*{:*/
 @keyframes fadeout {0%{opacity:1}100%{opacity:0}}
 /*;}/**/
 ```
@@ -197,7 +197,6 @@ Allow vendor-prefixed prperties in keyframes.
 
 [0]:  https://github.com/pixelass/more-or-less/blob/master/license.txt
 [1]:  https://github.com/pixelass
-[17]: https://github.com/jantimon
 [2]:  https://github.com/seven-phases-max
 [3]:  https://github.com/csshat/lesshat
 [4]:  https://github.com/less/less.js
@@ -213,3 +212,4 @@ Allow vendor-prefixed prperties in keyframes.
 [14]: http://pixelass.github.io/more-or-less/examples/animationframes.html
 [15]: https://github.com/pixelass/more-or-less/blob/master/examples/less/flip.less
 [16]: http://pixelass.github.io/more-or-less/examples/flip.html
+[17]: https://github.com/jantimon
