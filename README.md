@@ -136,12 +136,10 @@ This way mixins can easily be created or modified.
 // join
 //················································
 
-& {
+.cats:before {
     @cats: cheetah, tiger, lion;
     .join(@cats, ' & ');
-    .cats:before {
         content: '@{string}';
-    }
 }
 
 ```
