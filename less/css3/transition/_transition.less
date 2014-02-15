@@ -1,11 +1,14 @@
 @import '../../fn/_for';
-@import '../helpers/_prop';
+@import '../helpers/_prefix';
 
 // MIXIN: .transition
+
 .transition(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
     // http://caniuse.com/#search=transition
-    .for(@vendorPrefixes);.-each(@i) {
-        .prop(transition;false;@values);
+    .for(@vendorPrefixes); .-each(@i) {
+        .prefix(@values, @i, ' ');
+        @eProp: e('@{i}transition');
+        @{eProp}: @string;
     }
 }

@@ -41,7 +41,7 @@ input {
 testing CSS3 transition-mixins
 *****************************/
 
-.transition-oneline { /* currently fails */
+.transition-oneline {
     .transition(transform 200ms linear 400ms;);
 }
 
@@ -154,26 +154,22 @@ testing animation-library
 
 & {
     @selector: ~'test';
-    .for(5); .-each(@i) {
-        .repeat('@{selector}', ' + ', @i);
-
+        .repeat('@{selector}', ' + ', 5);
         @{string} {
             test: foo;
         }
-
-    }
-
-
 }
-
 
 
 & {
     @animals: 'cat', 'tiger', 'lion';
     .join(@animals, ' + ');
-
     console {
         log: @string;
     }
-
 }
+
+
+
+
+

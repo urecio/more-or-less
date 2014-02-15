@@ -63,11 +63,10 @@ input::-ms-placeholder {
 testing CSS3 transition-mixins
 *****************************/
 .transition-oneline {
-  /* currently fails */
-  -webkit-transition: -webkit-transform, 200ms, linear, 400ms;
-  -moz-transition: -moz-transform, 200ms, linear, 400ms;
-  -o-transition: -o-transform, 200ms, linear, 400ms;
-  transition: transform, 200ms, linear, 400ms;
+  -webkit-transition: -webkit-transform 200ms linear 400ms;
+  -moz-transition: -moz-transform 200ms linear 400ms;
+  -o-transition: -o-transform 200ms linear 400ms;
+  transition: transform 200ms linear 400ms;
 }
 .transition-separated {
   -webkit-transition-property: all;
@@ -362,18 +361,6 @@ testing animation-library
    : */@keyframes flip-x {0%,100% {transform:rotateX(0deg)}@{step-2}/*;
 }
 /**/
-test {
-  test: foo;
-}
-test + test {
-  test: foo;
-}
-test + test + test {
-  test: foo;
-}
-test + test + test + test {
-  test: foo;
-}
 test + test + test + test + test {
   test: foo;
 }

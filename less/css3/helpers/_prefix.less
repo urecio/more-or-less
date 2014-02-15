@@ -1,0 +1,23 @@
+@import '../../fn/_in';
+
+.prefix(...) {}
+.prefix(@arr, @prefix)  {.prefix(@arr, @prefix, '')}
+.prefix(@arr, @prefix, @glue)  {
+    @prefixed: transform, box-shadow, border-radius, opacity;
+    .prefix(@word, @arr, @prefix, @glue, @n) when (@n >= 0) {
+        .-return(@wordResult, @n2) when (@n2 = 0) {@string: ~'@{wordResult}';}
+        .-return(@word, @n);
+        @add: extract(@arr, @n);
+        .in(@prefixed, @add);
+        .-try(...) when (@-){@prefixedAdd: e('@{prefix}@{add}');}
+        .-try(...) when not (@-){@prefixedAdd: e('@{add}');}
+        .-try(@add);
+        .prefix('@{prefixedAdd}@{glue}@{word}', @arr, @prefix, @glue, @n - 1);
+    }
+    @last: extract(@arr, length(@arr));
+    .in(@prefixed, @last);
+    .-try(...) when (@-){@prefixedLast: e('@{prefix}@{last}');}
+    .-try(...) when not (@-){@prefixedLast: e('@{last}');}
+    .-try(@last);
+    .prefix(@prefixedLast, @arr, @prefix, @glue, length(@arr) - 1);
+}

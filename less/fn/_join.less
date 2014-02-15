@@ -1,6 +1,5 @@
 .join(...) {}
 .join(@arr) {.join(@word, '');}
-
 .join(@arr, @glue) {
     .join(@word, @arr, @glue, @n) when (@n >= 0) {
         .-return(@wordResult, @n2) when (@n2 = 0) {@string: ~'@{wordResult}';}

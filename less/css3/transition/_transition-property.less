@@ -1,12 +1,14 @@
 @import '../../fn/_for';
-@import '../helpers/_prop';
+@import '../helpers/_prefix';
 
 // MIXIN: .transition-property
 .transition-property(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
     // http://caniuse.com/#search=transition
     // http://caniuse.com/#search=transform
-    .for(@vendorPrefixes);.-each(@i) {
-        .prop(transition-property;false;@values);
+    .for(@vendorPrefixes); .-each(@i) {
+        .prefix(@values, @i,', ');
+        @eProp: e('@{i}transition-property');
+        @{eProp}: @string;
     }
 }

@@ -44,7 +44,11 @@
 
 * It adds some functions and mixins for lessjs
 * It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
-* It is adds helpul functions (e.g. to create loops or compare lists)
+* It is adds helpul functions 
+    * find (find the index of a value in an array)
+    * for (create a for loop with a callback)
+    * repeat (repeats a string @n times and returns it)
+    * join (joins vlues from an array with a @glue)
 * It allows to import [reset][7] or [normalize][8]
     * `@import 'lib/reset';` to import the reset styles
     * `@import 'lib/normalize'` to import the normalize styles
@@ -76,15 +80,7 @@
 
 ## What does this NOT do?
 
-* It does not render SVGs from gradients
-    * (gradients are currently not supported but will hopefully follow)
-* <del>It does not provide keyframes as a mixin</del>
-    * (keyframes are supported but the syntax is hacky and ugly)
-    * (vendor-prefixed prperties need some special care)
-    * Example usage: [keyframes](#keyframes)
-* transform "oneliner" does not work properly
-    * <del>requires a [lessjs][4] [pullrequest][5] to be merged</del>
-    * The pullrequest has been merged and will be available in 1.6.4
+* gradients are currently not supported but will hopefully follow
 
 ## How mixins are built
 

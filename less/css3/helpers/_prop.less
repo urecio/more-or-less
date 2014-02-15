@@ -1,6 +1,0 @@
-@import '_vendor';
-
-// MIXIN: .prop (loop through values for vendor-prefixing)
-.prop(@p;@s;@in;@n) when     (@in <= @n)    {.-vendor(@p;@s;@in);}
-.prop(@p;@s;@n)     when not (isnumber(@n)) {.prop(@p;@s;1;length(@n));}
-.prop(@p;@s;@in;@n) when not (@in = @n)     {.prop(@p;@s;@in + 1;@n);}
