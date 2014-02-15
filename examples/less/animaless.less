@@ -1,19 +1,12 @@
 @import '../../less/fn/_in';
+@import '../../less/fn/_join';
+@import '../../less/css3/misc/_border-radius';
 @import '../../less/css3/misc/_box-sizing';
 @import '../../less/css3/misc/_box-shadow';
 
 @gutter: 5px;
 @imageDim: 50px;
-@isFarm: '';
-@isSafari: '';
-@isDinosaur: '';
-@isPet: '';
-@isDangerous: '';
-@isForest: '';
-@isBird: '';
-@isFly: '';
-@isUnderwater: '';
-@isExtinct: '';
+
 
 @animals: alpaca, bat, bear, beaver, bee, cat, chicken, cow, crocodile, dog, duck, elasmosaurus, elephant, giraffe, gnu, goat, hippo, kangaroo, leopard, lion, monkey, moose, mouse, owl, panda, peacock, penguin, pig, prontosaurus, pterodactylus, rabbit, rhino, sheep, squirrel, tiger, trex, triceratops, turkey, zebra;
 @bird: chicken, duck, owl, peacock, penguin, turkey;
@@ -36,38 +29,38 @@
 
 
 .bird(@bool) when (@bool) {
-    @isBird:  ' is a bird';
+    .join(@string 'is a bird', ' ');
 }
 .forest(@bool) when (@bool) {
-    @isForest:  ' lives in a forest';
+    .join( @string 'lives in a forest', ' ');
 }
 .dangerous(@bool) when (@bool) {
-    @isDangerous:  ' is dangerous';
+    .join(@string ' is dangerous', ' ');
 }
 .pet(@bool) when (@bool) {
-    @isPet:  ' can be held as a pet';
+    .join(@string 'can be held as a pet', ' ');
 }
 .dinosaur(@bool) when (@bool) {
-    @isDinosaur:  ' is a dinosaur';
+    .join(@string 'is a dinosaur', ' ');
 }
 .safari(@bool) when (@bool) {
-    @isSafari:  ' can be seen on a safari';
+    .join(@string 'can be seen on a safari', ' ');
 }
 .farm(@bool) when (@bool) {
-    @isFarm:  ' lives on a farm';
+    .join(@string 'lives on a farm', ' ');
 }
 .fly(@bool) when (@bool) {
-    @isFly:  ' can fly';
+    .join(@string 'can fly', ' ');
 }
 .extinct(@bool) when (@bool) {
-    @isExtinct:  ' is extinct';
+    .join(@string 'is extinct', ' ');
 }
 .underwater(@bool) when (@bool) {
-    @isUnderwater:  ' lives underwater';
+    .join(@string 'lives underwater', ' ');
 }
 
 body {
-    background: #ffffff;
+    background: #fff8c2;
 }
 *, *:before, *:after {
     .box-sizing(border-box);
@@ -78,7 +71,8 @@ body {
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
-    background: #ffffff;
+    background: #cec79c;
+    color: #333226;
     position: relative;
     font-weight: 700;
     font-family: sans-serif;
@@ -87,16 +81,20 @@ body {
     padding: @gutter;
     list-style: none;
     & {
-        .box-shadow(0 0 4px 1px rgba(0,0,0,0.2) inset;);
+        .border-radius(3px);
+        .box-shadow(2px 2px 0 0 #868692);
     }
-
+    &:hover {
+        background: #868692;
+        .box-shadow(2px 2px 0 0 #333226);
+    }
     &:after ,&:before {
         display: inline-block;
         vertical-align: middle;
         padding: @gutter;
     }
     &:before {
-        background-image: url('../images/sprites/animaless.jpg');
+        background-image: url('../images/sprites/animaless.png');
         background-size: auto (@imageDim * 2);
         height: @imageDim;
         width: @imageDim;
@@ -111,6 +109,7 @@ body {
         }
     }
     .for(@animals);.-each(@i) {
+        @string: '';
         &.@{i} {
             &:after {
                 & {.in(@forest, @i);.forest(@-);
@@ -123,7 +122,7 @@ body {
                                             & {.in(@fly, @i);.fly(@-);
                                                 & {.in(@underwater, @i);.underwater(@-);
                                                     & {.in(@extinct, @i);.extinct(@-);
-                                                        content: 'The @{i}@{isFarm}@{isForest}@{isPet}@{isSafari}@{isDangerous}@{isBird}@{isFly}@{isUnderwater}@{isDinosaur}@{isExtinct}.';
+                                                        content: 'The @{i} @{string}.';
                                                     }
                                                 }
                                             }
@@ -148,7 +147,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (           min-resolution: 192dpi),
 only screen and (            min-resolution: 2dppx) {
     .animal:before {
-        background-image: url('../images/sprites/animaless@2x.jpg');
+        background-image: url('../images/sprites/animaless@2x.png');
 
     }
 }

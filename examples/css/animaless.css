@@ -1,5 +1,5 @@
 body {
-  background: #ffffff;
+  background: #fff8c2;
 }
 *,
 *:before,
@@ -14,7 +14,8 @@ body {
   display: inline-block;
   vertical-align: top;
   white-space: nowrap;
-  background: #ffffff;
+  background: #cec79c;
+  color: #333226;
   position: relative;
   font-weight: 700;
   font-family: sans-serif;
@@ -22,9 +23,18 @@ body {
   margin: 5px;
   padding: 5px;
   list-style: none;
-  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2) inset;
-  -moz-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2) inset;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 0 0 #868692;
+  -moz-box-shadow: 2px 2px 0 0 #868692;
+  box-shadow: 2px 2px 0 0 #868692;
+}
+.animal:hover {
+  background: #868692;
+  -webkit-box-shadow: 2px 2px 0 0 #333226;
+  -moz-box-shadow: 2px 2px 0 0 #333226;
+  box-shadow: 2px 2px 0 0 #333226;
 }
 .animal:after,
 .animal:before {
@@ -33,7 +43,7 @@ body {
   padding: 5px;
 }
 .animal:before {
-  background-image: url('../images/sprites/animaless.jpg');
+  background-image: url('../images/sprites/animaless.png');
   background-size: auto 100px;
   height: 50px;
   width: 50px;
@@ -177,163 +187,124 @@ body {
   background-position: -1900px -50px;
 }
 .animal.alpaca:after {
-  log: alpaca;
-  content: 'The alpaca can be seen on a safari.';
+  content: 'The alpaca  can be seen on a safari.';
 }
 .animal.bat:after {
-  log: bat;
-  content: 'The bat can fly.';
+  content: 'The bat  can fly.';
 }
 .animal.bear:after {
-  log: bear;
-  content: 'The bear lives in a forest is dangerous.';
+  content: 'The bear  lives in a forest  is dangerous.';
 }
 .animal.beaver:after {
-  log: beaver;
-  content: 'The beaver lives in a forest.';
+  content: 'The beaver  lives in a forest.';
 }
 .animal.bee:after {
-  log: bee;
-  content: 'The bee lives in a forest can fly.';
+  content: 'The bee  lives in a forest can fly.';
 }
 .animal.cat:after {
-  log: cat;
-  content: 'The cat can be held as a pet.';
+  content: 'The cat  can be held as a pet.';
 }
 .animal.chicken:after {
-  log: chicken;
-  content: 'The chicken lives on a farm is a bird can fly.';
+  content: 'The chicken  lives on a farm is a bird can fly.';
 }
 .animal.cow:after {
-  log: cow;
-  content: 'The cow lives on a farm.';
+  content: 'The cow  lives on a farm.';
 }
 .animal.crocodile:after {
-  log: crocodile;
-  content: 'The crocodile can be seen on a safari is dangerous.';
+  content: 'The crocodile   is dangerous can be seen on a safari.';
 }
 .animal.dog:after {
-  log: dog;
-  content: 'The dog lives on a farm can be held as a pet.';
+  content: 'The dog  lives on a farm can be held as a pet.';
 }
 .animal.duck:after {
-  log: duck;
-  content: 'The duck lives on a farm is a bird can fly.';
+  content: 'The duck  lives on a farm is a bird can fly.';
 }
 .animal.elasmosaurus:after {
-  log: elasmosaurus;
-  content: 'The elasmosaurus is dangerous lives underwater is a dinosaur is extinct.';
+  content: 'The elasmosaurus   is dangerous is a dinosaur lives underwater is extinct.';
 }
 .animal.elephant:after {
-  log: elephant;
-  content: 'The elephant can be seen on a safari is dangerous.';
+  content: 'The elephant   is dangerous can be seen on a safari.';
 }
 .animal.giraffe:after {
-  log: giraffe;
-  content: 'The giraffe can be seen on a safari.';
+  content: 'The giraffe  can be seen on a safari.';
 }
 .animal.gnu:after {
-  log: gnu;
-  content: 'The gnu can be seen on a safari is dangerous.';
+  content: 'The gnu   is dangerous can be seen on a safari.';
 }
 .animal.goat:after {
-  log: goat;
-  content: 'The goat lives on a farm.';
+  content: 'The goat  lives on a farm.';
 }
 .animal.hippo:after {
-  log: hippo;
-  content: 'The hippo can be seen on a safari is dangerous.';
+  content: 'The hippo   is dangerous can be seen on a safari.';
 }
 .animal.kangaroo:after {
-  log: kangaroo;
-  content: 'The kangaroo is dangerous.';
+  content: 'The kangaroo   is dangerous.';
 }
 .animal.leopard:after {
-  log: leopard;
-  content: 'The leopard can be seen on a safari is dangerous.';
+  content: 'The leopard   is dangerous can be seen on a safari.';
 }
 .animal.lion:after {
-  log: lion;
-  content: 'The lion can be seen on a safari is dangerous.';
+  content: 'The lion   is dangerous can be seen on a safari.';
 }
 .animal.monkey:after {
-  log: monkey;
-  content: 'The monkey can be seen on a safari.';
+  content: 'The monkey  can be seen on a safari.';
 }
 .animal.moose:after {
-  log: moose;
-  content: 'The moose can be seen on a safari.';
+  content: 'The moose  can be seen on a safari.';
 }
 .animal.mouse:after {
-  log: mouse;
-  content: 'The mouse lives on a farm lives in a forest can be held as a pet.';
+  content: 'The mouse  lives in a forest lives on a farm can be held as a pet.';
 }
 .animal.owl:after {
-  log: owl;
-  content: 'The owl lives in a forest is a bird can fly.';
+  content: 'The owl  lives in a forest is a bird can fly.';
 }
 .animal.panda:after {
-  log: panda;
-  content: 'The panda is dangerous.';
+  content: 'The panda   is dangerous.';
 }
 .animal.peacock:after {
-  log: peacock;
-  content: 'The peacock is a bird.';
+  content: 'The peacock  is a bird.';
 }
 .animal.penguin:after {
-  log: penguin;
-  content: 'The penguin is a bird.';
+  content: 'The penguin  is a bird.';
 }
 .animal.pig:after {
-  log: pig;
-  content: 'The pig lives on a farm.';
+  content: 'The pig  lives on a farm.';
 }
 .animal.prontosaurus:after {
-  log: prontosaurus;
-  content: 'The prontosaurus is dangerous is a dinosaur is extinct.';
+  content: 'The prontosaurus   is dangerous is a dinosaur is extinct.';
 }
 .animal.pterodactylus:after {
-  log: pterodactylus;
-  content: 'The pterodactylus is dangerous can fly is a dinosaur is extinct.';
+  content: 'The pterodactylus   is dangerous is a dinosaur can fly is extinct.';
 }
 .animal.rabbit:after {
-  log: rabbit;
-  content: 'The rabbit lives on a farm lives in a forest can be held as a pet.';
+  content: 'The rabbit  lives in a forest lives on a farm can be held as a pet.';
 }
 .animal.rhino:after {
-  log: rhino;
-  content: 'The rhino can be seen on a safari is dangerous.';
+  content: 'The rhino   is dangerous can be seen on a safari.';
 }
 .animal.sheep:after {
-  log: sheep;
-  content: 'The sheep lives on a farm.';
+  content: 'The sheep  lives on a farm.';
 }
 .animal.squirrel:after {
-  log: squirrel;
-  content: 'The squirrel lives in a forest.';
+  content: 'The squirrel  lives in a forest.';
 }
 .animal.tiger:after {
-  log: tiger;
-  content: 'The tiger can be seen on a safari is dangerous.';
+  content: 'The tiger   is dangerous can be seen on a safari.';
 }
 .animal.trex:after {
-  log: trex;
-  content: 'The trex is dangerous is a dinosaur is extinct.';
+  content: 'The trex   is dangerous is a dinosaur is extinct.';
 }
 .animal.triceratops:after {
-  log: triceratops;
-  content: 'The triceratops is dangerous is a dinosaur is extinct.';
+  content: 'The triceratops   is dangerous is a dinosaur is extinct.';
 }
 .animal.turkey:after {
-  log: turkey;
-  content: 'The turkey lives on a farm is a bird can fly.';
+  content: 'The turkey  lives on a farm is a bird can fly.';
 }
 .animal.zebra:after {
-  log: zebra;
-  content: 'The zebra can be seen on a safari.';
+  content: 'The zebra  can be seen on a safari.';
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .animal:before {
-    background-image: url('../images/sprites/animaless@2x.jpg');
+    background-image: url('../images/sprites/animaless@2x.png');
   }
 }

@@ -1,9 +1,9 @@
 @import '../helpers/_vendorize';
 
 // MIXIN: .box-shadow
-.box-shadow(@values...) {
+.box-shadow(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
     @prop: box-shadow;
     // http://caniuse.com/#search=box-sizing
-    .vendorize(@values, ', ');
+    .vendorize('@{values}', ', ');
 }
