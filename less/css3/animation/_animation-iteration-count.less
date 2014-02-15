@@ -1,8 +1,9 @@
-@import '../helpers/_return';
+@import '../helpers/_vendorize';
 
 // MIXIN: .animation-iteration-count
 .animation-iteration-count(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
+    @prop: animation-iteration-count;
     // http://caniuse.com/#search=animation
-    .-return(animation-iteration-count);
+    .vendorize(@values);
 }

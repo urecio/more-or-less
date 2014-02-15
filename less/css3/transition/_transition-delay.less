@@ -1,8 +1,9 @@
-@import '../helpers/_return';
+@import '../helpers/_vendorize';
 
 // MIXIN: .transition-delay
 .transition-delay(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
+    @prop: transition-delay;
     // http://caniuse.com/#search=transition
-    .-return(transition-delay);
+    .vendorize(@values, ', ');
 }

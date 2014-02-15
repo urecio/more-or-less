@@ -1,8 +1,9 @@
-@import '../helpers/_return';
+@import '../helpers/_vendorize';
 
 // MIXIN: .column-rule
 .column-rule(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, '';
-    // http://caniuse.com/#search=columns
-    .-return(column-rule);
+    @vendorPrefixes: -webkit-, -moz-, '';
+    @prop: column-rule;
+    // http://caniuse.com/#search=animation
+    .vendorize(@values);
 }

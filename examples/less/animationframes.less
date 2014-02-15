@@ -1,13 +1,12 @@
 @import '../../less/fn/_for';
 @import '../../less/css3/_animation';
-@import '../../less/css3/helpers/_vendor';
 @import '../../less/css3/misc/_box-sizing';
 @import '../../less/css3/misc/_border-radius';
 
 @boxBigDimension: 140px;
-@boxSmallDimension: (@boxBigDimension / 2);
-@border-radius: (@boxSmallDimension / 8);
-@movement: (@boxBigDimension - @boxSmallDimension);
+@boxSmallDimension: ceil(@boxBigDimension / 2);
+@border-radius: ceil(@boxSmallDimension / 8);
+@movement: ceil(@boxBigDimension - @boxSmallDimension);
 @boxMargin: 10px;
 @animation-duration: 500ms;
 @animation-timing-function: linear;

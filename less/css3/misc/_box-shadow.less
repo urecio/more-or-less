@@ -1,8 +1,9 @@
-@import '../helpers/_return';
+@import '../helpers/_vendorize';
 
 // MIXIN: .box-shadow
 .box-shadow(@values...) {
     @vendorPrefixes: -webkit-, -moz-, '';
+    @prop: box-shadow;
     // http://caniuse.com/#search=box-sizing
-    .-return(box-shadow);
+    .vendorize(@values, ', ');
 }

@@ -1,8 +1,9 @@
-@import '../helpers/_return';
+@import '../helpers/_vendorize';
 
 // MIXIN: .perspective
 .perspective(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
+    @prop: perspective;
     // http://caniuse.com/#search=transform
-    .-return(perspective);
+    .vendorize(@values);
 }

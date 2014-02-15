@@ -1,7 +1,7 @@
 @import '../../fn/_for';
 
 // MIXIN: .calc
-.calc(@prop; @value...) {
+.calc(@prop; @value) {
     @vendorPrefixes: -webkit-, -moz-, '';
     // http://caniuse.com/#search=calc
     .for(@vendorPrefixes);.-each(@i) {

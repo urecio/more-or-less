@@ -1,8 +1,9 @@
-@import '../helpers/_return';
+@import '../helpers/_vendorize';
 
 // MIXIN: .animation-direction
 .animation-direction(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
+    @prop: animation-direction;
     // http://caniuse.com/#search=animation
-    .-return(animation-direction);
+    .vendorize(@values);
 }

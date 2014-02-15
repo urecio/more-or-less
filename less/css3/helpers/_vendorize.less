@@ -1,0 +1,28 @@
+@import '../helpers/_vendorProps';
+@import '../../fn/_in';
+
+.vendorize(...) {}
+.vendorize(@values )  {.vendorize(@values, ' ')}
+.vendorize(@values, @glue)  {
+
+    .for(@vendorPrefixes); .-each(@i) {
+        .-test(@s) {
+            .in(@vendorProps, @s);
+            .-try(...) when (@-){@result: e('@{i}@{s}');}
+            .-try(...) when not (@-){@result: e('@{s}');}
+            .-try(@s);
+        }
+        .-(@word, @values, @glue, @n) when (@n >= 0) {
+            .-return(@wordResult, @n2) when (@n2 = 0) {@string: e('@{wordResult}');}
+            .-return(@word, @n);
+            @add: extract(@values, @n);
+            .-test(@add);
+            .-('@{result}@{glue}@{word}', @values, @glue, @n - 1);
+        }
+        @last: extract(@values, length(@values));
+        .-test(@last);
+        .-(@result, @values, @glue, length(@values) - 1);
+        @eProp: e('@{i}@{prop}');
+        @{eProp}: @string;
+    }
+}

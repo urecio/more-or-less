@@ -1,14 +1,9 @@
-@import '../../fn/_for';
-@import '../helpers/_prefix';
+@import '../helpers/_vendorize';
 
 // MIXIN: .transition
-
 .transition(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
+    @prop: transition;
     // http://caniuse.com/#search=transition
-    .for(@vendorPrefixes); .-each(@i) {
-        .prefix(@values, @i, ' ');
-        @eProp: e('@{i}transition');
-        @{eProp}: @string;
-    }
+    .vendorize(@values);
 }

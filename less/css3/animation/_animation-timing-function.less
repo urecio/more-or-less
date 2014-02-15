@@ -1,8 +1,9 @@
-@import '../helpers/_return';
+@import '../helpers/_vendorize';
 
 // MIXIN: .animation-timing-function
 .animation-timing-function(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
+    @prop: animation-timing-function;
     // http://caniuse.com/#search=animation
-    .-return(animation-timing-function);
+    .vendorize(@values);
 }
