@@ -189,7 +189,7 @@ A loop to batch create keyframe-animations.
 
 ### Flip
 
-Allow vendor-prefixed prperties in keyframes.
+Allow vendor-prefixed properties in keyframes.
 
 * The example source can be found [here][15]
 * The example result can be found [here][16]
