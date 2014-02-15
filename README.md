@@ -137,10 +137,10 @@ This way mixins can easily be created or modified.
 //················································
 
 & {
-    @animals: 'cat', 'tiger', 'lion';
-    .join(@animals, ' + ');
-    console {
-        log: @string;
+    @cats: cheetah, tiger, lion;
+    .join(@cats, ' & ');
+    .cats:before {
+        content: '@{string}';
     }
 }
 
