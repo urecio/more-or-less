@@ -47,7 +47,7 @@
 * It is adds helpul functions 
     * find (find the index of a value in an array)
     * for (create a for loop with a callback)
-    * repeat (repeats a string @n times and returns it)
+    * repeat (repeats a string @n times and returns it with an optional @glue)
     * join (joins vlues from an array with a @glue)
     * in (checks if a value is in an array and return a boolean)
 * It allows to import [reset][7] or [normalize][8]
@@ -109,50 +109,41 @@ This way mixins can easily be created or modified.
 ```less
 // border-radius
 //················································
-    .border-radius(1px 2px 3px 4px;);
+
+.border-radius(1px 2px 3px 4px;);
 
 // box-shadow
 //················································
-    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
 
-// box-sizing
-//················································
-    .box-sizing(border-box);
-
-// calc
-//················································
-    .calc(height;
-          '100% - 10px');
-
-// sprite (right)
-//················································
-    .sprites('../img/sprite.png';
-             auto;
-             90px;
-             30;
-             one;
-             two;
-             three;);
-
-// text-overflow
-//················································
-    .text-overflow(ellipsis);
+.box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
 
 // transition (oneline)
 //················································
-    .transition(transform 200ms linear 400ms;);
 
-// transition (separated)
+.transition(transform 200ms linear 400ms;);
+
+
+// repeat
 //················································
-    .transition-property(all);
-    .transition-duration(200ms);
-    .transition-timing-function(linear);
-    .transition-delay(400ms);
 
+& {
+    .repeat('.test', ' + ', 5);
+    @{string} {
+        float: right;
+    }
+}
 
-// transition (separated & multiple properties)
+// join
 //················································
-    .transition-property(transform, color, box-shadow;);
+
+& {
+    @animals: 'cat', 'tiger', 'lion';
+    .join(@animals, ' + ');
+    console {
+        log: @string;
+    }
+}
+
 ```
 
 ### Keyframes
@@ -214,20 +205,20 @@ Allow vendor-prefixed prperties in keyframes.
 * The example result can be found [here][16]
 
 
- [0]:  https://github.com/pixelass/more-or-less/blob/master/license.txt
- [1]:  https://github.com/pixelass
- [2]:  https://github.com/seven-phases-max
- [3]:  https://github.com/csshat/lesshat
- [4]:  https://github.com/less/less.js
- [5]:  https://github.com/less/less.js/pull/1788
- [6]:  https://github.com/ai/autoprefixer
- [7]:  http://meyerweb.com/eric/tools/css/reset/
- [8]:  https://github.com/necolas/normalize.css/
- [9]:  http://meyerweb.com/
- [10]: https://github.com/necolas
- [11]: https://github.com/pixelass/more-or-less/blob/master/examples/less/animaless.less
- [12]: http://pixelass.github.io/more-or-less/examples/animaless.html
- [13]: https://github.com/pixelass/more-or-less/blob/master/examples/less/animationframes.less
- [14]: http://pixelass.github.io/more-or-less/examples/animationframes.html
- [15]: https://github.com/pixelass/more-or-less/blob/master/examples/less/flip.less
- [16]: http://pixelass.github.io/more-or-less/examples/flip.html
+[0]:  https://github.com/pixelass/more-or-less/blob/master/license.txt
+[1]:  https://github.com/pixelass
+[2]:  https://github.com/seven-phases-max
+[3]:  https://github.com/csshat/lesshat
+[4]:  https://github.com/less/less.js
+[5]:  https://github.com/less/less.js/pull/1788
+[6]:  https://github.com/ai/autoprefixer
+[7]:  http://meyerweb.com/eric/tools/css/reset/
+[8]:  https://github.com/necolas/normalize.css/
+[9]:  http://meyerweb.com/
+[10]: https://github.com/necolas
+[11]: https://github.com/pixelass/more-or-less/blob/master/examples/less/animaless.less
+[12]: http://pixelass.github.io/more-or-less/examples/animaless.html
+[13]: https://github.com/pixelass/more-or-less/blob/master/examples/less/animationframes.less
+[14]: http://pixelass.github.io/more-or-less/examples/animationframes.html
+[15]: https://github.com/pixelass/more-or-less/blob/master/examples/less/flip.less
+[16]: http://pixelass.github.io/more-or-less/examples/flip.html
