@@ -49,6 +49,7 @@
     * for (create a for loop with a callback)
     * repeat (repeats a string @n times and returns it)
     * join (joins vlues from an array with a @glue)
+    * in (checks if a value is in an array and return a boolean)
 * It allows to import [reset][7] or [normalize][8]
     * `@import 'lib/reset';` to import the reset styles
     * `@import 'lib/normalize'` to import the normalize styles
