@@ -2,7 +2,6 @@
 
 * [Basic Info](#basic-info)
     * [License](#license)
-    * [Credit](#credit)
     * [Dependencies](#dependencies)
 * [What does this do](#what-does-this-do)
     * [Example for "less" import](#example-for-less-imports)
@@ -28,13 +27,6 @@
 ### License:
 
 * MIT ([license.txt][0])
-
-### Credit:
-
-* [pixelass][1]
-* [seven-phases-max][2] (for some help with the basics)
-* [Eric Meyer][9] (reset.css)
-* [Nicolas Gallagher][10] (normalize.css)
 
 ### Dependencies:
 
@@ -205,6 +197,7 @@ Allow vendor-prefixed prperties in keyframes.
 
 [0]:  https://github.com/pixelass/more-or-less/blob/master/license.txt
 [1]:  https://github.com/pixelass
+[17]: https://github.com/jantimon
 [2]:  https://github.com/seven-phases-max
 [3]:  https://github.com/csshat/lesshat
 [4]:  https://github.com/less/less.js
