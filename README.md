@@ -91,7 +91,8 @@ This way mixins can easily be created or modified.
 }
 ```
 
-`.vendorize` takes two arguments.
+`.vendorize` takes two arguments.  
+
 1. the `@values`
 2. the `@glue` (defaults to `' '` which will separate values by a single space)
 
