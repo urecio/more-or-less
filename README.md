@@ -139,7 +139,7 @@ This way mixins can easily be created or modified.
 .cats:before {
     @cats: cheetah, tiger, lion;
     .join(@cats, ' & ');
-        content: '@{string}';
+    content: '@{string}';
 }
 
 ```
