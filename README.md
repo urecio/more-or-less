@@ -83,16 +83,21 @@ This way mixins can easily be created or modified.
 ### Example CSS3 Mixin
 
 ```less
-@import '../helpers/_return';
+@import '../helpers/_vendorize';
 .box-shadow(@values...) {
     @vendorPrefixes: -webkit-, -moz-, '';
-    .-return(box-shadow);
+    @prop: box-shadow;
+    .vendorize(@values, ', ');
 }
 ```
 
+`.vendorize` takes two arguments.
+1. the `@values`
+2. the `@glue` (defaults to `' '` which will separate values by a single space)
+
 ## Notice
 
-> Auto-prefixing is ugly. It is advised to use libraries like [autoprefixer][6] or similar.  
+>  Instead of auto-prefixing it is advised to use libraries like [autoprefixer][6] or similar.  
 >  Aaaaanyways... if you want to use auto-prefixing mixins you can use:  
 >  `@import 'less/_css3';` or it's decendants  
 
