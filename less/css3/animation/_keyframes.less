@@ -1,11 +1,7 @@
 
-// not happy with this yet but let’s keep it in here for now
 // MIXIN: .keyframes
 .keyframes(@name) {
-    @vendorPrefixes: -webkit-, -moz-, '';
     // http://caniuse.com/#search=animation
-
-
     @-webkit-keyframes @name {
         .-frames(-webkit-);
     }

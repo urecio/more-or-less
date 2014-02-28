@@ -143,10 +143,8 @@ This way mixins can easily be created or modified.
 
 ### Keyframes
 
-> keyframes require some ugly syntax  
 > The mixin call must be wrapped in a selector e.g. `&{}`.  
 > Using an "&" (ampersand) works fine.  
-> animation steps need to be in one line and a string
 
 
 #### Keyframes INPUT
