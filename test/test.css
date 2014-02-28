@@ -66,12 +66,29 @@ testing CSS3 transition-mixins
   -webkit-transition: -webkit-transform 200ms linear 400ms;
   -moz-transition: -moz-transform 200ms linear 400ms;
   -o-transition: -o-transform 200ms linear 400ms;
+  log: 1 400ms;
+  log: 1 linear;
+  log: 1 200ms;
+  log: 1 transform;
+  log: 1 extract(transform 200ms linear 400ms, 0);
   transition: transform 200ms linear 400ms;
+}
+.transition-oneline {
+  /* currently fails */
+  -webkit-transition: transform 200ms height 500ms;
+  -moz-transition: transform 200ms height 500ms;
+  -o-transition: transform 200ms height 500ms;
+  log: 2 height 500ms;
+  log: 2 transform 200ms;
+  log: 1 extract(transform 200ms, height 500ms, 0);
+  transition: transform 200ms height 500ms;
 }
 .transition-separated {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
+  log: 1 all;
+  log: 1 extract(all, 0);
   transition-property: all;
   -webkit-transition-duration: 200ms;
   -moz-transition-duration: 200ms;
@@ -90,31 +107,75 @@ testing CSS3 transition-mixins
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   -o-transition-property: -o-transform;
+  log: 1 transform;
+  log: 1 extract(transform, 0);
   transition-property: transform;
 }
 .transition-prop-mutli-with-transform {
   -webkit-transition-property: -webkit-transform, color, height;
   -moz-transition-property: -moz-transform, color, height;
   -o-transition-property: -o-transform, color, height;
+  log: 1 height;
+  log: 1 color;
+  log: 1 transform;
+  log: 1 extract(transform, color, height, 0);
   transition-property: transform, color, height;
 }
 .transition-prop-mutli-with-transform-and-boxShadow {
   -webkit-transition-property: -webkit-transform, color, -webkit-box-shadow;
   -moz-transition-property: -moz-transform, color, -moz-box-shadow;
   -o-transition-property: -o-transform, color, -o-box-shadow;
+  log: 1 box-shadow;
+  log: 1 color;
+  log: 1 transform;
+  log: 1 extract(transform, color, box-shadow, 0);
   transition-property: transform, color, box-shadow;
 }
 .transition-prop {
   -webkit-transition-property: height;
   -moz-transition-property: height;
   -o-transition-property: height;
+  log: 1 height;
+  log: 1 extract(height, 0);
   transition-property: height;
 }
 .transition-multi {
   -webkit-transition-property: height, top, left;
   -moz-transition-property: height, top, left;
   -o-transition-property: height, top, left;
+  log: 1 left;
+  log: 1 top;
+  log: 1 height;
+  log: 1 extract(height, top, left, 0);
   transition-property: height, top, left;
+}
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+.animation-oneline {
+  -webkit-animation: test-animation 200ms linear 200ms;
+  -moz-animation: test-animation 200ms linear 200ms;
+  animation: test-animation 200ms linear 200ms;
+}
+.animation-delay {
+  -webkit-animation-delay: 200ms;
+  -moz-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+.animation-timing-function {
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animation-timing-function {
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animation-fill-mode {
+  -webkit-animation-fill-mode: forward;
+  -moz-animation-fill-mode: forward;
+  animation-fill-mode: forward;
 }
 /****************************
 testing CSS3 transform-mixins
@@ -124,6 +185,12 @@ testing CSS3 transform-mixins
   -moz-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   -o-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   transform: translate(2px, 3px) rotate(3deg) scale(0.4);
+}
+.transforms {
+  -webkit-transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
+  -moz-transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
+  -o-transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
+  transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
 }
 /*******************
 testing image-mixins
@@ -161,209 +228,144 @@ testing image-mixins
 /****************
 testing keyframes
 ****************/
-/* {
-   : */
-@-webkit-keyframes slideout {
-    0% {left: 0} 100% {left: 100%}
+@-webkit-keyframes testanimation {
+  0% {
+    left: 0;
+    -webkit-transform: translate(10px, 20px);
+  }
+  100% {
+    left: 100%;
+    -webkit-transform: translate(100px, 200px);
+  }
 }
-/*;
+@-moz-keyframes testanimation {
+  0% {
+    left: 0;
+    -moz-transform: translate(10px, 20px);
+  }
+  100% {
+    left: 100%;
+    -moz-transform: translate(100px, 200px);
+  }
 }
-/**/
-/* {
-   : */
-@-moz-keyframes slideout {
-    0% {left: 0} 100% {left: 100%}
+@keyframes testanimation {
+  0% {
+    left: 0;
+    transform: translate(10px, 20px);
+  }
+  100% {
+    left: 100%;
+    transform: translate(100px, 200px);
+  }
 }
-/*;
-}
-/**/
-/* {
-   : */
-@keyframes slideout {
-    0% {left: 0} 100% {left: 100%}
-}
-/*;
-}
-/**/
-/* @start testing pretty output (with newlines and 4-space-indents)*/
-/* {
-   : */
-@-webkit-keyframes slidein {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 0;
-    }
-}
-/*;
-}
-/**/
-/* {
-   : */
-@-moz-keyframes slidein {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 0;
-    }
-}
-/*;
-}
-/**/
-/* {
-   : */
-@keyframes slidein {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 0;
-    }
-}
-/*;
-}
-/**/
-/* @end testing pretty output (with newlines and 4-space-indents)*/
 /************************
-testing animation-library
+testing animation library
 ************************/
-/* {
-   : */
+@-webkit-keyframes slide-in {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@-moz-keyframes slide-in {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes slide-in {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@-webkit-keyframes slide-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@-moz-keyframes slide-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes slide-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
 @-webkit-keyframes fade-in {
-    0%{opacity:0}100%{opacity:1}
+  0% {
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-opacity: 1;
+  }
 }
-/*;
-}
-/**/
-/* {
-   : */
 @-moz-keyframes fade-in {
-    0%{opacity:0}100%{opacity:1}
+  0% {
+    -moz-opacity: 0;
+  }
+  100% {
+    -moz-opacity: 1;
+  }
 }
-/*;
-}
-/**/
-/* {
-   : */
 @keyframes fade-in {
-    0%{opacity:0}100%{opacity:1}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-/*;
-}
-/**/
-/* {
-   : */
 @-webkit-keyframes fade-out {
-    0%{opacity:1}100%{opacity:0}
+  0% {
+    -webkit-opacity: 1;
+  }
+  100% {
+    -webkit-opacity: 0;
+  }
 }
-/*;
-}
-/**/
-/* {
-   : */
 @-moz-keyframes fade-out {
-    0%{opacity:1}100%{opacity:0}
+  0% {
+    -moz-opacity: 1;
+  }
+  100% {
+    -moz-opacity: 0;
+  }
 }
-/*;
-}
-/**/
-/* {
-   : */
 @keyframes fade-out {
-    0%{opacity:1}100%{opacity:0}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-/*;
-}
-/**/
-/* {
-   : */
-@-webkit-keyframes slide-out-left {
-    0%{left:0}100%{left:-100%}
-}
-/*;
-}
-/**/
-/* {
-   : */
-@-moz-keyframes slide-out-left {
-    0%{left:0}100%{left:-100%}
-}
-/*;
-}
-/**/
-/* {
-   : */
-@keyframes slide-out-left {
-    0%{left:0}100%{left:-100%}
-}
-/*;
-}
-/**/
-/* {
-   : */
-@-webkit-keyframes slide-out-top {
-    0%{top:0}100%{top:-100%}
-}
-/*;
-}
-/**/
-/* {
-   : */
-@-moz-keyframes slide-out-top {
-    0%{top:0}100%{top:-100%}
-}
-/*;
-}
-/**/
-/* {
-   : */
-@keyframes slide-out-top {
-    0%{top:0}100%{top:-100%}
-}
-/*;
-}
-/**/
-/* {
-   : */
-@-webkit-keyframes slide-in-right {
-    0%{right:-100%}100%{right:0}
-}
-/*;
-}
-/**/
-/* {
-   : */
-@-moz-keyframes slide-in-right {
-    0%{right:-100%}100%{right:0}
-}
-/*;
-}
-/**/
-/* {
-   : */
-@keyframes slide-in-right {
-    0%{right:-100%}100%{right:0}
-}
-/*;
-}
-/**/
-/* {
-   : */@-webkit-keyframes flip-x {0%,100% {-webkit-transform:rotateX(0deg)}@{step-2}/*;
-}
-/**/
-/* {
-   : */@-moz-keyframes flip-x {0%,100% {-moz-transform:rotateX(0deg)}@{step-2}/*;
-}
-/**/
-/* {
-   : */@keyframes flip-x {0%,100% {transform:rotateX(0deg)}@{step-2}/*;
-}
-/**/
+/*************
+testing repeat
+*************/
 .test + .test + .test + .test + .test {
   float: right;
 }
+/***********
+testing join
+***********/
 console {
   log: cat + tiger + lion;
 }

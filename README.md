@@ -18,8 +18,7 @@
         * [Keyframes output](#keyframes-output)
 * [Examples](#examples)
     * [Animaless](#animaless)
-    * [Animationframes](#animationframes)
-    * [flip](#flip)
+
 
 
 
@@ -30,7 +29,7 @@
 
 ### Dependencies:
 
-* [lessjs][4] 1.6.x
+* [lessjs][4] 1.7.x
 
 ## What does this do?
 
@@ -154,27 +153,54 @@ This way mixins can easily be created or modified.
 
 ```less
 & {
-    .keyframes(
-        slideout;
-        "0% {left: 0;} 100% {left: 100%;}");
+    .keyframes(testanimation);.-frames(@-...){
+        0% {
+            left: 0;
+            @{-}transform: translate(10px, 20px);
+        }
+
+        100% {
+            left: 100%;
+            @{-}transform: translate(100px, 200px);
+        }
+    }
 }
+
 ```
-> unecessary output is produced  
-> `/*{:*/ -->  important output is in here  <-- /*;}/**/`  
-> `/*{:*/ <--          THIS IS JUNK         --> /*;}/**/`  
 
 #### Keyframes OUTPUT
 
 ```less
-/*{:*/
-@-webkit-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
-/*;}/**/
-/*{:*/
-@-moz-keyframes fadeout {0%{opacity:1}100%{opacity:0}}
-/*;}/**/
-/*{:*/
-@keyframes fadeout {0%{opacity:1}100%{opacity:0}}
-/*;}/**/
+@-webkit-keyframes testanimation {
+  0% {
+    left: 0;
+    -webkit-transform: translate(10px, 20px);
+  }
+  100% {
+    left: 100%;
+    -webkit-transform: translate(100px, 200px);
+  }
+}
+@-moz-keyframes testanimation {
+  0% {
+    left: 0;
+    -moz-transform: translate(10px, 20px);
+  }
+  100% {
+    left: 100%;
+    -moz-transform: translate(100px, 200px);
+  }
+}
+@keyframes testanimation {
+  0% {
+    left: 0;
+    transform: translate(10px, 20px);
+  }
+  100% {
+    left: 100%;
+    transform: translate(100px, 200px);
+  }
+}
 ```
 
 ## Examples
@@ -186,19 +212,6 @@ A loop to check if an animal belongs to a group (e.g. Owl = bird + forest, Bear 
 * The example source can be found [here][11]
 * The example result can be found [here][12]
 
-### Animationframes
-
-A loop to batch create keyframe-animations.
-
-* The example source can be found [here][13]
-* The example result can be found [here][14]
-
-### Flip
-
-Allow vendor-prefixed properties in keyframes.
-
-* The example source can be found [here][15]
-* The example result can be found [here][16]
 
 
 [0]:  https://github.com/pixelass/more-or-less/blob/master/license.txt

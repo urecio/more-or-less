@@ -1,22 +1,18 @@
 
 // not happy with this yet but let’s keep it in here for now
 // MIXIN: .keyframes
-.keyframes(@name; @frames...) {
+.keyframes(@name) {
     @vendorPrefixes: -webkit-, -moz-, '';
     // http://caniuse.com/#search=animation
 
-    // hacky stuff
-    @nl: `'\n'`;
-    @t: "    ";
-    @comment-hack: e("/*");
-    @null: e(" ");
 
-    // beautify @frames
-    @rules: '{@{nl}@{t}@{frames}@{nl}}@{nl}';
-
-    .for(@vendorPrefixes);.-each(@i) {
-        @keyframe-selector-hack: e('*/@{nl}@@{i}keyframes @{name} @{rules}/*');
-        @{comment-hack}{@{null}: @keyframe-selector-hack}
-        /**/
+    @-webkit-keyframes @name {
+        .-frames(-webkit-);
+    }
+    @-moz-keyframes @name {
+        .-frames(-moz-);
+    }
+    @keyframes @name {
+        .-frames();
     }
 }

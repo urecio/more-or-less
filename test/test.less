@@ -1,11 +1,10 @@
 @import '../_more';
 
-
 /***********************
 testing CSS3 misc-mixins
 ***********************/
 .border-radius {
-    .border-radius(1px 2px 3px 4px;);
+    .border-radius(1px 2px 3px 4px);
 }
 
 .box-shadow {
@@ -42,7 +41,11 @@ testing CSS3 transition-mixins
 *****************************/
 
 .transition-oneline {
-    .transition(transform 200ms linear 400ms;);
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline { /* currently fails */
+    .transition(transform 200ms, height 500ms;);
 }
 
 .transition-separated {
@@ -69,12 +72,40 @@ testing CSS3 transition-mixins
 .transition-multi {
     .transition-property(height, top, left;);
 }
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
 /****************************
 testing CSS3 transform-mixins
 ****************************/
 
 .transforms {
     .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
 }
 
 /*******************
@@ -108,57 +139,39 @@ testing keyframes
 ****************/
 
 & {
-    .keyframes(
-        slideout;
-        "0% {left: 0} 100% {left: 100%}")
-}
+    .keyframes(testanimation);.-frames(@-...){
+        0% {
+            left: 0;
+            @{-}transform: translate(10px, 20px);
+        }
 
-
-& {
-    /* @start testing pretty output (with newlines and 4-space-indents)*/
-    @nl: `'\n'`;
-    @t: '    ';
-    @nlt: '@{nl}@{t}';
-    @nltt: '@{nlt}@{t}';
-    @step-1: "0% {@{nltt}left: -100%;@{nlt}}@{nlt}";
-    @step-2: "100% {@{nltt}left: 0;@{nlt}}";
-    .keyframes(slidein;"@{step-1}@{step-2}");
-    /* @end testing pretty output (with newlines and 4-space-indents)*/
-}
-
-/************************
-testing animation-library
-************************/
-
-& {.fade-in;}
-& {.fade-out;}
-& {.slide-out;}
-& {.slide-out(top);}
-& {.slide-in(right);}
-
-
-
-
-& {
-    @vendorPrefixes: -webkit-, -moz-, '';
-    @step-1: "0%,100% {@{transform}:rotateX(0deg)}";
-    @step-2: "50% {@{transform}:rotateX(-180deg)}";
-    .for(@vendorPrefixes);.-each(@i) {
-        @transform: '@{i}transform';
-        .keyframes-prevendored(flip-x;"@{step-1}@{step-2";)
+        100% {
+            left: 100%;
+            @{-}transform: translate(100px, 200px);
+        }
     }
 }
 
+/************************
+testing animation library
+************************/
 
-
-
+&{.slide-in()}
+&{.slide-out()}
+&{.fade-in()}
+&{.fade-out()}
+/*************
+testing repeat
+*************/
 & {
     .repeat('.test', ' + ', 5);
     @{string} {
         float: right;
     }
 }
-
+/***********
+testing join
+***********/
 
 & {
     @animals: 'cat', 'tiger', 'lion';
@@ -167,7 +180,6 @@ testing animation-library
         log: @string;
     }
 }
-
 
 
 
