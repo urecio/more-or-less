@@ -369,3 +369,9 @@ testing join
 console {
   log: cat + tiger + lion;
 }
+test {
+  background-image: -webkit-linear-gradient(top, #000000, #ffffff) -webkit-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: -moz-linear-gradient(top, #000000, #ffffff) -moz-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: -o-linear-gradient(top, #000000, #ffffff) -o-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: linear-gradient(top, #000000, #ffffff) radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+}

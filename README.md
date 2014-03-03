@@ -72,7 +72,8 @@
 
 ## What does this NOT do?
 
-* gradients are currently not supported but will hopefully follow
+* no SVG fallback for gradients
+* no old webkit syntax gradients
 
 ## How mixins are built
 
@@ -104,6 +105,12 @@ This way mixins can easily be created or modified.
 ## Usage
 
 ```less
+// background-image 
+//················································
+
+    .background-image(linear-gradient(top, #000, #fff));
+    .background-image(url('test.png'),linear-gradient(top, #000, #fff));
+
 // border-radius
 //················································
 
@@ -118,7 +125,6 @@ This way mixins can easily be created or modified.
 //················································
 
 .transition(transform 200ms linear 400ms;);
-
 
 // repeat
 //················································
