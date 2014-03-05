@@ -133,7 +133,7 @@ This way mixins can easily be created or modified.
 
 .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
 
-// linear-gradient (generates svs and old webkit syntax)
+// linear-gradient (generates svg and old webkit syntax)
 //................................................
 
 .linear-gradient(to bottom, #000, #f00);
