@@ -1,4 +1,6 @@
 @import '_prefix';
 
 // deprecated use .prefix() instead
-.vendorize(...) {.prefix(' ')}
+.vendorize(...) {}
+.vendorize(@values) {.prefix(' ')}
+.vendorize(@values, @glue) {.prefix(@glue)}
