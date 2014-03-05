@@ -3,6 +3,7 @@
 * [Basic Info](#basic-info)
     * [License](#license)
     * [Dependencies](#dependencies)
+* [Versions](#versions)
 * [What does this do](#what-does-this-do)
     * [Example for "less" import](#example-for-less-imports)
         * [Import all transitions](#import-all-transitions)
@@ -30,6 +31,9 @@
 ### Dependencies:
 
 * [lessjs][4] 1.7.x
+
+## Versions
+* [1.0.0](https://github.com/pixelass/more-or-less/releases/tag/1.0.0)
 
 ## What does this do?
 
