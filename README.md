@@ -87,18 +87,26 @@ This way mixins can easily be created or modified.
 ### Example CSS3 Mixin
 
 ```less
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
+
+// box-shadow mixin
 .box-shadow(@values...) {
     @vendorPrefixes: -webkit-, -moz-, '';
     @prop: box-shadow;
-    .vendorize(@values, ', ');
+    .prefix(',');
+}
+
+// border-radius mixin
+.border-radius(@values...) {
+    @vendorPrefixes: -webkit-, -moz-, '';
+    @prop: border-radius;
+    .prefix();
 }
 ```
 
-`.vendorize` takes two arguments.  
+`.prefix()` takes one (optional) arguments.  
 
-1. the `@values`
-2. the `@glue` (defaults to `' '` which will separate values by a single space)
+1. the `@glue` (defaults to `' '` which will separate values by a single space)
 
 ## Notice
 
