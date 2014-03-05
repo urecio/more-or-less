@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .perspective-origin
 .perspective-origin(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
     @prop: perspective-origin;
     // http://caniuse.com/#search=transform
-    .vendorize(@values);
+    .prefix();
 }

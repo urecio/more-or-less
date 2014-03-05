@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .backface-visibility
 .backface-visibility(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
     @prop: backface-visibility;
     // http://caniuse.com/#search=transform
-    .vendorize(@values);
+    .prefix();
 }

@@ -1,24 +1,4 @@
-@import '../../fn/_in';
+@import '_prefix';
 
-.vendorize(...) {}
-.vendorize() {.vendorize(@values)}
-.vendorize(@values)  {.vendorize(@values, ' ')}
-.vendorize(@values, @glue) {
-    @vendorVals: transition-property, transition;
-
-    .for(@vendorPrefixes); .-each(@i){
-        .in(@vendorVals, @prop);
-        .-test(@s) when not (@-){
-            @string: @values;
-        }
-        .-test(@s) when (@-){
-            @1: replace('@{values}', 'transform', '@{i}transform');
-            @2: replace('@{1}', 'opacity', '@{i}opacity');
-            @3: replace('@{2}', 'box-shadow', '@{i}box-shadow');
-            @string: e(@3);
-        }
-        .-test(@values);
-        @eProp: e('@{i}@{prop}');
-        @{eProp}: @string;
-    }
-}
+// deprecated use .prefix() instead
+.vendorize(...) {.prefix(' ')}

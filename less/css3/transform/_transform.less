@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .transform
 .transform(@values) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
     @prop: transform;
     // http://caniuse.com/#search=transform
-    .vendorize(@values);
+    .prefix();
 }

@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .appearance
 .appearance(@values) {
     @vendorPrefixes: -webkit-, -moz- '';
     @prop: appearance;
     // https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance
-    .vendorize(@values);
+    .prefix();
 }

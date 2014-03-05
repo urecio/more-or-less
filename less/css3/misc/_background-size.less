@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .background-size
 .background-size(@values...) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
     @prop: background-size;
     // http://caniuse.com/#search=background-size
-    .vendorize(@values, ', ');
+    .prefix(',');
 }

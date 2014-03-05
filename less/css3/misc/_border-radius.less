@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .border-radius
 .border-radius(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
     @prop: border-radius;
     // http://caniuse.com/#search=border-radius
-    .vendorize();
+    .prefix();
 }

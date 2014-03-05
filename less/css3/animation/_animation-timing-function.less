@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .animation-timing-function
 .animation-timing-function(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
     @prop: animation-timing-function;
     // http://caniuse.com/#search=animation
-    .vendorize(@values);
+    .prefix();
 }

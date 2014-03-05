@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .animation-delay
 .animation-delay(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
     @prop: animation-delay;
     // http://caniuse.com/#search=animation
-    .vendorize();
+    .prefix();
 }

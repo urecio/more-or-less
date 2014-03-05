@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .animation-play-state
 .animation-play-state(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
     @prop: animation-play-state;
     // http://caniuse.com/#search=animation
-    .vendorize(@values);
+    .prefix();
 }

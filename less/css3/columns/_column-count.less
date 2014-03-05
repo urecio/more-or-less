@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .column-count
 .column-count(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
     @prop: column-count;
     // http://caniuse.com/#search=columns
-    .vendorize(@values);
+    .prefix();
 }

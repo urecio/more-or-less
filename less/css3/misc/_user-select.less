@@ -1,9 +1,9 @@
-@import '../helpers/_vendorize';
+@import '../helpers/_prefix';
 
 // MIXIN: .user-select
 .user-select(@values) {
     @vendorPrefixes: -webkit-, -moz-, '';
     @prop: user-select;
     // http://caniuse.com/#search=user-select
-    .vendorize(@values);
+    .prefix();
 }
