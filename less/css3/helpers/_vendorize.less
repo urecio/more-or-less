@@ -1,35 +1,23 @@
-@import '../helpers/_vendorProps';
 @import '../../fn/_in';
 
 .vendorize(...) {}
 .vendorize() {.vendorize(@values)}
 .vendorize(@values)  {.vendorize(@values, ' ')}
 .vendorize(@values, @glue) {
+    @vendorVals: transition-property, transition;
+
     .for(@vendorPrefixes); .-each(@i){
         .in(@vendorVals, @prop);
-
         .-test(@s) when not (@-){
-            @result: @values;
             @string: @values;
         }
         .-test(@s) when (@-){
-            .in(@vendorProps, @s);
-            log: length(@s) @s;
-
-            .-try(...) when (@-){@result: e('@{i}@{s}');}
-            .-try(...) when not (@-){@result: e('@{s}');}
-            .-try(@s);
+            @1: replace('@{values}', 'transform', '@{i}transform');
+            @2: replace('@{1}', 'opacity', '@{i}opacity');
+            @3: replace('@{2}', 'box-shadow', '@{i}box-shadow');
+            @string: e(@3);
         }
-        .-(@word, @values, @glue, @n) when (@n >= 0) and (@-) {
-            .-return(@wordResult, @n2) when (@n2 = 0) {@string: e('@{wordResult}');}
-            .-return(@word, @n);
-            @add: extract(@values, @n);
-            .-test(@add);
-            .-('@{result}@{glue}@{word}', @values, @glue, @n - 1);
-        }
-        @last: extract(@values, length(@values));
-        .-test(@last);
-        .-(@result, @values, @glue, length(@values) - 1);
+        .-test(@values);
         @eProp: e('@{i}@{prop}');
         @{eProp}: @string;
     }
