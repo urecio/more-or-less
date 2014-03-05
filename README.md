@@ -76,8 +76,7 @@
 
 ## What does this NOT do?
 
-* no SVG fallback for gradients
-* no old webkit syntax gradients
+* clean my apartment
 
 ## How mixins are built
 
@@ -124,6 +123,12 @@ This way mixins can easily be created or modified.
 //················································
 
 .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+
+// linear-gradient (generates svs and old webkit syntax)
+//................................................
+
+.linear-gradient(to bottom, #000, #f00);
+
 
 // transition (oneline)
 //················································
