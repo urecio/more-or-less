@@ -370,3 +370,11 @@ test-svg {
   background-image: -o-linear-gradient(to bottom right, #000000, #ff0000);
   background-image: linear-gradient(to bottom right, #000000, #ff0000);
 }
+test-svg {
+  background-imge: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjeD0iNTAlIiBjeT0iNTAlIiByPSI3NSUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjAwMDAiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkaWVudCkiIC8+PC9zdmc+');
+  background-imge: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#000000), to(#ff0000));
+  background-image: -webkit-radial-gradient(closest-corner, #000000, #ff0000);
+  background-image: -moz-radial-gradient(closest-corner, #000000, #ff0000);
+  background-image: -o-radial-gradient(closest-corner, #000000, #ff0000);
+  background-image: radial-gradient(closest-corner, #000000, #ff0000);
+}
