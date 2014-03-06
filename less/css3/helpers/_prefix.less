@@ -1,8 +1,6 @@
 @import '../../fn/_in';
 
-.prefix(...) {}
-.prefix() {.prefix(' ')}
-.prefix(@glue) {
+.prefix(...) {
     @needPrefix: transition-property, transition;
 
     .for(@vendorPrefixes); .-each(@i){
