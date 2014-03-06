@@ -104,10 +104,6 @@ This way mixins can easily be created or modified.
 }
 ```
 
-`.prefix()` takes one (optional) arguments.  
-
-1. the `@glue` (defaults to `' '` which will separate values by a single space)
-
 ## Notice
 
 >  Instead of auto-prefixing it is advised to use libraries like [autoprefixer][6] or similar.  
