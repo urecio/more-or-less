@@ -1,9 +1,7 @@
-@import '_for';
+@import '_index';
 
 // .find
 
 .find(@array, @value, @fallback: -1) {
-    .for(@array); .-each(...) {}
-    .-each(~'@{value}') {@-: @i}
-    .-() {@-: @fallback} .-;
+    .index(@array, @value, @fallback);
 }

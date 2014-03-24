@@ -43,11 +43,11 @@
 * It adds some functions and mixins for lessjs
 * It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
 * It is adds helpul functions 
-    * find (find the index of a value in an array)
-    * for (create a for loop with a callback)
-    * repeat (repeats a string @n times and returns it with an optional @glue)
-    * join (joins values from an array with a @glue)
-    * in (checks if a value is in an array and return a boolean)
+    * `.index()` (find the index of a value in an array)
+    * `.for()` (create a for loop with a callback)
+    * `.repeat()` (repeats a string @n times and returns it with an optional @glue)
+    * `.join()` (joins values from an array with a @glue)
+    * `.inArray()` (checks if a value is in an array and return a boolean)
 * It allows to import [reset][7] or [normalize][8]
     * `@import 'lib/reset';` to import the reset styles
     * `@import 'lib/normalize'` to import the normalize styles

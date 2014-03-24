@@ -348,6 +348,36 @@ testing join
 .animals:after {
   content: 'cat and tiger and lion';
 }
+/*******************
+testing index (find)
+*******************/
+.tools {
+  saw: 1;
+}
+.fruits {
+  banana: 3;
+}
+.fruits {
+  orange: 2;
+}
+.fruits {
+  tomato: -1;
+}
+/*******************
+testing inArray (in)
+*******************/
+.tools {
+  saw: true;
+}
+.fruits {
+  banana: true;
+}
+.fruits {
+  orange: true;
+}
+.fruits {
+  tomato: false;
+}
 /****************
 testing gradients
 ****************/

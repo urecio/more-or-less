@@ -190,7 +190,61 @@ testing join
     }
 }
 
+/*******************
+testing index (find)
+*******************/
 
+.tools {
+    @tools: saw, hammer, screwdriver, wrench;
+
+    .find(@tools, saw);
+    saw: @-;
+}
+
+.fruits {
+    @fruits: apple, orange, banana;
+
+    & {
+        .index(@fruits, banana);
+        banana: @-;
+    }
+    & {
+        .index(@fruits, orange);
+        orange: @-;
+    }
+    & {
+        .index(@fruits, tomato);
+        tomato: @-;
+    }
+}
+
+/*******************
+testing inArray (in)
+*******************/
+
+.tools {
+    @tools: saw, hammer, screwdriver, wrench;
+
+    .in(@tools, saw);
+    saw: @-;
+}
+
+.fruits {
+    @fruits: apple, orange, banana;
+
+    & {
+        .inArray(@fruits, banana);
+        banana: @-;
+    }
+    & {
+        .inArray(@fruits, orange);
+        orange: @-;
+    }
+    & {
+        .inArray(@fruits, tomato);
+        tomato: @-;
+    }
+}
 /****************
 testing gradients
 ****************/
