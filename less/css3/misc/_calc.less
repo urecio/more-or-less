@@ -1,11 +1,21 @@
-@import '../../fn/_for';
+@import '../vars/_prefix';
+@import '../../fn/_in';
 
 // MIXIN: .calc
 .calc(@prop; @value) {
     @vendorPrefixes: -webkit-, -moz-, '';
     // http://caniuse.com/#search=calc
     .for(@vendorPrefixes);.-each(@i) {
-        @eValue: e('@{value}');
-        @{prop}: e('@{i}calc(@{eValue})');
+        & {
+            .in(@prefixes, @i);
+            & when (@-) {
+                @eValue: e('@{value}');
+                @{prop}: e('@{i}calc(@{eValue})');
+            }
+            & when not (@-) {
+                @eValue: e('@{value}');
+                @{prop}: e('calc(@{eValue})');
+            }
+        }
     }
 }

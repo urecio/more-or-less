@@ -29,7 +29,12 @@ testing CSS3 misc-mixins
 }
 
 input {
-    .placeholder(#aaa);
+    .placeholder(
+    {
+        color: #aaa;
+        font-size: 20px;
+    }
+    );
 }
 
 .text-overflow-ellipsis {
@@ -188,8 +193,7 @@ testing join
 
 
 
-
-test {
+.background-image {
     .background-image(
         linear-gradient(top, #000, #fff),
         radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),

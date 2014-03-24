@@ -1,3 +1,5 @@
+@import '../vars/_prefix';
+@import '../../fn/_in';
 
 // MIXIN: .background-size
 .background-image(@values...) {
@@ -5,8 +7,16 @@
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
     //http://caniuse.com/#feat=css-gradients
     .for(@vendorPrefixes);.-each(@i) {
-        @1: replace('@{values}', 'linear-gradient\(', '@{i}linear-gradient(' );
-        @2: replace('@{1}', 'radial-gradient\(', '@{i}radial-gradient(' );
-        background-image: e(@2);
+        & {
+            .in(@prefixes, @i);
+            & when (@-){
+                @1: replace('@{values}', 'linear-gradient', '@{i}linear-gradient' );
+                @2: replace('@{1}', 'radial-gradient', '@{i}radial-gradient' );
+                background-image: e(@2);
+            }
+            & when not (@-){
+                background-image: @values;
+            }
+        }
     }
 }

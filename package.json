@@ -1,0 +1,10 @@
+{
+  "name": "more-or-less",
+  "version": "1.2.0",
+  "dependencies": {
+    "grunt-cli": "latest",
+    "grunt-notify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}

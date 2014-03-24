@@ -1,13 +1,32 @@
+@import '../vars/_prefix';
 @import '../../fn/_for';
+@import '../../fn/_in';
 
 // MIXIN: .placeholder
-.placeholder(@values) {
-    @vendorPrefixes: ':-webkit-', ':-moz-', '-moz-', ':-ms-';
+.placeholder(@rules) {
+    @vendorPrefixes: ':-webkit-', ':-ms-';
+    @vendorPrefixesMoz:  ':-moz-', '-moz-';
     // http://caniuse.com/#search=placeholder
     .for(@vendorPrefixes);.-each(@i) {
-        @selector: e(':@{i}placeholder');
-        &@{selector} {
-            color: @values;
+        @prefix: replace('@{i}', ':', '');
+        .in(@prefixes, @prefix);
+        & when (@-) {
+            @selector: e(':@{i}input-placeholder');
+            &@{selector} {
+                @rules();
+            }
+        }
+    }
+    & {
+        .for(@vendorPrefixesMoz);.-each(@i) {
+            @prefix: replace('@{i}', ':', '');
+            .in(@prefixes, @prefix);
+            & when (@-) {
+                @selector: e(':@{i}placeholder');
+                &@{selector} {
+                    @rules();
+                }
+            }
         }
     }
 }

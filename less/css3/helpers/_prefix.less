@@ -1,8 +1,8 @@
+@import '../vars/_prefix';
 @import '../../fn/_in';
 
 .prefix(...) {
     @needPrefix: transition-property, transition;
-
     .for(@vendorPrefixes); .-each(@i){
         .in(@needPrefix, @prop);
         .-return(@s) when not (@-){
@@ -13,8 +13,16 @@
             @2: replace('@{1}', 'box-shadow', '@{i}box-shadow');
             @return: e(@2);
         }
-        .-return(@values);
-        @eProp: e('@{i}@{prop}');
-        @{eProp}: @return;
+        & {
+            .in(@prefixes, @i);
+            & when (@-){
+                .-return(@i);
+                @eProp: e('@{i}@{prop}');
+                @{eProp}: @return;
+            }
+            & when not (@-){
+                @{prop}: @values;
+            }
+        }
     }
 }

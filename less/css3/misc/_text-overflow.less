@@ -1,20 +1,18 @@
-@import '../../fn/_for';
+@import '../helpers/_prefix';
 
 // MIXIN: .text-overflow
-.text-overflow(@value) {
+.text-overflow(@values) {
     @vendorPrefixes: -ms-, -o-, '';
     // http://caniuse.com/#search=text-overflow
-    .for(@vendorPrefixes);.-each(@i) {
-        @prop: e('@{i}text-overflow');
-        @{prop}: @value;
-    }
-    // props needed
-    display: inline-block; // may be overridden with block
+    @prop: text-overflow;
+    .prefix();
+    display: inline-block;
     max-width: 100%;
     overflow: hidden;
     white-space: no-wrap;
     word-wrap: normal;
-    // IE fixes
-    *display: inline;
-    *zoom: 1;
+    & when (@ie-legacy) {
+        *display: inline;
+        *zoom: 1;
+    }
 }
