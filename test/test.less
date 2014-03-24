@@ -184,14 +184,16 @@ testing join
 
 & {
     @animals: 'cat', 'tiger', 'lion';
-    .join(@animals, ' + ');
-    console {
-        log: @string;
+    .join(@animals, ' and ');
+    .animals:after {
+        content: '@{string}';
     }
 }
 
 
-
+/****************
+testing gradients
+****************/
 
 .background-image {
     .background-image(
@@ -212,3 +214,9 @@ test-svg {
 test-svg {
     .radial-gradient(#000, #f00);
 }
+
+/****************
+testing font-face
+****************/
+
+.font-face(myFont);
