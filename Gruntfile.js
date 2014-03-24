@@ -31,5 +31,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-notify");
 
+    grunt.registerTask("default", ["less"]);
     grunt.registerTask("dev", ["watch"]);
 };
