@@ -35,6 +35,7 @@
 ## Versions
 * [1.0.0](https://github.com/pixelass/more-or-less/releases/tag/1.0.0)
     * [1.1.0](https://github.com/pixelass/more-or-less/releases/tag/1.1.0)
+    * [1.2.0](https://github.com/pixelass/more-or-less/releases/tag/1.2.0)
 
 ## What does this do?
 
@@ -52,6 +53,7 @@
 * It allows to use "more or less" of the library
     * `@import '_more';` to get access to the entire library of mixins
     * `'less/css3/_transition';` to get access to the transition library
+* control prefixes or legacy support with global-variables
 
 ### Example for "less" imports
 
@@ -93,7 +95,7 @@ This way mixins can easily be created or modified.
 .box-shadow(@values...) {
     @vendorPrefixes: -webkit-, -moz-, '';
     @prop: box-shadow;
-    .prefix(',');
+    .prefix();
 }
 
 // border-radius mixin
