@@ -1,4 +1,5 @@
 # more-or-less
+[![Build Status](https://travis-ci.org/pixelass/more-or-less.svg)](https://travis-ci.org/pixelass/more-or-less)
 
 * [Basic Info](#basic-info)
     * [License](#license)
