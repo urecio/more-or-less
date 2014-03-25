@@ -382,25 +382,43 @@ testing inArray (in)
 testing gradients
 ****************/
 .background-image {
-  background-image: -webkit-linear-gradient(top, #000000, #ffffff) -webkit-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
-  background-image: -moz-linear-gradient(top, #000000, #ffffff) -moz-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
-  background-image: -o-linear-gradient(top, #000000, #ffffff) -o-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
-  background-image: linear-gradient(top, #000000, #ffffff) radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: -webkit-linear-gradient(bottom, #000000, #ffffff) -webkit-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: -moz-linear-gradient(bottom, #000000, #ffffff) -moz-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: -o-linear-gradient(bottom, #000000, #ffffff) -o-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: linear-gradient(to top, #000000, #ffffff) radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+}
+.background-image {
+  background-image: -webkit-linear-gradient(bottom left, #000000, #ffffff);
+  background-image: -moz-linear-gradient(bottom left, #000000, #ffffff);
+  background-image: -o-linear-gradient(bottom left, #000000, #ffffff);
+  background-image: linear-gradient(to top left, #000000, #ffffff);
+  background-image: -webkit-linear-gradient(top right, #000000, #ffffff);
+  background-image: -moz-linear-gradient(top right, #000000, #ffffff);
+  background-image: -o-linear-gradient(top right, #000000, #ffffff);
+  background-image: linear-gradient(to bottom right, #000000, #ffffff);
+  background-image: -webkit-linear-gradient(left, #000000, #ffffff);
+  background-image: -moz-linear-gradient(left, #000000, #ffffff);
+  background-image: -o-linear-gradient(left, #000000, #ffffff);
+  background-image: linear-gradient(to right, #000000, #ffffff);
+  background-image: -webkit-linear-gradient(top, #000000, #ffffff);
+  background-image: -moz-linear-gradient(top, #000000, #ffffff);
+  background-image: -o-linear-gradient(top, #000000, #ffffff);
+  background-image: linear-gradient(to bottom, #000000, #ffffff);
 }
 test-svg {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkaWVudCkiIC8+PC9zdmc+');
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #ff0000));
-  background-image: -webkit-linear-gradient(to bottom, #000000, #ff0000);
-  background-image: -moz-linear-gradient(to bottom, #000000, #ff0000);
-  background-image: -o-linear-gradient(to bottom, #000000, #ff0000);
+  background-image: -webkit-linear-gradient(top, #000000, #ff0000);
+  background-image: -moz-linear-gradient(top, #000000, #ff0000);
+  background-image: -o-linear-gradient(top, #000000, #ff0000);
   background-image: linear-gradient(to bottom, #000000, #ff0000);
 }
 test-svg {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmYwMDAwIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgLz48L3N2Zz4=');
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #000000), color-stop(100%, #ff0000));
-  background-image: -webkit-linear-gradient(to bottom right, #000000, #ff0000);
-  background-image: -moz-linear-gradient(to bottom right, #000000, #ff0000);
-  background-image: -o-linear-gradient(to bottom right, #000000, #ff0000);
+  background-image: -webkit-linear-gradient(top right, #000000, #ff0000);
+  background-image: -moz-linear-gradient(top right, #000000, #ff0000);
+  background-image: -o-linear-gradient(top right, #000000, #ff0000);
   background-image: linear-gradient(to bottom right, #000000, #ff0000);
 }
 test-svg {

@@ -1,7 +1,7 @@
 @import '../vars/_prefix';
 @import '../../fn/_in';
 
-// MIXIN: .background-size
+// MIXIN: .background-image
 .background-image(@values...) {
 
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
@@ -10,9 +10,16 @@
         & {
             .in(@prefixes, @i);
             & when (@-){
-                @1: replace('@{values}', 'linear-gradient', '@{i}linear-gradient' );
-                @2: replace('@{1}', 'radial-gradient', '@{i}radial-gradient' );
-                background-image: e(@2);
+                @to-top-left: replace('@{values}', 'to top left', 'bottom right' );
+                @to-bottom-right: replace('@{to-top-left}', 'to bottom right', 'top left' );
+                @to-top: replace('@{values}', 'to top', 'bottom' );
+                @to-bottom: replace('@{to-top}', 'to bottom', 'top' );
+                @to-left: replace('@{to-bottom}', 'to left', 'right' );
+                @to-right: replace('@{to-left}', 'to right', 'left' );
+                @linear-gradient: replace('@{to-right}', 'linear-gradient', '@{i}linear-gradient' );
+                @radial-gradient: replace('@{linear-gradient}', 'radial-gradient', '@{i}radial-gradient' );
+                @end: @radial-gradient;
+                background-image: e(@end);
             }
             & when not (@-){
                 background-image: @values;

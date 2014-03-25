@@ -251,9 +251,16 @@ testing gradients
 
 .background-image {
     .background-image(
-        linear-gradient(top, #000, #fff),
+        linear-gradient(to top, #000, #fff),
         radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
         url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
 }
 
 
