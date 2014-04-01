@@ -44,6 +44,7 @@
 * It adds some functions and mixins for lessjs
 * It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
 * It is adds helpul functions 
+    * `.if()` (if - then - [else] )
     * `.index()` (find the index of a value in an array)
     * `.for()` (create a for loop with a callback)
     * `.repeat()` (repeats a string @n times and returns it with an optional @glue)
@@ -162,6 +163,22 @@ This way mixins can easily be created or modified.
     .join(@cats, ' & ');
     content: '@{string}';
 }
+
+// if
+//················································
+
+.if(isnumber(2), {
+    .-then(){
+        log {
+            condition: is a number;
+        }
+    }
+    .-else(){
+        log {
+            condition: is not a number;
+        }
+    }
+});
 
 ```
 
