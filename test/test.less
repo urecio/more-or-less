@@ -281,3 +281,87 @@ testing font-face
 ****************/
 
 .font-face(myFont);
+
+
+/**************
+testing if-else
+**************/
+
+.if(isnumber(2), {
+    .-then(){
+        log {
+            isnumber: then;
+        }
+    }
+    .-else(){
+        log {
+            isnumber: else;
+        }
+    }
+});
+
+
+
+.if(true, {
+    .-then(){
+        log {
+            true: then;
+        }
+    }
+    .-else(){
+        log {
+            true: else;
+        }
+    }
+});
+
+
+
+
+.if(false, {
+    .-then(){
+        log {
+            false: then;
+        }
+    }
+    .-else(){
+        log {
+            false: else;
+        }
+    }
+});
+
+.if(false, {
+    .-then(){
+        log {
+            false2: then;
+        }
+    }
+});
+
+.if(1 lt 2, {
+    .-then(){
+        log {
+            lowerthan: then;
+        }
+    }
+});
+
+
+.if(1 lte 2, {
+    .-then(){
+        log {
+            lowerthanequal: then;
+        }
+    }
+});
+
+.if(lightness(#fff) gt 50%, {
+    .-then(){
+        log {
+            lightnessgt: then;
+        }
+    }
+});
+
+

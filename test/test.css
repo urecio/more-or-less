@@ -439,3 +439,24 @@ testing font-face
   font-weight: normal;
   font-style: normal;
 }
+/**************
+testing if-else
+**************/
+log {
+  isnumber: then;
+}
+log {
+  true: then;
+}
+log {
+  false: else;
+}
+log {
+  lowerthan: then;
+}
+log {
+  lowerthanequal: then;
+}
+log {
+  lightnessgt: then;
+}
