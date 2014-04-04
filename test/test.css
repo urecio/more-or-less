@@ -205,6 +205,67 @@ testing image-mixins
   background-position: 0 -60px;
 }
 /****************
+testing gradients
+****************/
+.background-image {
+  background-image: -webkit-linear-gradient(bottom, #000000, #ffffff) -webkit-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: -moz-linear-gradient(bottom, #000000, #ffffff) -moz-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: -o-linear-gradient(bottom, #000000, #ffffff) -o-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+  background-image: linear-gradient(to top, #000000, #ffffff) radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+}
+.background-image {
+  background-image: -webkit-linear-gradient(bottom left, #000000, #ffffff);
+  background-image: -moz-linear-gradient(bottom left, #000000, #ffffff);
+  background-image: -o-linear-gradient(bottom left, #000000, #ffffff);
+  background-image: linear-gradient(to top left, #000000, #ffffff);
+  background-image: -webkit-linear-gradient(top right, #000000, #ffffff);
+  background-image: -moz-linear-gradient(top right, #000000, #ffffff);
+  background-image: -o-linear-gradient(top right, #000000, #ffffff);
+  background-image: linear-gradient(to bottom right, #000000, #ffffff);
+  background-image: -webkit-linear-gradient(left, #000000, #ffffff);
+  background-image: -moz-linear-gradient(left, #000000, #ffffff);
+  background-image: -o-linear-gradient(left, #000000, #ffffff);
+  background-image: linear-gradient(to right, #000000, #ffffff);
+  background-image: -webkit-linear-gradient(top, #000000, #ffffff);
+  background-image: -moz-linear-gradient(top, #000000, #ffffff);
+  background-image: -o-linear-gradient(top, #000000, #ffffff);
+  background-image: linear-gradient(to bottom, #000000, #ffffff);
+}
+test-svg {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkaWVudCkiIC8+PC9zdmc+');
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #ff0000));
+  background-image: -webkit-linear-gradient(top, #000000, #ff0000);
+  background-image: -moz-linear-gradient(top, #000000, #ff0000);
+  background-image: -o-linear-gradient(top, #000000, #ff0000);
+  background-image: linear-gradient(to bottom, #000000, #ff0000);
+}
+test-svg {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmYwMDAwIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgLz48L3N2Zz4=');
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #000000), color-stop(100%, #ff0000));
+  background-image: -webkit-linear-gradient(top right, #000000, #ff0000);
+  background-image: -moz-linear-gradient(top right, #000000, #ff0000);
+  background-image: -o-linear-gradient(top right, #000000, #ff0000);
+  background-image: linear-gradient(to bottom right, #000000, #ff0000);
+}
+test-svg {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjeD0iNTAlIiBjeT0iNTAlIiByPSI3NSUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjAwMDAiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkaWVudCkiIC8+PC9zdmc+');
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#000000), to(#ff0000));
+  background-image: -webkit-radial-gradient(closest-corner, #000000, #ff0000);
+  background-image: -moz-radial-gradient(closest-corner, #000000, #ff0000);
+  background-image: -o-radial-gradient(closest-corner, #000000, #ff0000);
+  background-image: radial-gradient(closest-corner, #000000, #ff0000);
+}
+/****************
+testing font-face
+****************/
+@font-face {
+  font-family: myFont;
+  src: url('fonts/myFont.eot');
+  src: url('fonts/myFont.eot?#iefix') format('embedded-opentype'), url('fonts/myFont.woff') format('woff'), url('fonts/myFont.ttf') format('truetype'), url('fonts/myFont.svg#myFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/****************
 testing keyframes
 ****************/
 @-webkit-keyframes testanimation {
@@ -339,6 +400,15 @@ testing animation library
 /*************
 testing repeat
 *************/
+.test.test.test.test.test {
+  float: right;
+}
+.test and .test and .test and .test and .test {
+  float: right;
+}
+.test foo .test foo .test foo .test foo .test {
+  float: right;
+}
 .test + .test + .test + .test + .test {
   float: right;
 }
@@ -378,64 +448,36 @@ testing inArray (in)
 .fruits {
   tomato: false;
 }
-/****************
-testing gradients
-****************/
-.background-image {
-  background-image: -webkit-linear-gradient(bottom, #000000, #ffffff) -webkit-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
-  background-image: -moz-linear-gradient(bottom, #000000, #ffffff) -moz-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
-  background-image: -o-linear-gradient(bottom, #000000, #ffffff) -o-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
-  background-image: linear-gradient(to top, #000000, #ffffff) radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
+/**************
+testing if-else
+**************/
+log {
+  isnumber: then;
 }
-.background-image {
-  background-image: -webkit-linear-gradient(bottom left, #000000, #ffffff);
-  background-image: -moz-linear-gradient(bottom left, #000000, #ffffff);
-  background-image: -o-linear-gradient(bottom left, #000000, #ffffff);
-  background-image: linear-gradient(to top left, #000000, #ffffff);
-  background-image: -webkit-linear-gradient(top right, #000000, #ffffff);
-  background-image: -moz-linear-gradient(top right, #000000, #ffffff);
-  background-image: -o-linear-gradient(top right, #000000, #ffffff);
-  background-image: linear-gradient(to bottom right, #000000, #ffffff);
-  background-image: -webkit-linear-gradient(left, #000000, #ffffff);
-  background-image: -moz-linear-gradient(left, #000000, #ffffff);
-  background-image: -o-linear-gradient(left, #000000, #ffffff);
-  background-image: linear-gradient(to right, #000000, #ffffff);
-  background-image: -webkit-linear-gradient(top, #000000, #ffffff);
-  background-image: -moz-linear-gradient(top, #000000, #ffffff);
-  background-image: -o-linear-gradient(top, #000000, #ffffff);
-  background-image: linear-gradient(to bottom, #000000, #ffffff);
+log {
+  true: then;
 }
-test-svg {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkaWVudCkiIC8+PC9zdmc+');
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #ff0000));
-  background-image: -webkit-linear-gradient(top, #000000, #ff0000);
-  background-image: -moz-linear-gradient(top, #000000, #ff0000);
-  background-image: -o-linear-gradient(top, #000000, #ff0000);
-  background-image: linear-gradient(to bottom, #000000, #ff0000);
+log {
+  false: else;
 }
-test-svg {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmYwMDAwIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgLz48L3N2Zz4=');
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #000000), color-stop(100%, #ff0000));
-  background-image: -webkit-linear-gradient(top right, #000000, #ff0000);
-  background-image: -moz-linear-gradient(top right, #000000, #ff0000);
-  background-image: -o-linear-gradient(top right, #000000, #ff0000);
-  background-image: linear-gradient(to bottom right, #000000, #ff0000);
+foo {
+  bar: baz;
 }
-test-svg {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjeD0iNTAlIiBjeT0iNTAlIiByPSI3NSUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjAwMDAiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkaWVudCkiIC8+PC9zdmc+');
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#000000), to(#ff0000));
-  background-image: -webkit-radial-gradient(closest-corner, #000000, #ff0000);
-  background-image: -moz-radial-gradient(closest-corner, #000000, #ff0000);
-  background-image: -o-radial-gradient(closest-corner, #000000, #ff0000);
-  background-image: radial-gradient(closest-corner, #000000, #ff0000);
+log {
+  lowerthanequal: then;
 }
-/****************
-testing font-face
-****************/
-@font-face {
-  font-family: myFont;
-  src: url('fonts/myFont.eot');
-  src: url('fonts/myFont.eot?#iefix') format('embedded-opentype'), url('fonts/myFont.woff') format('woff'), url('fonts/myFont.ttf') format('truetype'), url('fonts/myFont.svg#myFont') format('svg');
-  font-weight: normal;
-  font-style: normal;
+log {
+  lightnessgt: then;
+}
+/***************
+testing scope
+***************/
+test {
+  a: a;
+  b: b;
+  foo: foo;
+  bar: bar;
+}
+test header {
+  height: 100px;
 }

@@ -1,0 +1,4683 @@
+@import '../_more';
+//@import 'lesshat';
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+.border-radius {
+    .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    .box-sizing(border-box);
+}
+
+.background-size {
+    .background-size(10px auto, 100px auto;);
+}
+
+.opacity {
+    .opacity(0.4);
+}
+
+
+/*****************************
+testing CSS3 transition-mixins
+*****************************/
+
+.transition-oneline {
+    .transition(transform 200ms linear 400ms);
+}
+
+.transition-oneline {
+    .transition(transform 200ms, height 500ms;);
+}
+
+.transition-oneline {
+    .transition(transform 200ms linear, height 500ms linear, box-shadow 500ms linear, opacity 500ms linear;);
+}
+
+.transition-separated {
+    .transition-property(all);
+    .transition-duration(200ms);
+    .transition-timing-function(linear);
+    .transition-delay(400ms);
+}
+
+.transition-prop-transform {
+    .transition-property(transform;);
+}
+.transition-prop-mutli-with-transform {
+    .transition-property(transform, color, height;);
+}
+
+.transition-prop-mutli-with-transform-and-boxShadow {
+    .transition-property(transform, color, box-shadow;);
+}
+
+.transition-prop {
+    .transition-property(height;);
+}
+.transition-multi {
+    .transition-property(height, top, left;);
+}
+
+/*****************************
+testing CSS3 animation-mixins
+*****************************/
+
+.animation-oneline {
+    .animation(test-animation 200ms linear 200ms);
+}
+
+.animation-delay {
+    .animation-delay(200ms);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-timing-function {
+    .animation-timing-function(linear);
+}
+
+.animation-fill-mode {
+    .animation-fill-mode(forward);
+}
+
+/****************************
+testing CSS3 transform-mixins
+****************************/
+
+.transforms {
+    .transform(translate(2px, 3px) rotate(3deg) scale(0.4));
+}
+.transforms {
+    .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
+}
+
+
+/****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+

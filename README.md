@@ -1,6 +1,28 @@
 # more-or-less
 [![Build Status](https://travis-ci.org/pixelass/more-or-less.svg)](https://travis-ci.org/pixelass/more-or-less)
 
+## Faster and more powerful mixins for [less.js][4]
+
+## Compared to lesshat
+```
+                                   MORE-OR-LESS          LESSHAT
+Keyframes                               ✓                  ✓
+Unlimited gradients                     ✓                  ✓
+SVG gradients for IE9                   ✓                  ✓
+Font-face                               ✓                  ✓
+Input placeholders                      ✓                  ✓
+Unlimited transitions                   ✓                  ✓
+Prefixed transition values              ✓                  ✓
+Units completition                      ✗                  ✓
+for loops                               ✓                  ✗
+get Index                               ✓                  ✗
+in Array                                ✓                  ✗
+scoping                                 ✓                  ✗
+repeat                                  ✓                  ✗
+join                                    ✓                  ✗
+time to compile compare file           8s                30.6s
+```
+
 * [Basic Info](#basic-info)
     * [License](#license)
     * [Dependencies](#dependencies)
@@ -31,19 +53,22 @@
 
 ### Dependencies:
 
-* [lessjs][4] 1.7.x
+* [less.js][4] 1.7.x
 
 ## Versions
 * [1.0.0](https://github.com/pixelass/more-or-less/releases/tag/1.0.0)
     * [1.1.0](https://github.com/pixelass/more-or-less/releases/tag/1.1.0)
     * [1.2.0](https://github.com/pixelass/more-or-less/releases/tag/1.2.0)
     * [1.3.0](https://github.com/pixelass/more-or-less/releases/tag/1.3.0)
+    * [1.4.0](https://github.com/pixelass/more-or-less/releases/tag/1.4.0)
 
 ## What does this do?
 
 * It adds some functions and mixins for lessjs
-* It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
+* It is stronger and a lot faster than [lesshat][3] but does NOT USE ANY inline-javaScript
 * It is adds helpul functions 
+    * `.if()` (if - then - [else])
+    * `.ifscope` leaner scoping)
     * `.index()` (find the index of a value in an array)
     * `.for()` (create a for loop with a callback)
     * `.repeat()` (repeats a string @n times and returns it with an optional @glue)
@@ -161,6 +186,40 @@ This way mixins can easily be created or modified.
     @cats: cheetah, tiger, lion;
     .join(@cats, ' & ');
     content: '@{string}';
+}
+
+// if
+//················································
+
+.if(isnumber(2), {
+    .-then(){
+        log {
+            condition: is a number;
+        }
+    }
+    .-else(){
+        log {
+            condition: is not a number;
+        }
+    }
+});
+
+// scope
+//················································
+
+.test {
+    .scope(a); // no return but no error
+    .scope(1); // no return but no error
+    .scope({
+        @height: 100px;
+        height: @height;
+    });
+    .scope({
+        @a: foo;
+        @b: bar;
+        foo: @a;
+        bar: @b;
+    });
 }
 
 ```

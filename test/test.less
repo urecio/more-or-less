@@ -144,6 +144,44 @@ testing image-mixins
 }
 
 /****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+test-svg {
+    .linear-gradient(to bottom, #000, #f00);
+}
+
+test-svg {
+    .linear-gradient(to bottom right, #000, #f00);
+}
+
+test-svg {
+    .radial-gradient(#000, #f00);
+}
+
+/****************
+testing font-face
+****************/
+
+.font-face(myFont);
+
+
+/****************
 testing keyframes
 ****************/
 
@@ -172,6 +210,27 @@ testing animation library
 /*************
 testing repeat
 *************/
+& {
+    .repeat('.test', 5);
+    @{string} {
+        float: right;
+    }
+}
+
+& {
+    .repeat('.test', ' and ', 5);
+    @{string} {
+        float: right;
+    }
+}
+
+& {
+    .repeat('.test', ' foo ', 5);
+    @{string} {
+        float: right;
+    }
+}
+
 & {
     .repeat('.test', ' + ', 5);
     @{string} {
@@ -245,39 +304,108 @@ testing inArray (in)
         tomato: @-;
     }
 }
-/****************
-testing gradients
-****************/
 
-.background-image {
-    .background-image(
-        linear-gradient(to top, #000, #fff),
-        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
-        url('test.png'));
+/**************
+testing if-else
+**************/
+
+.if(isnumber(2), {
+    .-then(){
+        log {
+            isnumber: then;
+        }
+    }
+    .-else(){
+        log {
+            isnumber: else;
+        }
+    }
+});
+
+
+.if(true, {
+    .-then(){
+        log {
+            true: then;
+        }
+    }
+    .-else(){
+        log {
+            true: else;
+        }
+    }
+});
+
+
+.if(false, {
+    .-then(){
+        log {
+            false: then;
+        }
+    }
+    .-else(){
+        log {
+            false: else;
+        }
+    }
+});
+
+
+.if(1 gt 2, {
+    .-then(){
+        log {
+            lowerthan: then;
+        }
+    }
+    .-else () {
+        foo {
+            bar: baz;
+        }
+
+    }
+});
+
+
+.if(1 lte 2, {
+    .-then(){
+        log {
+            lowerthanequal: then;
+        }
+    }
+});
+
+.if(lightness(#fff) gt (20% * 2), {
+    .-then(){
+        log {
+            lightnessgt: then;
+        }
+    }
+});
+
+/***************
+testing scope
+***************/
+
+
+@fn1: {
+        @a: a;
+        @b: b;
+        a: @a;
+        b: @b;
+    };
+test {
+    .scope(@fn1);
+    .scope(a);
+    .scope(1);
+    .scope({
+        header {
+            height: 100px;
+        }
+    });
+    .scope({
+        @a: foo;
+        @b: bar;
+        foo: @a;
+        bar: @b;
+    });
 }
-
-.background-image {
-    .background-image(linear-gradient(to top left, #000, #fff));
-    .background-image(linear-gradient(to bottom right, #000, #fff));
-    .background-image(linear-gradient(to right, #000, #fff));
-    .background-image(linear-gradient(to bottom, #000, #fff));
-}
-
-
-test-svg {
-    .linear-gradient(to bottom, #000, #f00);
-}
-
-test-svg {
-    .linear-gradient(to bottom right, #000, #f00);
-}
-
-test-svg {
-    .radial-gradient(#000, #f00);
-}
-
-/****************
-testing font-face
-****************/
-
-.font-face(myFont);
