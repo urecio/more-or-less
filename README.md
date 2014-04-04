@@ -20,7 +20,7 @@ in Array                                ✓                  ✗
 scoping                                 ✓                  ✗
 repeat                                  ✓                  ✗
 join                                    ✓                  ✗
-time to compile compare file          735ms               1.5s
+time to compile compare file           8s                30.6s
 ```
 
 * [Basic Info](#basic-info)
