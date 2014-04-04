@@ -1,5 +1,6 @@
 @import '../_more';
-
+@prefixes: '';
+@svg-fallback: false;
 /***********************
 testing CSS3 misc-mixins
 ***********************/
@@ -144,6 +145,44 @@ testing image-mixins
 }
 
 /****************
+testing gradients
+****************/
+
+.background-image {
+    .background-image(
+        linear-gradient(to top, #000, #fff),
+        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
+        url('test.png'));
+}
+
+.background-image {
+    .background-image(linear-gradient(to top left, #000, #fff));
+    .background-image(linear-gradient(to bottom right, #000, #fff));
+    .background-image(linear-gradient(to right, #000, #fff));
+    .background-image(linear-gradient(to bottom, #000, #fff));
+}
+
+
+test-svg {
+    .linear-gradient(to bottom, #000, #f00);
+}
+
+test-svg {
+    .linear-gradient(to bottom right, #000, #f00);
+}
+
+test-svg {
+    .radial-gradient(#000, #f00);
+}
+
+/****************
+testing font-face
+****************/
+
+.font-face(myFont);
+
+
+/****************
 testing keyframes
 ****************/
 
@@ -172,6 +211,27 @@ testing animation library
 /*************
 testing repeat
 *************/
+& {
+    .repeat('.test', 5);
+    @{string} {
+        float: right;
+    }
+}
+
+& {
+    .repeat('.test', ' and ', 5);
+    @{string} {
+        float: right;
+    }
+}
+
+& {
+    .repeat('.test', ' foo ', 5);
+    @{string} {
+        float: right;
+    }
+}
+
 & {
     .repeat('.test', ' + ', 5);
     @{string} {
@@ -245,43 +305,6 @@ testing inArray (in)
         tomato: @-;
     }
 }
-/****************
-testing gradients
-****************/
-
-.background-image {
-    .background-image(
-        linear-gradient(to top, #000, #fff),
-        radial-gradient(45px 45px, farthest-corner, #fff 0%, #000 100%),
-        url('test.png'));
-}
-
-.background-image {
-    .background-image(linear-gradient(to top left, #000, #fff));
-    .background-image(linear-gradient(to bottom right, #000, #fff));
-    .background-image(linear-gradient(to right, #000, #fff));
-    .background-image(linear-gradient(to bottom, #000, #fff));
-}
-
-
-test-svg {
-    .linear-gradient(to bottom, #000, #f00);
-}
-
-test-svg {
-    .linear-gradient(to bottom right, #000, #f00);
-}
-
-test-svg {
-    .radial-gradient(#000, #f00);
-}
-
-/****************
-testing font-face
-****************/
-
-.font-face(myFont);
-
 
 /**************
 testing if-else
@@ -301,7 +324,6 @@ testing if-else
 });
 
 
-
 .if(true, {
     .-then(){
         log {
@@ -314,8 +336,6 @@ testing if-else
         }
     }
 });
-
-
 
 
 .if(false, {
@@ -331,19 +351,18 @@ testing if-else
     }
 });
 
-.if(false, {
-    .-then(){
-        log {
-            false2: then;
-        }
-    }
-});
 
-.if(1 lt 2, {
+.if(1 gt 2, {
     .-then(){
         log {
             lowerthan: then;
         }
+    }
+    .-else () {
+        foo {
+            bar: baz;
+        }
+
     }
 });
 
@@ -356,7 +375,7 @@ testing if-else
     }
 });
 
-.if(lightness(#fff) gt 50%, {
+.if(lightness(#fff) gt (20% * 2), {
     .-then(){
         log {
             lightnessgt: then;
@@ -364,4 +383,43 @@ testing if-else
     }
 });
 
+/***************
+testing scope
+***************/
 
+
+@fn1: {
+        @a: a;
+        @b: b;
+        a: @a;
+        b: @b;
+    };
+test {
+    .scope(@fn1);
+    .scope(a);
+    .scope(1);
+    .scope({
+        header {
+            height: 100px;
+        }
+        });
+    .scope({
+        @a: foo;
+        @b: bar;
+        foo: @a;
+        bar: @b;
+    });
+}
+
+
+
+
+& {
+    @a: c;
+    header {
+        height: @a;
+    }
+    footer {
+        width: @a;
+    }
+}
