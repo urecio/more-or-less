@@ -60,6 +60,7 @@ time to compile compare file          735ms               1.5s
     * [1.1.0](https://github.com/pixelass/more-or-less/releases/tag/1.1.0)
     * [1.2.0](https://github.com/pixelass/more-or-less/releases/tag/1.2.0)
     * [1.3.0](https://github.com/pixelass/more-or-less/releases/tag/1.3.0)
+    * [1.4.0](https://github.com/pixelass/more-or-less/releases/tag/1.4.0)
 
 ## What does this do?
 
