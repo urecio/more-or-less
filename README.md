@@ -67,7 +67,8 @@ time to compile compare file          735ms               1.5s
 * It adds some functions and mixins for lessjs
 * It is stronger and a lot faster than [lesshat][3] but does NOT USE ANY inline-javaScript
 * It is adds helpul functions 
-    * `.if()` (if - then - [else] )
+    * `.if()` (if - then - [else])
+    * `.ifscope` leaner scoping)
     * `.index()` (find the index of a value in an array)
     * `.for()` (create a for loop with a callback)
     * `.repeat()` (repeats a string @n times and returns it with an optional @glue)
