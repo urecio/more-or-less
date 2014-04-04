@@ -287,9 +287,3 @@ test {
 test header {
   height: 100px;
 }
-header {
-  height: c;
-}
-footer {
-  width: c;
-}

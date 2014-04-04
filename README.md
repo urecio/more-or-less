@@ -1,6 +1,8 @@
 # more-or-less
 [![Build Status](https://travis-ci.org/pixelass/more-or-less.svg)](https://travis-ci.org/pixelass/more-or-less)
 
+## Faster and more powerful mixins for [less.js][4]
+
 * [Basic Info](#basic-info)
     * [License](#license)
     * [Dependencies](#dependencies)
@@ -31,7 +33,7 @@
 
 ### Dependencies:
 
-* [lessjs][4] 1.7.x
+* [less.js][4] 1.7.x
 
 ## Versions
 * [1.0.0](https://github.com/pixelass/more-or-less/releases/tag/1.0.0)
@@ -42,7 +44,7 @@
 ## What does this do?
 
 * It adds some functions and mixins for lessjs
-* It is "almost" as strong as [lesshat][3] but does NOT USE ANY inline-javaScript
+* It is stronger and a lot faster than [lesshat][3] but does NOT USE ANY inline-javaScript
 * It is adds helpul functions 
     * `.if()` (if - then - [else] )
     * `.index()` (find the index of a value in an array)
@@ -179,6 +181,24 @@ This way mixins can easily be created or modified.
         }
     }
 });
+
+// scope
+//················································
+
+.test {
+    .scope(a); // no return but no error
+    .scope(1); // no return but no error
+    .scope({
+        @height: 100px;
+        height: @height;
+    });
+    .scope({
+        @a: foo;
+        @b: bar;
+        foo: @a;
+        bar: @b;
+    });
+}
 
 ```
 
