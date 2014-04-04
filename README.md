@@ -3,6 +3,26 @@
 
 ## Faster and more powerful mixins for [less.js][4]
 
+## Compared to lesshat
+```
+                                   MORE-OR-LESS          LESSHAT
+Keyframes                               ✓                  ✓
+Unlimited gradients                     ✓                  ✓
+SVG gradients for IE9                   ✓                  ✓
+Font-face                               ✓                  ✓
+Input placeholders                      ✓                  ✓
+Unlimited transitions                   ✓                  ✓
+Prefixed transition values              ✓                  ✓
+Units completition                      ✗                  ✓
+for loops                               ✓                  ✗
+get Index                               ✓                  ✗
+in Array                                ✓                  ✗
+scoping                                 ✓                  ✗
+repeat                                  ✓                  ✗
+join                                    ✓                  ✗
+time to compile compare file          735ms               1.5s
+```
+
 * [Basic Info](#basic-info)
     * [License](#license)
     * [Dependencies](#dependencies)

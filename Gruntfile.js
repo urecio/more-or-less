@@ -1,10 +1,18 @@
 module.exports = function(grunt) {
+    require('time-grunt')(grunt);
+
     grunt.initConfig({
         less: {
             development: {
                 options: {},
                 files: {
                     "test/test.css": "test/test.less"
+                }
+            },
+            compare: {
+                options: {},
+                files: {
+                    "test/compare-to-lesshat.css": "test/compare-to-lesshat.less"
                 }
             }
         },
@@ -33,4 +41,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask("default", ["less"]);
     grunt.registerTask("dev", ["watch"]);
+    grunt.registerTask("compare", ["less:compare"]);
 };

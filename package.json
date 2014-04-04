@@ -2,6 +2,7 @@
   "name": "more-or-less",
   "version": "1.2.0",
   "dependencies": {
+    "time-grunt": "latest",
     "grunt-cli": "latest",
     "grunt-notify": "latest",
     "grunt-contrib-less": "latest",
