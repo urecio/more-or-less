@@ -4,6 +4,6 @@ There are cases when we do not want the front face of an element to be visible t
 
 This property has no effect on 2D transforms as there is no perspective.
 
-[Webplatform](docs.webplatform.org/wiki/css/properties/backface-visibility)
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility)
-[Caniuse](http://caniuse.com/#feat=transforms3d)
+[Webplatform](docs.webplatform.org/wiki/css/properties/backface-visibility "Webplatform")
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility "Mozilla")
+[Caniuse](http://caniuse.com/#feat=transforms3d "Caniuse")

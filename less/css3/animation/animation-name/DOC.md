@@ -2,6 +2,6 @@ The animation-name CSS property specifies a list of animations that should be ap
 
 It is often convenient to use the shorthand property animation to set all animation properties at once.
 
-[Webplatform](http://docs.webplatform.org/wiki/css/properties/animation-name)
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name)
-[Caniuse](http://caniuse.com/#feat=css-animation)
+[Webplatform](http://docs.webplatform.org/wiki/css/properties/animation-name "Webplatform")
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name "Mozilla")
+[Caniuse](http://caniuse.com/#feat=css-animation "Caniuse")

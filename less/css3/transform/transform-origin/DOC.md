@@ -2,6 +2,6 @@ The transform-origin CSS property lets you modify the origin for transformations
 
 Not explicitly set values are reset to their corresponding values.
 
-[Webplatform](docs.webplatform.org/wiki/css/properties/transform-origin)
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin)
-[Caniuse](http://caniuse.com/#feat=transforms3d)
+[Webplatform](docs.webplatform.org/wiki/css/properties/transform-origin "Webplatform")
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin "Mozilla")
+[Caniuse](http://caniuse.com/#feat=transforms3d "Caniuse")

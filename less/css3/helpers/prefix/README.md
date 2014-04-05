@@ -1,5 +1,13 @@
 ```
-@import 'more-or-less/less/css3/animation/_animation';
-.animation(my-animation 200ms);
-.animation(my-animation 200ms linear 500ms);
+@import '../../helpers/_prefix';
+.some-property(@values) {
+    @vendorPrefixes: -webkit-, -moz-;
+    @prop: some-property;
+    .prefix();
+}
+.another-property(@values) {
+    @vendorPrefixes: -webkit-, -moz-, '';
+    @prop: another-property;
+    .prefix();
+}
 ```

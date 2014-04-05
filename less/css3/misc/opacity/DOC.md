@@ -4,6 +4,6 @@ The value applies to the element as a whole, including its contents, even though
 
 Using this property with a value different than 1 places the element in a new stacking context.
 
-[Webplatform](docs.webplatform.org/wiki/css/properties/opacity)
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
-[Caniuse](http://caniuse.com/#feat=css-opacity)
+[Webplatform](docs.webplatform.org/wiki/css/properties/opacity "Webplatform")
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity "Mozilla")
+[Caniuse](http://caniuse.com/#feat=css-opacity "Caniuse")

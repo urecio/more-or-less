@@ -18,5 +18,5 @@ If multiple keyframe sets exist for a given name, the last one encountered is us
 
 If a given animation time offset is duplicated, the last keyframe in the @keyframes rule for that percentage is used for that frame. There's no cascading within a @keyframes rule if multiple keyframes specify the same percentage values.
 
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
-[Caniuse](http://caniuse.com/#feat=css-animation)
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes "Mozilla")
+[Caniuse](http://caniuse.com/#feat=css-animation "Caniuse")

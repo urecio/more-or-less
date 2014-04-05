@@ -6,6 +6,6 @@ The vanishing point is by default placed at the center of the element, but its p
 
 Using this property with a value different than 0 and none creates a new stacking context.
 
-[Webplatform](docs.webplatform.org/wiki/css/properties/perspective)
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective)
-[Caniuse](http://caniuse.com/#feat=transforms3d)
+[Webplatform](docs.webplatform.org/wiki/css/properties/perspective "Webplatform")
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective "Mozilla")
+[Caniuse](http://caniuse.com/#feat=transforms3d "Caniuse")

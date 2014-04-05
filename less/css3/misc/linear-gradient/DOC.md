@@ -16,6 +16,6 @@ The linear-gradient syntax does not allow for repeating gradients, but by using 
 
 When the position of a color-stop point is implicitly defined, it is placed half-way between the point that precedes it and the one that follows it.  The position can also be explicitly defined by using a <length> or a <percentage> CSS data type.
 
-[Webplatform](http://docs.webplatform.org/wiki/css/functions/linear-gradient)
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
-[Caniuse](http://caniuse.com/#feat=css-gradients)
+[Webplatform](http://docs.webplatform.org/wiki/css/functions/linear-gradient "Webplatform")
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient "Mozilla")
+[Caniuse](http://caniuse.com/#feat=css-gradients "Caniuse")

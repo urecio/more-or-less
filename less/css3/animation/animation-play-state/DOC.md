@@ -2,6 +2,6 @@ The animation-play-state CSS property determines whether an animation is running
 
 Resuming a paused animation will start the animation from where it left off at the time it was paused, rather than starting over from the beginning of the animation sequence.
 
-[Webplatform](http://docs.webplatform.org/wiki/css/properties/animation-play-state)
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state)
-[Caniuse](http://caniuse.com/#feat=css-animation)
+[Webplatform](http://docs.webplatform.org/wiki/css/properties/animation-play-state "Webplatform")
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state "Mozilla")
+[Caniuse](http://caniuse.com/#feat=css-animation "Caniuse")

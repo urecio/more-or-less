@@ -8,6 +8,6 @@ Like any other gradient, a CSS radial gradient is not a CSS <color> but an image
 
 The radial-gradient function does not allow repeating gradients. For such a functionality, use the CSS repeating-radial-gradient function.
 
-[Webplatform](http://docs.webplatform.org/wiki/css/functions/radial-gradient)
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
-[Caniuse](http://caniuse.com/#feat=css-gradients)
+[Webplatform](http://docs.webplatform.org/wiki/css/functions/radial-gradient "Webplatform")
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient "Mozilla")
+[Caniuse](http://caniuse.com/#feat=css-gradients "Caniuse")

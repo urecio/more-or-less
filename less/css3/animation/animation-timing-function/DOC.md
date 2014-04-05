@@ -6,6 +6,6 @@ An animation timing function defined within a keyframe block applies to that key
 
 It is often convenient to use the shorthand property animation to set all animation properties at once.
 
-[Webplatform](http://docs.webplatform.org/wiki/css/properties/animation-timing-function)
-[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function)
-[Caniuse](http://caniuse.com/#feat=css-animation)
+[Webplatform](http://docs.webplatform.org/wiki/css/properties/animation-timing-function "Webplatform")
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function "Mozilla")
+[Caniuse](http://caniuse.com/#feat=css-animation "Caniuse")
