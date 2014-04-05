@@ -1,7 +1,7 @@
 # more-or-less
 [![Build Status](https://travis-ci.org/pixelass/more-or-less.svg)](https://travis-ci.org/pixelass/more-or-less)
 
-## Faster and more powerful mixins for [less.js][4]
+**Faster and more powerful mixins for** [less.js][4]
 
 ## Compared to lesshat
 ```
@@ -22,6 +22,8 @@ repeat                                  ✓                  ✗
 join                                    ✓                  ✗
 time to compile compare file           8s                30.6s
 ```
+You can find a more detailed documentation here:
+[Documentation](http://more-or-less.org/)
 
 * [Basic Info](#basic-info)
     * [License](#license)
