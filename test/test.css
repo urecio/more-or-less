@@ -162,13 +162,11 @@ testing CSS3 transform-mixins
 .transforms {
   -webkit-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   -moz-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
-  -o-transform: translate(2px, 3px) rotate(3deg) scale(0.4);
   transform: translate(2px, 3px) rotate(3deg) scale(0.4);
 }
 .transforms {
   -webkit-transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
   -moz-transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
-  -o-transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
   transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
 }
 /*******************
