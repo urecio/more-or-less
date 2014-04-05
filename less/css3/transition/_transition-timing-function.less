@@ -1,9 +1,1 @@
-@import '../helpers/_prefix';
-
-// MIXIN: .transition-timing-function
-.transition-timing-function(@values) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, '';
-    @prop: transition-timing-function;
-    // http://caniuse.com/#search=transition
-    .prefix(',');
-}
+@import 'transition-timing-function/_export';

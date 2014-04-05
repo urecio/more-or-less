@@ -1,3 +1,5 @@
-[Webplatform](docs.webplatform.org/wiki/css/properties)
-[Mozilla docs](https://developer.mozilla.org)
-[Caniuse](http://caniuse.com/)
+The perspective-origin CSS property determines the position the viewer is looking at. It is used as the vanishing point by the perspective property.
+
+[Webplatform](docs.webplatform.org/wiki/css/properties/perspective-origin)
+[Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin)
+[Caniuse](http://caniuse.com/#feat=transforms3d)

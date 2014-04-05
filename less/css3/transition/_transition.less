@@ -1,9 +1,1 @@
-@import '../helpers/_prefix';
-
-// MIXIN: .transition
-.transition(@values...) {
-    @vendorPrefixes: -webkit-, -moz-, -o-, '';
-    @prop: transition;
-    // http://caniuse.com/#search=transition
-    .prefix();
-}
+@import 'transition/_export';
