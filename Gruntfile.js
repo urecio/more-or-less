@@ -42,4 +42,5 @@ module.exports = function(grunt) {
     grunt.registerTask("default", ["less"]);
     grunt.registerTask("dev", ["watch"]);
     grunt.registerTask("compare", ["less:compare"]);
+    grunt.registerTask("test", ["less:development"]);
 };

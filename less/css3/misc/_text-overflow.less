@@ -1,18 +1,1 @@
-@import '../helpers/_prefix';
-
-// MIXIN: .text-overflow
-.text-overflow(@values) {
-    @vendorPrefixes: -ms-, -o-, '';
-    // http://caniuse.com/#search=text-overflow
-    @prop: text-overflow;
-    .prefix();
-    display: inline-block;
-    max-width: 100%;
-    overflow: hidden;
-    white-space: no-wrap;
-    word-wrap: normal;
-    & when (@ie-legacy) {
-        *display: inline;
-        *zoom: 1;
-    }
-}
+@import 'text-overflow/_export';

@@ -1,12 +1,1 @@
-@import '../vars/_prefix';
-
-// MIXIN: .opacity
-.opacity(@value) {
-    // http://caniuse.com/#search=opacity
-    & when (@ie-legacy) {
-        @msValue: (@value * 100);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{msValue})";
-        filter: alpha(opacity=@msValue);
-    }
-    opacity: @value;
-}
+@import 'opacity/_export';

@@ -1,5 +1,5 @@
 ```
-@import 'more-or-less/less/css3/animation/_animation';
-.animation(my-animation 200ms);
-.animation(my-animation 200ms linear 500ms);
+@import 'more-or-less/less/css3/misc/_linear-gradient';
+.linear-gradient(to bottom, #000, #f00);
+.linear-gradient(to bottom right, #000, #f00);
 ```

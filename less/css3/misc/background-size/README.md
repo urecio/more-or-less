@@ -1,5 +1,5 @@
 ```
-@import 'more-or-less/less/css3/animation/_animation';
-.animation(my-animation 200ms);
-.animation(my-animation 200ms linear 500ms);
+@import 'more-or-less/less/css3/misc/_background-size';
+.background-size(100px);
+.background-size(100% auto);
 ```

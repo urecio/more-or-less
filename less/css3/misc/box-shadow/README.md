@@ -1,5 +1,4 @@
 ```
-@import 'more-or-less/less/css3/animation/_animation';
-.animation(my-animation 200ms);
-.animation(my-animation 200ms linear 500ms);
+@import 'more-or-less/less/css3/misc/_box-shadow';
+.box-shadow(0 2px 0 rgba(0,0,0,0.5));
 ```

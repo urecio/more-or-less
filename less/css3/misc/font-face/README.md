@@ -1,5 +1,9 @@
 ```
-@import 'more-or-less/less/css3/animation/_animation';
-.animation(my-animation 200ms);
-.animation(my-animation 200ms linear 500ms);
+@import 'more-or-less/less/css3/misc/_font-face';
+.font-face(myFont);
+.font-face(myFont);
+.font-face(@family: myFont,
+           @path: "path/to/my/font/",
+           @weight: normal,
+           @style: normal");
 ```
