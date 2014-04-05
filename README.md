@@ -1,5 +1,6 @@
 # more-or-less
 [![Build Status](https://travis-ci.org/pixelass/more-or-less.svg)](https://travis-ci.org/pixelass/more-or-less)
+[![Dependencies Status](https://david-dm.org/pixelass/more-or-less.png)](https://david-dm.org/pixelass/more-or-less)
 
 **Faster and more powerful mixins for** [less.js][4]
 
