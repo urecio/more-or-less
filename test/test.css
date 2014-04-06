@@ -263,6 +263,14 @@ testing font-face
   font-weight: normal;
   font-style: normal;
 }
+/*************
+testing filter
+*************/
+.filter {
+  -webkit-filter: grayscale(0.5) blur(10px);
+  -moz-filter: grayscale(0.5) blur(10px);
+  filter: grayscale(0.5) blur(10px);
+}
 /****************
 testing keyframes
 ****************/
