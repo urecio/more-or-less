@@ -5,6 +5,7 @@
     "time-grunt": "latest",
     "grunt-cli": "latest",
     "grunt-notify": "latest",
+    "grunt-contrib-csslint": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-watch": "latest"
   }

@@ -169,39 +169,6 @@ testing CSS3 transform-mixins
   -moz-transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
   transform: perspective(700px) rotate3d(1, 1, 0, 180deg);
 }
-/*******************
-testing image-mixins
-*******************/
-.sprite-right {
-  background-color: transparent;
-  background-image: url('../img/sprite.png');
-  background-size: auto 90px;
-  background-repeat: no-repeat;
-}
-.sprite-right.one {
-  background-position: 0px 0;
-}
-.sprite-right.two {
-  background-position: -30px 0;
-}
-.sprite-right.three {
-  background-position: -60px 0;
-}
-.sprite-down {
-  background-color: transparent;
-  background-image: url('../img/sprite.png');
-  background-size: 90px auto;
-  background-repeat: no-repeat;
-}
-.sprite-down.four {
-  background-position: 0 0px;
-}
-.sprite-down.five {
-  background-position: 0 -30px;
-}
-.sprite-down.six {
-  background-position: 0 -60px;
-}
 /****************
 testing gradients
 ****************/
@@ -211,19 +178,25 @@ testing gradients
   background-image: -o-linear-gradient(bottom, #000000, #ffffff) -o-radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
   background-image: linear-gradient(to top, #000000, #ffffff) radial-gradient(45px 45px, farthest-corner, #ffffff 0%, #000000 100%) url('test.png');
 }
-.background-image {
+.background-image-top {
   background-image: -webkit-linear-gradient(bottom left, #000000, #ffffff);
   background-image: -moz-linear-gradient(bottom left, #000000, #ffffff);
   background-image: -o-linear-gradient(bottom left, #000000, #ffffff);
   background-image: linear-gradient(to top left, #000000, #ffffff);
+}
+.background-image-right-bottom {
   background-image: -webkit-linear-gradient(top right, #000000, #ffffff);
   background-image: -moz-linear-gradient(top right, #000000, #ffffff);
   background-image: -o-linear-gradient(top right, #000000, #ffffff);
   background-image: linear-gradient(to bottom right, #000000, #ffffff);
+}
+.background-image-right {
   background-image: -webkit-linear-gradient(left, #000000, #ffffff);
   background-image: -moz-linear-gradient(left, #000000, #ffffff);
   background-image: -o-linear-gradient(left, #000000, #ffffff);
   background-image: linear-gradient(to right, #000000, #ffffff);
+}
+.background-image-bottom {
   background-image: -webkit-linear-gradient(top, #000000, #ffffff);
   background-image: -moz-linear-gradient(top, #000000, #ffffff);
   background-image: -o-linear-gradient(top, #000000, #ffffff);
@@ -409,12 +382,6 @@ testing repeat
 .test.test.test.test.test {
   float: right;
 }
-.test and .test and .test and .test and .test {
-  float: right;
-}
-.test foo .test foo .test foo .test foo .test {
-  float: right;
-}
 .test + .test + .test + .test + .test {
   float: right;
 }
@@ -427,63 +394,48 @@ testing join
 /*******************
 testing index (find)
 *******************/
-.tools {
-  saw: 1;
+.tools:before {
+  content: "1";
 }
-.fruits {
-  banana: 3;
+.fruits .banana:before {
+  content: "3";
 }
-.fruits {
-  orange: 2;
+.fruits .orange:before {
+  content: "@{@}-";
 }
-.fruits {
-  tomato: -1;
+.fruits .tomato:before {
+  content: "-1";
 }
 /*******************
 testing inArray (in)
 *******************/
-.tools {
-  saw: true;
+.fruits .banana:before {
+  content: "true";
 }
-.fruits {
-  banana: true;
+.fruits .orange:before {
+  content: "true";
 }
-.fruits {
-  orange: true;
-}
-.fruits {
-  tomato: false;
+.fruits .tomato:before {
+  content: "false";
 }
 /**************
 testing if-else
 **************/
-log {
-  isnumber: then;
+.log:before {
+  content: "then";
 }
-log {
-  true: then;
+.log:before {
+  content: "then";
 }
-log {
-  false: else;
+.log:before {
+  content: "else";
 }
-foo {
-  bar: baz;
+.log:before {
+  content: "else";
 }
-log {
-  lowerthanequal: then;
+.log:before {
+  content: "then";
 }
-log {
-  lightnessgt: then;
-}
-/***************
-testing scope
-***************/
-test {
-  a: a;
-  b: b;
-  foo: foo;
-  bar: bar;
-}
-test header {
-  height: 100px;
+.log:before {
+  content: "then";
 }

@@ -32,7 +32,7 @@ input {
     .placeholder({
         color: #aaa;
         font-size: 20px;
-    });
+        });
 }
 
 .text-overflow-ellipsis {
@@ -115,32 +115,6 @@ testing CSS3 transform-mixins
     .transform(perspective(700px) rotate3d(1, 1, 0, 180deg));
 }
 
-/*******************
-testing image-mixins
-*******************/
-
-.sprite-right{
-    .sprites(
-        '../img/sprite.png';
-        auto;
-        90px;
-        30;
-        one;
-        two;
-        three;);
-}
-
-.sprite-down{
-    .sprites(
-        '../img/sprite.png';
-        90px;
-        auto;
-        30;
-        four;
-        five;
-        six;);
-}
-
 /****************
 testing gradients
 ****************/
@@ -152,10 +126,19 @@ testing gradients
         url('test.png'));
 }
 
-.background-image {
+.background-image-top {
     .background-image(linear-gradient(to top left, #000, #fff));
+}
+
+.background-image-right-bottom {
     .background-image(linear-gradient(to bottom right, #000, #fff));
+}
+
+.background-image-right {
     .background-image(linear-gradient(to right, #000, #fff));
+}
+
+.background-image-bottom {
     .background-image(linear-gradient(to bottom, #000, #fff));
 }
 
@@ -224,20 +207,6 @@ testing repeat
 }
 
 & {
-    .repeat('.test', ' and ', 5);
-    @{string} {
-        float: right;
-    }
-}
-
-& {
-    .repeat('.test', ' foo ', 5);
-    @{string} {
-        float: right;
-    }
-}
-
-& {
     .repeat('.test', ' + ', 5);
     @{string} {
         float: right;
@@ -259,11 +228,11 @@ testing join
 testing index (find)
 *******************/
 
-.tools {
+.tools:before {
     @tools: saw, hammer, screwdriver, wrench;
 
     .find(@tools, saw);
-    saw: @-;
+    content: "@{-}";
 }
 
 .fruits {
@@ -271,15 +240,21 @@ testing index (find)
 
     & {
         .index(@fruits, banana);
-        banana: @-;
+        .banana:before {
+            content: "@{-}";
+        }
     }
     & {
         .index(@fruits, orange);
-        orange: @-;
+        .orange:before {
+            content:"@{@}-";
+        }
     }
     & {
         .index(@fruits, tomato);
-        tomato: @-;
+        .tomato:before {
+            content: "@{-}";
+        }
     }
 }
 
@@ -287,27 +262,26 @@ testing index (find)
 testing inArray (in)
 *******************/
 
-.tools {
-    @tools: saw, hammer, screwdriver, wrench;
-
-    .in(@tools, saw);
-    saw: @-;
-}
-
 .fruits {
     @fruits: apple, orange, banana;
 
     & {
         .inArray(@fruits, banana);
-        banana: @-;
+        .banana:before {
+            content: "@{-}";
+        }
     }
     & {
         .inArray(@fruits, orange);
-        orange: @-;
+        .orange:before {
+            content: "@{-}";
+        }
     }
     & {
         .inArray(@fruits, tomato);
-        tomato: @-;
+        .tomato:before {
+            content: "@{-}";
+        }
     }
 }
 
@@ -317,13 +291,13 @@ testing if-else
 
 .if(isnumber(2), {
     .-then(){
-        log {
-            isnumber: then;
+        .log:before {
+            content: "then";
         }
     }
     .-else(){
-        log {
-            isnumber: else;
+        .log:before {
+            content: "else";
         }
     }
 });
@@ -331,13 +305,13 @@ testing if-else
 
 .if(true, {
     .-then(){
-        log {
-            true: then;
+        .log:before {
+            content: "then";
         }
     }
     .-else(){
-        log {
-            true: else;
+        .log:before {
+            content: "else";
         }
     }
 });
@@ -345,13 +319,13 @@ testing if-else
 
 .if(false, {
     .-then(){
-        log {
-            false: then;
+        .log:before {
+            content: "then";
         }
     }
     .-else(){
-        log {
-            false: else;
+        .log:before {
+            content: "else";
         }
     }
 });
@@ -359,13 +333,13 @@ testing if-else
 
 .if(1 gt 2, {
     .-then(){
-        log {
-            lowerthan: then;
+        .log:before {
+            content: "then";
         }
     }
     .-else () {
-        foo {
-            bar: baz;
+        .log:before {
+            content: "else";
         }
 
     }
@@ -374,44 +348,17 @@ testing if-else
 
 .if(1 lte 2, {
     .-then(){
-        log {
-            lowerthanequal: then;
+        .log:before {
+            content: "then";
         }
     }
 });
 
 .if(lightness(#fff) gt (20% * 2), {
     .-then(){
-        log {
-            lightnessgt: then;
+        .log:before {
+            content: "then";
         }
     }
 });
 
-/***************
-testing scope
-***************/
-
-
-@fn1: {
-        @a: a;
-        @b: b;
-        a: @a;
-        b: @b;
-    };
-test {
-    .scope(@fn1);
-    .scope(a);
-    .scope(1);
-    .scope({
-        header {
-            height: 100px;
-        }
-    });
-    .scope({
-        @a: foo;
-        @b: bar;
-        foo: @a;
-        bar: @b;
-    });
-}

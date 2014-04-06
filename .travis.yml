@@ -5,4 +5,4 @@ notifications:
   email: false
 before_install:
   - "npm install -g grunt-cli"
-script: "grunt"
+script: "grunt test"
