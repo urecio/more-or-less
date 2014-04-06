@@ -6,7 +6,7 @@
     @vendorPrefixesMoz:  ':-moz-', '-moz-';
     .for(@vendorPrefixes);.-each(@i) {
         @prefix: replace('@{i}', ':', '');
-        .in(@prefixes, @prefix);
+        .inArray(@prefixes, @prefix);
         & when (@-) {
             @selector: e(':@{i}input-placeholder');
             &@{selector} {

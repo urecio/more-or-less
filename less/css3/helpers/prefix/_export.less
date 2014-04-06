@@ -1,28 +1,32 @@
 @import '../../vars/_prefix';
-@import '../../../fn/_in';
+@import '../../../fn/_inArray';
+@import '../../../fn/_scope';
+@import '../../../fn/_if';
 .prefix(...) {
     @needPrefix: transition-property, transition;
     .for(@vendorPrefixes); .-each(@i){
-        .in(@needPrefix, @prop);
-        .-return(@s) when not (@-){
-            @return: @values;
-        }
+        .inArray(@needPrefix, @prop);
         .-return(@s) when (@-){
             @transform: replace('@{values}', 'transform', '@{i}transform');
             @box-shadow: replace('@{transform}', 'box-shadow', '@{i}box-shadow');
-            @end: @box-shadow;
-            @return: e(@end);
+            @end: e(@box-shadow);
+            @return: @end;
         }
-        & {
-            .in(@prefixes, @i);
-            & when (@-){
-                .-return(@i);
-                @eProp: e('@{i}@{prop}');
-                @{eProp}: @return;
-            }
-            & when not (@-){
-                @{prop}: @values;
-            }
+        .-return(@s) when not (@-){
+            @return: @values;
         }
+        .scope({
+            .inArray(@prefixes, @i);
+            .if((@-),{
+                .-then(){
+                    .-return(@i);
+                    @eProp: e('@{i}@{prop}');
+                    @{eProp}: @return;
+                }
+                .-else(){
+                    @{prop}: @values;
+                }
+            });
+        });
     }
 }

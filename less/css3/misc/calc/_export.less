@@ -1,12 +1,12 @@
 @import '../../vars/_prefix';
 @import '../../../fn/_if';
 @import '../../../fn/_scope';
-@import '../../../fn/_in';
+@import '../../../fn/_inArray';
 .calc(@prop; @value) {
     @vendorPrefixes: -webkit-, -moz-, '';
     .for(@vendorPrefixes);.-each(@i) {
         .scope({
-            .in(@prefixes, @i);
+            .inArray(@prefixes, @i);
             .if((@-), {
                 .-then(){
                     @eValue: e('@{value}');
