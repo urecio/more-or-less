@@ -43,6 +43,7 @@ You can find a more detailed documentation here:
     * [Keyframes](#keyframes)
         * [Keyframes input](#keyframes-input)
         * [Keyframes output](#keyframes-output)
+    * [Namespaces](#namespaces)
 * [Examples](#examples)
     * [Animaless](#animaless)
 
@@ -85,6 +86,7 @@ You can find a more detailed documentation here:
     * `@import '_more';` to get access to the entire library of mixins
     * `'less/css3/_transition';` to get access to the transition library
 * control prefixes or legacy support with global-variables
+* Add a namespace to avoid conflicts with other libraries
 
 ### Example for "less" imports
 
@@ -288,6 +290,26 @@ This way mixins can easily be created or modified.
 }
 ```
 
+### Namespaces
+
+```
+#more-or.less {
+    @import '../_more';
+}
+
+
+.border-radius {
+    #more-or.less > .border-radius(1px 2px 3px 4px);
+}
+
+.box-shadow {
+    #more-or.less > .box-shadow(1px 0 2px rgba(0,0,0,0.3), 0 1px 2px rgba(255,0,0,0.3););
+}
+
+.box-sizing {
+    #more-or.less > .box-sizing(border-box);
+}
+```
 ## Examples
 
 ### Animaless
