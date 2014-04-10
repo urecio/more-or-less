@@ -73,7 +73,7 @@ You can find a more detailed documentation here:
 * It is stronger and a lot faster than [lesshat][3] but does NOT USE ANY inline-javaScript
 * It is adds helpul functions 
     * `.if()` (if - then - [else])
-    * `.ifscope` leaner scoping)
+    * `.scope()` (leaner scoping)
     * `.index()` (find the index of a value in an array)
     * `.for()` (create a for loop with a callback)
     * `.repeat()` (repeats a string @n times and returns it with an optional @glue)
