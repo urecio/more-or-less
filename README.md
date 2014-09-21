@@ -14,7 +14,7 @@ Font-face                               ✓                  ✓
 Input placeholders                      ✓                  ✓
 Unlimited transitions                   ✓                  ✓
 Prefixed transition values              ✓                  ✓
-Units completition                      ✗                  ✓
+Units completion                        ✗                  ✓
 for loops                               ✓                  ✗
 get Index                               ✓                  ✗
 in Array                                ✓                  ✗
