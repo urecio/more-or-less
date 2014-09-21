@@ -1,0 +1,22 @@
+{
+  "name": "more-or-less",
+  "version": "1.5.1",
+  "homepage": "https://github.com/pixelass/more-or-less",
+  "authors": [
+    "Gregor Adams <greg@pixelass.com>"
+  ],
+  "description": "smart mixins and functions for Less.js",
+  "main": "_more.less",
+  "keywords": [
+    "less",
+    "mixins"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
