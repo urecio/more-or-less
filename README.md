@@ -6,7 +6,7 @@
 
 ## Compared to lesshat
 ```
-                                   MORE-OR-LESS          LESSHAT
+                                   MORE-OR-LESS          LESSHAT(2)
 Keyframes                               ✓                  ✓
 Unlimited gradients                     ✓                  ✓
 SVG gradients for IE9                   ✓                  ✓
@@ -31,6 +31,7 @@ You can find a more detailed documentation here:
     * [Dependencies](#dependencies)
 * [Versions](#versions)
 * [What does this do](#what-does-this-do)
+    * [Bower](#bower)
     * [Example for "less" import](#example-for-less-imports)
         * [Import all transitions](#import-all-transitions)
         * [Import transition oneliner only](#import-transition-oneliner-only)
@@ -87,6 +88,9 @@ You can find a more detailed documentation here:
     * `'less/css3/_transition';` to get access to the transition library
 * control prefixes or legacy support with global-variables
 * Add a namespace to avoid conflicts with other libraries
+
+### Bower
+`bower install more-or-less`
 
 ### Example for "less" imports
 
