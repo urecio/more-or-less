@@ -4,12 +4,12 @@
 @import '../../../fn/_if';
 .prefix(...) {
     @needPrefix: transition-property, transition;
-    .for(@vendorPrefixes); .-each(@i){
+    .for(@vendorPrefixes); .-each(@vendor, ...){
         .inArray(@needPrefix, @prop);
         .if(@-, {
             .-then(){
-                @transform: replace('@{values}', 'transform', '@{i}transform');
-                @box-shadow: replace('@{transform}', 'box-shadow', '@{i}box-shadow');
+                @transform: replace('@{values}', 'transform', '@{vendor}transform');
+                @box-shadow: replace('@{transform}', 'box-shadow', '@{vendor}box-shadow');
                 @end: e(@box-shadow);
                 @return: @end;
             }
@@ -18,10 +18,10 @@
             }
         });
         .scope({
-            .inArray(@prefixes, @i);
+            .inArray(@prefixes, @vendor);
             .if(@-,{
                 .-then(){
-                    @eProp: e('@{i}@{prop}');
+                    @eProp: e('@{vendor}@{prop}');
                     @{eProp}: @return;
                 }
                 .-else(){

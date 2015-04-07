@@ -101,27 +101,27 @@ body {
         content: '';
     }
     & {
-        .for(1,length(@animals));.-each(@i){
-            @class: extract(@animals, @i);
+        .for(1,length(@animals));.-each(@class, @i){
+
             &.@{class}:before {
                 .sprite-position(@i);
             }
         }
     }
-    .for(@animals);.-each(@i) {
-        @string: 'The @{i}';
-        &.@{i} {
+    .for(@animals);.-each(@animal, @i) {
+        @string: 'The @{animal}';
+        &.@{animal} {
             &:after {
-                & {.in(@forest, @i);.forest(@-);
-                    & {.in(@dangerous, @i);.dangerous(@-);
-                        & {.in(@dinosaur, @i);.dinosaur(@-);
-                            & {.in(@farm, @i);.farm(@-);
-                                & {.in(@pet, @i);.pet(@-);
-                                    & {.in(@bird, @i);.bird(@-);
-                                        & {.in(@safari, @i);.safari(@-);
-                                            & {.in(@fly, @i);.fly(@-);
-                                                & {.in(@underwater, @i);.underwater(@-);
-                                                    & {.in(@extinct, @i);.extinct(@-);
+                & {.in(@forest, @animal);.forest(@-);
+                    & {.in(@dangerous, @animal);.dangerous(@-);
+                        & {.in(@dinosaur, @animal);.dinosaur(@-);
+                            & {.in(@farm, @animal);.farm(@-);
+                                & {.in(@pet, @animal);.pet(@-);
+                                    & {.in(@bird, @animal);.bird(@-);
+                                        & {.in(@safari, @animal);.safari(@-);
+                                            & {.in(@fly, @animal);.fly(@-);
+                                                & {.in(@underwater, @animal);.underwater(@-);
+                                                    & {.in(@extinct, @animal);.extinct(@-);
                                                         content: '@{string}.';
                                                     }
                                                 }

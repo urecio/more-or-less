@@ -4,22 +4,22 @@
 .placeholder(@rules) {
     @vendorPrefixes: ':-webkit-', ':-ms-';
     @vendorPrefixesMoz:  ':-moz-', '-moz-';
-    .for(@vendorPrefixes);.-each(@i) {
-        @prefix: replace('@{i}', ':', '');
+    .for(@vendorPrefixes);.-each(@vendor, ...) {
+        @prefix: replace('@{vendor}', ':', '');
         .inArray(@prefixes, @prefix);
         & when (@-) {
-            @selector: e(':@{i}input-placeholder');
+            @selector: e(':@{vendor}input-placeholder');
             &@{selector} {
                 @rules();
             }
         }
     }
     .scope({
-        .for(@vendorPrefixesMoz);.-each(@i) {
-            @prefix: replace('@{i}', ':', '');
+        .for(@vendorPrefixesMoz);.-each(@vendor, ...) {
+            @prefix: replace('@{vendor}', ':', '');
             .in(@prefixes, @prefix);
             & when (@-) {
-                @selector: e(':@{i}placeholder');
+                @selector: e(':@{vendor}placeholder');
                 &@{selector} {
                     @rules();
                 }

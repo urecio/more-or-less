@@ -4,13 +4,13 @@
 @import '../../../fn/_inArray';
 .calc(@prop; @value) {
     @vendorPrefixes: -webkit-, -moz-, '';
-    .for(@vendorPrefixes);.-each(@i) {
+    .for(@vendorPrefixes);.-each(@vendor, ...) {
         .scope({
-            .inArray(@prefixes, @i);
+            .inArray(@prefixes, @vendor);
             .if((@-), {
                 .-then(){
                     @eValue: e('@{value}');
-                    @{prop}: e('@{i}calc(@{eValue})');
+                    @{prop}: e('@{vendor}calc(@{eValue})');
                 }
                 .-else() {
                     @eValue: e('@{value}');

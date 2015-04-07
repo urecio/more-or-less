@@ -4,9 +4,9 @@
 @import '../../../fn/_if';
 .background-image(@values...) {
     @vendorPrefixes: -webkit-, -moz-, -o-, '';
-    .for(@vendorPrefixes);.-each(@i) {
+    .for(@vendorPrefixes);.-each(@vendor, ...) {
         .scope({
-            .inArray(@prefixes, @i);
+            .inArray(@prefixes, @vendor);
             .if(@-,{
                 .-then(){
                     @to-top-left: replace('@{values}', 'to top left', 'bottom right' );
@@ -15,8 +15,8 @@
                     @to-bottom: replace('@{to-top}', 'to bottom', 'top' );
                     @to-left: replace('@{to-bottom}', 'to left', 'right' );
                     @to-right: replace('@{to-left}', 'to right', 'left' );
-                    @linear-gradient: replace('@{to-right}', 'linear-gradient', '@{i}linear-gradient' );
-                    @radial-gradient: replace('@{linear-gradient}', 'radial-gradient', '@{i}radial-gradient' );
+                    @linear-gradient: replace('@{to-right}', 'linear-gradient', '@{vendor}linear-gradient' );
+                    @radial-gradient: replace('@{linear-gradient}', 'radial-gradient', '@{vendor}radial-gradient' );
                     @end: @radial-gradient;
                     background-image: e(@end);
                 }

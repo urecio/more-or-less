@@ -328,12 +328,12 @@ body {
 }
 
 .box {
-    .for(@animations);.-each(@i) {
-        @animation-name: extract(@i,1);
-        @animation-duration: extract(@i,3);
-        @animation-timing-function: extract(@i,4);
-        @animation-iteration-count: extract(@i,5);
-        @animation-fill-mode: extract(@i,6);
+    .for(@animations);.-each(@animation, ...) {
+        @animation-name: extract(@animation,1);
+        @animation-duration: extract(@animation,3);
+        @animation-timing-function: extract(@animation,4);
+        @animation-iteration-count: extract(@animation,5);
+        @animation-fill-mode: extract(@animation,6);
 
         &.@{animation-name}:hover .box-inner  {
             .animation(
@@ -352,9 +352,9 @@ body {
 }
 
 & {
-    .for(@animations);.-each(@i) {
-        @animation-name: extract(@i,1);
-        @animation-frames: extract(@i,2);
+    .for(@animations);.-each(@animation, ...) {
+        @animation-name: extract(@animation,1);
+        @animation-frames: extract(@animation,2);
         .keyframes(@animation-name;@animation-frames;);
     }
 }
